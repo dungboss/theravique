@@ -478,7 +478,7 @@
   </head>
 
   <body
-    class="gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }}"
+    class="gradient link-btns--{{ settings.link_btn_hover }} action-btns--{{ settings.action_btn_hover }} template-{{ request.page_type }}"
     {% if is_rtl %}
       data-rtl="true"
     {% endif %}
