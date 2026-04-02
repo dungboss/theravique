@@ -1,1 +1,1098 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"product_title","settings":{"uppercase_title":false,"desktop_size":39,"alignment":"left","mobile_size":28,"mobile_alignment":"mobile-left","margin_top":0,"margin_bottom":0},"blocks":{}},"a6eb81db-40e4-43e0-972f-32db010a4a56":{"type":"rating-stars","settings":{"visibility":"always-display","rating":4.9,"star_color":"#ffcc00","bg_stars_style":"full","bg_star_color":"#ececec","label":"(1255+ Verified Reviews)","size":16,"alignment":"flex-start","scroll_id":"","margin_top":0,"margin_bottom":9},"blocks":{}},"price":{"type":"product_price","settings":{"price_layout":"price-first","price_color":"accent-1","compare_price_color":"text","regular_price_size":25,"sale_price_size":20,"compare_price_size":16,"displayed_badge":"sale","sale_badge_color":"accent-2","custom_badge_text":"[icon_1] SPECIAL OFFER","icon_scale":140,"icon_1":"redeem","filled_icon_1":false,"icon_2":"check_circle","filled_icon_2":false,"margin_top":9,"margin_bottom":15},"blocks":{}},"5fcc0428-e768-4cb7-bea3-eb0274198dd1":{"type":"product_product-variant-picker-block","settings":{"picker_types":"pills, dropdown, dropdown","custom_labels":"[name] - [selected]","skip_unavailable":false,"append":"option_1_label_container","swatches_size":"medium","swatches_custom_colors":"disabled","swatches_custom_colors_list":"#000000, #6D388B, #0000FF, #FFCC00","full_width_dropdowns":false,"breaks_style":"normal","breaks_headline":"BUNDLE & SAVE","breaks_prices_layout":"price-first-vertical","breaks_display_selected_indicator":true,"breaks_border_radius":10,"breaks_border_width":2,"breaks_color_scheme":"accent-1","breaks_vertical_items_align":"flex-start","breaks_badges":"[empty], Most popular, [empty]","breaks_badge_style":"1","breaks_badge_color":"accent-1","breaks_displayed_images":"variant_images","breaks_custom_images":"","breaks_image_width":70,"breaks_space_images":true,"breaks_vertical_images_position":"top","breaks_labels":"[name], [name], [name]","breaks_benefits":"[empty], Free Shipping, Free Shipping","breaks_benefit_position":"top","breaks_benefit_style":"outlined","breaks_benefit_color":"accent-1","breaks_captions":"Variant 1 caption, Variant 2 caption, Variant 3 caption","breaks_price_texts":"[price], [price], [price]","breaks_compare_price_texts":"[compare_price], [compare_price], [compare_price]","margin_top":15,"margin_bottom":15},"blocks":{}},"quantity_selector_4KXChJ":{"type":"product_quantity-selector","settings":{"full_width_classic":false,"enable_quantity_discounts":true,"headline":"BUNDLE & SAVE","style":"normal","preselected":"option_2","update_pdp_prices":true,"prices_layout":"price-first-vertical","display_selected_indicator":true,"border_radius":10,"border_width":2,"colors":"theme","color_scheme":"accent-1","accent_color":"accent-1","non_selected_border_style":"solid","non_selected_border_color":"#d9d9d9","non_selected_background_type":"color","non_selected_background_color":"#fbfbfb","non_selected_background_gradient":"linear-gradient(#ffffff, #f5f5f5)","non_selected_text_color":"#565656","non_selected_accent_color":"#a16ac0","non_selected_badge_text_color":"#ffffff","non_selected_badge_bg_color":"#a16ac0","non_selected_benefit_text_color":"#a16ac0","non_selected_benefit_bg_color":"#ffffff","non_selected_benefit_border_color":"#a16ac0","selected_border_style":"solid","selected_border_color":"#6d388b","selected_background_type":"color","selected_background_color":"#f2eaf6","selected_background_gradient":"linear-gradient(#FBF4FF, #E6D5F1)","selected_text_color":"#121212","selected_accent_color":"#6d388b","selected_badge_text_color":"#ffffff","selected_badge_bg_color":"#6d388b","selected_benefit_text_color":"#6d388b","selected_benefit_bg_color":"#ffffff","selected_benefit_border_color":"#6d388b","upsells_primary_style_bg_color":"#6d388b","upsells_primary_style_text_color":"#ffffff","upsells_primary_style_badge_bg":"#121212","upsells_primary_style_badge_text_color":"#ffffff","upsells_secondary_style_bg_color":"#e6dcf0","upsells_secondary_style_text_color":"#121212","upsells_secondary_style_badge_bg":"#6d388b","upsells_secondary_style_badge_text_color":"#ffffff","selected_upsells_primary_style_bg_color":"#6d388b","selected_upsells_primary_style_text_color":"#ffffff","selected_upsells_primary_style_badge_bg":"#121212","selected_upsells_primary_style_badge_text_color":"#ffffff","selected_upsells_secondary_style_bg_color":"#e6dcf0","selected_upsells_secondary_style_text_color":"#121212","selected_upsells_secondary_style_badge_bg":"#6d388b","selected_upsells_secondary_style_badge_text_color":"#ffffff","enable_variant_selectors":true,"pickers_label":"","enable_variant_selectors_on_quantity_of_1":false,"update_prices":true,"pickers_number_text":"<strong>#[index]<\/strong>","show_selected_variant_images":false,"variant_images_position":"middle","skip_unavailable":false,"full_width_pickers":false,"hide_pickers_overlay":true,"indicator_top":true,"scroll_media_gallery":true,"image_width":70,"vertical_items_align":"flex-start","space_images":true,"vertical_images_position":"top","hide_upsells_on_non_selected":true,"upsells_primary_style_badge_color_scheme":"inverse","upsells_secondary_style_badge_color_scheme":"accent-1","upsells_image_size":27,"upsells_text_size":11,"upsells_badge_radius":45,"upsell_1_product":"","upsell_1_min_offer":"2","upsell_1_type":"checkbox_preselected","upsell_1_design":"primary","upsell_1_badge_position":"left","upsell_1_text_left":"Add [title]","upsell_1_text_right":"<strong>[price]<\/strong>","upsell_1_badge_text":"","upsell_2_product":"","upsell_2_min_offer":"2","upsell_2_type":"checkbox_preselected","upsell_2_design":"primary","upsell_2_badge_position":"left","upsell_2_text_left":"Add [title]","upsell_2_text_right":"<strong>[price]<\/strong>","upsell_2_badge_text":"","upsell_3_product":"","upsell_3_min_offer":"2","upsell_3_type":"checkbox_preselected","upsell_3_design":"primary","upsell_3_badge_position":"left","upsell_3_text_left":"Add [title]","upsell_3_text_right":"<strong>[price]<\/strong>","upsell_3_badge_text":"","option_1_quantity":1,"option_1_percentage_off_text":"0","option_1_fixed_amount_off":"0","option_1_compare_price":"compare_price","option_1_badge":"","option_1_label":"<strong>Buy [quantity] - Everyday Essential<\/strong>","option_1_benefit":"","option_1_caption":"You save [amount_saved]","option_1_price_text":"<em><strong>[price]<\/strong><\/em>","option_1_compare_price_text":"[compare_price]","option_1_badge_style":"1","option_1_badge_color":"accent-1","option_1_benefit_position":"top","option_1_benefit_style":"outlined","option_1_benefit_radius":45,"option_1_benefit_color":"accent-1","option_2_quantity":2,"option_2_percentage_off_text":"0","option_2_fixed_amount_off":"","option_2_compare_price":"compare_price","option_2_badge":"<strong>MOST POPULAR<\/strong>","option_2_label":"<strong>Buy [quantity] - Travel Ready<\/strong>","option_2_benefit":"FREE SHIPPING","option_2_caption":"You save [amount_saved]","option_2_price_text":"<em><strong>[price]<\/strong><\/em>","option_2_compare_price_text":"[compare_price]","option_2_badge_style":"1","option_2_badge_color":"accent-1","option_2_benefit_position":"top","option_2_benefit_style":"outlined","option_2_benefit_radius":45,"option_2_benefit_color":"accent-1","option_3_quantity":3,"option_3_percentage_off_text":"0","option_3_fixed_amount_off":"0","option_3_compare_price":"compare_price","option_3_badge":"","option_3_label":"<strong>Buy [quantity] - Family \/ Gift Set<\/strong>","option_3_benefit":"","option_3_caption":"You save [amount_saved]","option_3_price_text":"<em><strong>[price]<\/strong><\/em>","option_3_compare_price_text":"[compare_price]","option_3_badge_style":"1","option_3_badge_color":"accent-1","option_3_benefit_position":"top","option_3_benefit_style":"outlined","option_3_benefit_radius":45,"option_3_benefit_color":"accent-1","option_4_quantity":0,"option_4_percentage_off_text":"0","option_4_fixed_amount_off":"0","option_4_compare_price":"compare_price","option_4_badge":"","option_4_label":"<strong>Buy [quantity]<\/strong>","option_4_benefit":"","option_4_caption":"You save [amount_saved]","option_4_price_text":"<em><strong>[price]<\/strong><\/em>","option_4_compare_price_text":"[compare_price]","option_4_badge_style":"1","option_4_badge_color":"accent-1","option_4_benefit_position":"top","option_4_benefit_style":"outlined","option_4_benefit_radius":45,"option_4_benefit_color":"accent-1","margin_top":15,"margin_bottom":15},"blocks":{}},"buy_buttons":{"type":"product_buy-buttons","settings":{"show_dynamic_checkout":false,"skip_cart":false,"atc_append":"left","atc_append_heights":"stretch-quantity","uppercase_text":true,"icon_scale":120,"icon_spacing":10,"atc_custom_label":"","display_price":false,"price_position":"left","price_separator":"•","enable_custom_color":false,"custom_color":"#53af01","custom_text_color":"#ffffff","enable_secondary_btn":true,"secondary_btn_label":"Buy It Now","secondary_btn_enable_custom_color":false,"secondary_btn_custom_color":"#dd1d1d","margin_top":24,"margin_bottom":24},"blocks":{}},"e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5":{"type":"product_sticky-atc","settings":{"function":"add_to_cart","display_when":"after_scroll","button_label":"Add to cart","enable_custom_btn_color":false,"custom_btn_color":"#dd1d1d","color_scheme":"background-1","star_color":"#ffcc00","stars_label":"(xxxx Reviews)","picker_type":"combined","desktop_show_image":true,"desktop_show_title":true,"desktop_rating_stars":false,"desktop_show_price":true,"desktop_show_sale_badge":true,"desktop_variant_picker":true,"desktop_full_button_width":false,"desktop_show_price_in_button":false,"desktop_transparent_bg":false,"mobile_show_image":false,"mobile_show_title":true,"mobile_rating_stars":false,"mobile_show_price":true,"mobile_show_sale_badge":false,"mobile_variant_picker":false,"mobile_full_button_width":false,"mobile_show_price_in_button":false,"mobile_transparent_bg":false},"blocks":{}},"description":{"type":"product_description","disabled":true,"settings":{"margin_top":24,"margin_bottom":24},"blocks":{}},"de158e68-5d0d-4819-a625-e2dabdff87d1":{"type":"collapsible-row","settings":{"visibility":"always-display","open":false,"heading":"🚚 Shipping & Delivery","heading_size":"medium","icon":"","filled_icon":false,"collapse_icon":"carret","collapse_icon_style":"standard","collapse_icon_radius":15,"animation_speed":0.4,"border_type":"bottom","border_thickness":1,"border_style":"solid","corner_radius":8,"enable_custom_style":false,"heading_padding_vertical":12,"heading_padding_horizontal":10,"content_padding_vertical":10,"content_padding_horizontal":10,"closed_state_border":"#dddddd","closed_state_header_bg":"#f9f9f9","closed_state_header_text":"#121212","closed_state_row_icon":"#121212","closed_state_collapse_icon":"#121212","closed_state_collapse_icon_solid":"#ffffff","closed_state_collapse_bg":"#121212","closed_state_content_bg":"#f9f9f9","closed_state_content_text":"#121212","open_colors_on_hover":true,"open_state_border":"#d5aeea","open_state_header_bg":"#fefaff","open_state_header_text":"#000000","open_state_row_icon":"#6d388b","open_state_collapse_icon":"#121212","open_state_collapse_icon_solid":"#ffffff","open_state_collapse_bg":"#6d388b","open_state_content_bg":"#fefaff","open_state_content_text":"#121212","content":"<p>We process orders within <strong>1–2 business days<\/strong>.<\/p><p>Estimated Delivery Time:<br\/><br\/><strong>5–10 Business Days (USA)<\/strong><\/p><p>Once your order ships, you will receive a <strong>tracking number via email<\/strong> so you can monitor your package every step of the way.<\/p><h3>📦 What To Expect<\/h3><ul><li><br\/>Secure packaging<br\/><\/li><li><br\/>Tracking included<br\/><\/li><li><br\/>Responsive customer support<br\/><\/li><li><br\/>Delivery straight to your doorstep<br\/><\/li><\/ul><p>Please note: During holidays or high-demand periods, delivery may take slightly longer.<\/p><p>Have questions? Our support team is here to help 24\/7.<\/p>","page":"","margin_top":24,"margin_bottom":0},"blocks":{}},"collapsible_row_NUtAaV":{"type":"collapsible-row","settings":{"visibility":"always-display","open":false,"heading":"🛡️ 30-Day Money Back Guarantee","heading_size":"medium","icon":"","filled_icon":false,"collapse_icon":"carret","collapse_icon_style":"standard","collapse_icon_radius":15,"animation_speed":0.4,"border_type":"bottom","border_thickness":1,"border_style":"solid","corner_radius":8,"enable_custom_style":false,"heading_padding_vertical":12,"heading_padding_horizontal":10,"content_padding_vertical":10,"content_padding_horizontal":10,"closed_state_border":"#dddddd","closed_state_header_bg":"#f9f9f9","closed_state_header_text":"#121212","closed_state_row_icon":"#121212","closed_state_collapse_icon":"#121212","closed_state_collapse_icon_solid":"#ffffff","closed_state_collapse_bg":"#121212","closed_state_content_bg":"#f9f9f9","closed_state_content_text":"#121212","open_colors_on_hover":true,"open_state_border":"#d5aeea","open_state_header_bg":"#fefaff","open_state_header_text":"#000000","open_state_row_icon":"#6d388b","open_state_collapse_icon":"#121212","open_state_collapse_icon_solid":"#ffffff","open_state_collapse_bg":"#6d388b","open_state_content_bg":"#fefaff","open_state_content_text":"#121212","content":"<p>f you’re not completely satisfied, you have <strong>30 days from the date of delivery<\/strong> to request a return or refund.<\/p><h3>✔️ Our Promise<\/h3><ul><li><br\/>No complicated forms<br\/><\/li><li><br\/>No hidden fees<br\/><\/li><li><br\/>Fast response from our support team<br\/><\/li><li><br\/>Hassle-free process<br\/><\/li><\/ul><p>To start a return, simply contact our support team with your order number.<\/p><p>Your satisfaction is our priority.<\/p>","page":"","margin_top":24,"margin_bottom":0},"blocks":{}}},"block_order":["title","a6eb81db-40e4-43e0-972f-32db010a4a56","price","5fcc0428-e768-4cb7-bea3-eb0274198dd1","quantity_selector_4KXChJ","buy_buttons","e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5","description","de158e68-5d0d-4819-a625-e2dabdff87d1","collapsible_row_NUtAaV"],"custom_css":[],"settings":{"display_id":false,"enable_sticky_info":true,"color_scheme":"background-1","pattern_bg":"none","pattern_color":"#6d388b","pattern_size":20,"pattern_thickness":2,"pattern_angle":45,"pattern_opacity_mode":"low","pattern_opacity_low":7,"pattern_opacity_normal":80,"display_variant_image_first":false,"disable_prepend":true,"hide_variants":false,"variant_image_filtering":"none","image_zoom":"none","thumbnails_ratio":"square","arrows_color_scheme":"inverse","transparent_arrows":false,"dots_color_scheme":"inverse","video_player":"play_btn","enable_video_looping":false,"autoplay_videos_pause_btn":false,"video_sound_btn":false,"video_timeline":false,"play_btn_color_scheme":"accent-1","sound_btn_color_scheme":"inverse","timeline_color":"accent-1","media_size":"medium","media_position":"left","gallery_layout":"thumbnail_slider","desktop_thumbnails_position":"bottom","desktop_thumbnails_count":5,"desktop_vertical_thumbnails_width":16,"desktop_vertical_thumbnails_hide_arrows":false,"constrain_to_viewport":true,"media_fit":"contain","desktop_arrows_position":"hidden","mobile_media_corner_radius":0,"mobile_spacing_pixels":0,"mobile_arrows_position":"sides","mobile_pagination":"dots_overlay","mobile_thumbnails_position":"hidden","mobile_thumbnails_count":5,"mobile_vertical_thumbnails_width":22,"mobile_vertical_thumbnails_hide_arrows":true,"mobile_scroll_padding_percentage":0,"mobile_scroll_padding_pixels":0,"enable_mobile_outher_spacing":false,"mobile_slides_container_width":100,"mobile_slides_inner_width":100,"trust_badge_position":"top-right","trust_badge_size":"medium","mobile_padding_top":0,"mobile_padding_bottom":16,"desktop_padding_top":36,"desktop_padding_bottom":36}},"related-products":{"type":"related-products","disabled":true,"settings":{"display_id":false,"title":"You may also like","title_highlight_1":"solid-color","title_highlight_1_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_bg-color":"#f9efff","title_highlight_1_color":"#6d388b","highlighted-1_border_radius":8,"highlighted-1_border_width":0,"highlighted-1_border":"solid","highlighted-1_border_color":"#6d388b","highlighted-1_padding-block":0.3,"highlighted-1_padding-inline":0.3,"title_highlight_1_underline-thickness":2,"title_highlight_1_underline-color":"#6d388b","title_highlight_1_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_underline-color-position":25,"title_highlight_1_handwritten-color":"#6d388b","title_highlight_1_handwritten-stroke-width":3,"title_highlight_1_handwritten-position":60,"title_highlight_2":"none","title_highlight_2_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_bg-color":"#f9efff","title_highlight_2_color":"#6d388b","highlighted-2_border_radius":8,"highlighted-2_border_width":0,"highlighted-2_border":"solid","highlighted-2_border_color":"#6d388b","highlighted-2_padding-block":0.3,"highlighted-2_padding-inline":0.3,"title_highlight_2_underline-thickness":2,"title_highlight_2_underline-color":"#6d388b","title_highlight_2_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_underline-color-position":25,"title_highlight_2_handwritten-color":"#6d388b","title_highlight_2_handwritten-stroke-width":3,"title_highlight_2_handwritten-position":60,"heading_size":"h2","custom_desktop_size":39,"custom_mobile_size":28,"products_to_show":4,"stretch_cards":false,"columns_desktop":4,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"button_funcionality":"add-to-cart","button_label":"Go to product","columns_mobile":"2","padding_top":36,"padding_bottom":24}},"video_make_xkcDcG":{"type":"Video-Make","blocks":{"video_7eNrqN":{"type":"video","settings":{"html5_video":"shopify:\/\/files\/videos\/snaptik.vn_78zlA.mp4","product":"","collection":""}},"video_6TWDhg":{"type":"video","settings":{"html5_video":"shopify:\/\/files\/videos\/snaptik.vn_78zlA.mp4","product":"","collection":""}},"video_Kgptxn":{"type":"video","settings":{"html5_video":"shopify:\/\/files\/videos\/snaptik.vn_78zlA.mp4","product":"","collection":""}},"video_pjtd9L":{"type":"video","settings":{"html5_video":"shopify:\/\/files\/videos\/snaptik.vn_78zlA.mp4","product":"","collection":""}},"video_EHHqQc":{"type":"video","settings":{"html5_video":"shopify:\/\/files\/videos\/snaptik.vn_78zlA.mp4","product":"","collection":""}}},"block_order":["video_7eNrqN","video_6TWDhg","video_Kgptxn","video_pjtd9L","video_EHHqQc"],"name":"Video carousel","settings":{"slide_width":300,"image_crop":"none","aspect_ratio":"9:16","autoplay":6,"gap":9,"show_arrows":false,"text_size":100,"text_alignment":"left","text_color":"#121212","border_color":"#121212","background_color":"","border_radius":30,"base_width":80,"max_width":"","inner_padding":40,"outer_margin":0,"custom_css":"","mobile_custom_css":"","anchor_id":"","override_theme_font":false,"heading_font":"serif","main_font":"system_ui_n4"}},"logo_list_wPJ7px":{"type":"logo-list","blocks":{"logo_PV7HW9":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/Bellroy_idP6Q6-WR0_0_1.png","link":"","target_blank":false}},"logo_mPG6jP":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/Nomatic_Black.webp","link":"","target_blank":false}},"logo_rxDk9Q":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/cropped-cropped-Peak-Design-Logo-1000-3.png","link":"","target_blank":false}},"logo_ATrUrM":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/pngegg.png","link":"","target_blank":false}}},"block_order":["logo_PV7HW9","logo_mPG6jP","logo_rxDk9Q","logo_ATrUrM"],"name":"Featured on","settings":{"display_id":false,"visibility":"always-display","title":"Featured on","title_highlight_1":"solid-color","title_highlight_1_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_bg-color":"#f9efff","title_highlight_1_color":"#6d388b","highlighted-1_border_radius":8,"highlighted-1_border_width":0,"highlighted-1_border":"solid","highlighted-1_border_color":"#6d388b","highlighted-1_padding-block":0.3,"highlighted-1_padding-inline":0.3,"title_highlight_1_underline-thickness":2,"title_highlight_1_underline-color":"#6d388b","title_highlight_1_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_underline-color-position":25,"title_highlight_1_handwritten-color":"#6d388b","title_highlight_1_handwritten-stroke-width":3,"title_highlight_1_handwritten-position":60,"title_highlight_2":"none","title_highlight_2_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_bg-color":"#f9efff","title_highlight_2_color":"#6d388b","highlighted-2_border_radius":8,"highlighted-2_border_width":0,"highlighted-2_border":"solid","highlighted-2_border_color":"#6d388b","highlighted-2_padding-block":0.3,"highlighted-2_padding-inline":0.3,"title_highlight_2_underline-thickness":2,"title_highlight_2_underline-color":"#6d388b","title_highlight_2_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_underline-color-position":25,"title_highlight_2_handwritten-color":"#6d388b","title_highlight_2_handwritten-stroke-width":3,"title_highlight_2_handwritten-position":60,"heading_size":"h2","custom_desktop_size":39,"custom_mobile_size":28,"gray_logos":false,"color_scheme":"background-1","custom_colors_background":"#ffffff","custom_gradient_background":"","custom_colors_text":"#121212","pattern_bg":"none","pattern_color":"#6d388b","pattern_size":20,"pattern_thickness":2,"pattern_angle":45,"pattern_opacity_mode":"low","pattern_opacity_low":7,"pattern_opacity_normal":80,"layout":"vertical","desktop_logo_height":80,"columns_mobile":2,"mobile_logo_height":50,"mobile_slider":true,"autoplay":true,"autoplay_speed":5,"show_dots":true,"padding_top":36,"padding_bottom":36}},"image_with_text_tWejha":{"type":"image-with-text","blocks":{"text_X8BmJE":{"type":"text","settings":{"visibility":"always-display","text":"<h3>🎒 Compact Yet Spacious<\/h3><p>Carries all your daily essentials without looking bulky.<\/p><h3>🔒 Anti-Theft Front Carry<\/h3><p>Wear it on your chest to keep valuables safe in crowded places.<\/p><h3>💧 Water-Resistant Fabric<\/h3><p>Protects your belongings from light rain and splashes.<\/p><h3>🧵 Premium Craftsmanship<\/h3><p>Clean stitching, smooth zippers, and durable materials built to last.<\/p>","alignment":"left","mobile_alignment":"mobile-center","text_size":14,"enable_custom_color":false,"custom_text_color":"#ff0000","bold_text_style":"none","bold_solid_color":"#6d388b","bold_gradient_color":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","bold_bg_color":"#ffd700","bold_bg_text_color":"#000000","bold_bg_padding_inline":0.7,"bold_bg_padding_block":0.2,"bold_bg_border_radius":8,"bold_bg_border_width":0,"bold_bg_border_style":"solid","bold_bg_border_color":"#121212","bold_remove_weight":false,"italic_text_style":"none","italic_solid_color":"#6d388b","italic_gradient_color":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","italic_bg_color":"#ffd700","italic_bg_text_color":"#121212","italic_bg_padding_inline":0.7,"italic_bg_padding_block":0.2,"italic_bg_border_radius":8,"italic_bg_border_width":0,"italic_bg_border_style":"solid","italic_bg_border_color":"#121212","italic_remove_style":false,"text_animation":"none","split_type":"chars","split_delay":30,"split_duration":600,"split_y_offset":40,"split_animate_on_scroll":true,"shiny_speed":5,"shiny_on_scroll":false,"blur_type":"words","blur_direction":"top","blur_delay":200,"blur_duration":350,"blur_animate_on_scroll":true,"highlight_bold_only":false,"remove_bold_weight":false,"highlight_color":"#ffd1dc","highlight_height":40,"highlight_position":10,"highlighter_underline_color":"#000000","highlighter_underline_thickness":2,"highlighter_underline_offset":0,"highlighter_strike_color":"#ff0000","highlighter_strike_thickness":2,"highlighter_strike_offset":0,"highlighter_animation_duration":800,"highlighter_animation_delay":200,"highlighter_animate_on_scroll":false,"typing_speed":50,"typing_initial_delay":0,"typing_pause_duration":2000,"typing_deleting_speed":30,"typing_loop":true,"typing_show_cursor":true,"typing_cursor_character":"|","typing_cursor_blink_duration":500,"typing_hide_cursor_while_typing":false,"typing_start_on_visible":false,"typing_reverse_mode":false,"margin_top":15,"margin_bottom":15},"blocks":{}}},"block_order":["text_X8BmJE"],"name":"t:sections.image-with-text.presets.name","settings":{"display_id":false,"visibility":"always-display","image":"shopify:\/\/shop_images\/aee9f39e-8a86-44ba-bfcd-a71c6d18017b_2.png","video_autoplay":true,"video_loop":true,"height":"adapt","color_scheme":"background-1","custom_colors_background":"#2e2a39","custom_gradient_background":"","custom_colors_text":"#ffffff","custom_colors_solid_button_background":"#dd1d1d","custom_colors_solid_button_text":"#ffffff","custom_colors_outline_button":"#dd1d1d","section_color_scheme":"background-1","custom_section_colors_background":"#ffffff","custom_section_gradient_background":"","full_desktop_width":false,"content_layout":"no-overlap","desktop_media_width":50,"layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","mobile_full_media_width":false,"mobile_direction":"normal","mobile_image_quanlity":"2","mobile_content_alignment":"left","mobile_padding_top":0,"mobile_padding_bottom":16,"desktop_padding_top":36,"desktop_padding_bottom":36}},"image_with_text_CHwqTD":{"type":"image-with-text","blocks":{"text_MmVNnA":{"type":"text","settings":{"visibility":"always-display","text":"<h3>🔒 Built to Feel Premium<\/h3><p><strong>Smooth zippers. Strong stitching. Built for daily use.<\/strong><\/p><p>You’ll notice the difference the moment you touch it — from the solid metal zipper to the clean, reinforced stitching designed to last.<\/p><h3>🧵 Durable, Everyday Materials<\/h3><p><strong>Made to handle daily wear without wearing out.<\/strong><\/p><p>High-quality fabric that keeps its shape and resists fraying over time.<\/p><h3>💧 Water-Resistant Protection<\/h3><p><strong>Light rain? No worries.<\/strong><\/p><p>Your essentials stay dry and protected throughout the day.<\/p><p><\/p>","alignment":"left","mobile_alignment":"mobile-center","text_size":14,"enable_custom_color":false,"custom_text_color":"#ff0000","bold_text_style":"none","bold_solid_color":"#6d388b","bold_gradient_color":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","bold_bg_color":"#ffd700","bold_bg_text_color":"#000000","bold_bg_padding_inline":0.7,"bold_bg_padding_block":0.2,"bold_bg_border_radius":8,"bold_bg_border_width":0,"bold_bg_border_style":"solid","bold_bg_border_color":"#121212","bold_remove_weight":false,"italic_text_style":"none","italic_solid_color":"#6d388b","italic_gradient_color":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","italic_bg_color":"#ffd700","italic_bg_text_color":"#121212","italic_bg_padding_inline":0.7,"italic_bg_padding_block":0.2,"italic_bg_border_radius":8,"italic_bg_border_width":0,"italic_bg_border_style":"solid","italic_bg_border_color":"#121212","italic_remove_style":false,"text_animation":"none","split_type":"chars","split_delay":30,"split_duration":600,"split_y_offset":40,"split_animate_on_scroll":true,"shiny_speed":5,"shiny_on_scroll":false,"blur_type":"words","blur_direction":"top","blur_delay":200,"blur_duration":350,"blur_animate_on_scroll":true,"highlight_bold_only":false,"remove_bold_weight":false,"highlight_color":"#ffd1dc","highlight_height":40,"highlight_position":10,"highlighter_underline_color":"#000000","highlighter_underline_thickness":2,"highlighter_underline_offset":0,"highlighter_strike_color":"#ff0000","highlighter_strike_thickness":2,"highlighter_strike_offset":0,"highlighter_animation_duration":800,"highlighter_animation_delay":200,"highlighter_animate_on_scroll":false,"typing_speed":50,"typing_initial_delay":0,"typing_pause_duration":2000,"typing_deleting_speed":30,"typing_loop":true,"typing_show_cursor":true,"typing_cursor_character":"|","typing_cursor_blink_duration":500,"typing_hide_cursor_while_typing":false,"typing_start_on_visible":false,"typing_reverse_mode":false,"margin_top":15,"margin_bottom":15},"blocks":{}}},"block_order":["text_MmVNnA"],"name":"t:sections.image-with-text.presets.name","settings":{"display_id":false,"visibility":"always-display","image":"shopify:\/\/shop_images\/48ce2d8b-8832-49a5-87d1-85f34e46abd1_2.png","video_autoplay":true,"video_loop":true,"height":"adapt","color_scheme":"background-1","custom_colors_background":"#2e2a39","custom_gradient_background":"","custom_colors_text":"#ffffff","custom_colors_solid_button_background":"#dd1d1d","custom_colors_solid_button_text":"#ffffff","custom_colors_outline_button":"#dd1d1d","section_color_scheme":"background-1","custom_section_colors_background":"#ffffff","custom_section_gradient_background":"","full_desktop_width":false,"content_layout":"no-overlap","desktop_media_width":50,"layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","mobile_full_media_width":false,"mobile_direction":"normal","mobile_image_quanlity":"2","mobile_content_alignment":"left","mobile_padding_top":0,"mobile_padding_bottom":16,"desktop_padding_top":36,"desktop_padding_bottom":36}},"horizontal_ticker_AMPAU8":{"type":"horizontal-ticker","blocks":{"text_FBjFH8":{"type":"text","settings":{"title":"✈️ Designed for City Life & Travel"}},"text_eXxbmz":{"type":"text","settings":{"title":"⚡ Limited Stock | Order Yours Today"}},"text_JAGAqU":{"type":"text","settings":{"title":"🚚 Free Shipping | 30-Day Money Back Guarantee"}}},"block_order":["text_FBjFH8","text_eXxbmz","text_JAGAqU"],"name":"Horizontal Ticker","settings":{"display_id":false,"visibility":"always-display","speed":2,"direction":"normal","stop_on_hover":false,"mobile_spacing":60,"desktop_spacing":100,"color_scheme":"accent-1","custom_colors_background":"#ffffff","custom_gradient_background":"","custom_colors_text":"#2e2a39","pattern_bg":"none","pattern_color":"#6d388b","pattern_size":20,"pattern_thickness":2,"pattern_angle":45,"pattern_opacity_mode":"low","pattern_opacity_low":7,"pattern_opacity_normal":80,"mobile_text_size":16,"desktop_text_size":18,"italic_text":false,"uppercase_text":true,"bold_text":true,"mobile_image_height":26,"desktop_image_height":40,"mobile_video_height":150,"desktop_video_height":250,"mobile_reviews_width":300,"desktop_reviews_width":400,"hidden_products":"","enable_specific_display":false,"displayed_products":"","mobile_padding_top":12,"mobile_padding_bottom":12,"desktop_padding_top":16,"desktop_padding_bottom":16}},"55bd100e-3bbd-426c-a5cf-eed7b2a3706f":{"type":"testimonials","blocks":{"template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/8159934f-5852-4008-9b0d-51b9e02fceca_0feb6f5c-c19c-43fe-af73-f82f6f06ac19.png","star_rating":5,"title":"“Perfect size for everyday carry.”","text":"<p>I’ve been using this bag daily for work and city walks. It fits my phone, wallet, keys, and power bank without feeling bulky. The quality feels premium for the price.<\/p>","author":"— <strong>Jason M., California<\/strong>"}},"template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/V2.png","star_rating":5,"title":"“Minimal, clean, and very practical.”","text":"<p>The design is simple but looks really good with casual outfits. I get compliments all the time. Lightweight and easy to wear all day.<\/p>","author":"— <strong>Mark T., New York<\/strong>"}},"template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-3":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/V1_1.png","star_rating":5,"title":"“Great for travel and crowded places.”","text":"<p>I wore this during a recent trip and loved the front-carry design. It feels secure and comfortable, especially in busy areas. The zipper is smooth and sturdy.<\/p>","author":"— <strong>Alex R., Texas<\/strong>"}}},"block_order":["template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-1","template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-2","template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-3"],"settings":{"display_id":false,"visibility":"always-display","title":"⭐ What Our Customers Are Saying","title_highlight_1":"solid-color","title_highlight_1_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_bg-color":"#f9efff","title_highlight_1_color":"#6d388b","highlighted-1_border_radius":8,"highlighted-1_border_width":0,"highlighted-1_border":"solid","highlighted-1_border_color":"#6d388b","highlighted-1_padding-block":0.3,"highlighted-1_padding-inline":0.3,"title_highlight_1_underline-thickness":2,"title_highlight_1_underline-color":"#6d388b","title_highlight_1_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_underline-color-position":25,"title_highlight_1_handwritten-color":"#6d388b","title_highlight_1_handwritten-stroke-width":3,"title_highlight_1_handwritten-position":60,"title_highlight_2":"none","title_highlight_2_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_bg-color":"#f9efff","title_highlight_2_color":"#6d388b","highlighted-2_border_radius":8,"highlighted-2_border_width":0,"highlighted-2_border":"solid","highlighted-2_border_color":"#6d388b","highlighted-2_padding-block":0.3,"highlighted-2_padding-inline":0.3,"title_highlight_2_underline-thickness":2,"title_highlight_2_underline-color":"#6d388b","title_highlight_2_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_underline-color-position":25,"title_highlight_2_handwritten-color":"#6d388b","title_highlight_2_handwritten-stroke-width":3,"title_highlight_2_handwritten-position":60,"heading_size":"h1","custom_desktop_size":39,"custom_mobile_size":28,"text":"","color_scheme":"background-1","custom_colors_background":"#ffffff","custom_gradient_background":"","custom_colors_text":"#2e2a39","pattern_bg":"none","pattern_color":"#6d388b","pattern_size":20,"pattern_thickness":2,"pattern_angle":45,"pattern_opacity_mode":"low","pattern_opacity_low":7,"pattern_opacity_normal":80,"image_width":"full","image_ratio":"square","column_alignment":"center","show_stars":true,"inactive_stars_style":"solid","star_color":"#ffcc00","bg_star_color":"#ececec","show_quotes":true,"quotes_color_scheme":"accent-2","cards_color_scheme":"bg-overlay","custom_cards_colors_background":"#f3f3f3","custom_cards_gradient_background":"","custom_cards_colors_text":"#2e2a39","type":"slide","autoplay":false,"autoplay_speed":5,"arrows_color_scheme":"inverse","transparent_arrows":true,"dots_color_scheme":"inverse","desktop_full_page":false,"columns_desktop":3,"slider_desktop":false,"per_move_desktop":1,"desktop_spacing":40,"desktop_side_padding":0,"desktop_padding_calc":true,"desktop_adaptive_height":false,"desktop_dots_position":"under","desktop_arrows_position":"sides","slider_mobile":true,"enable_mobile_preview":false,"mobile_adaptive_height":false,"mobile_dots_position":"under","mobile_arrows_position":"under","padding_top":36,"padding_bottom":36}},"icon_bar_FD8YMn":{"type":"icon-bar","blocks":{"column_KgG7yp":{"type":"column","settings":{"icon":"Local Shipping","filled_icon":true,"title":"Free Shipping","text":"<p>Free shipping on all orders.<br\/>No hidden fees. No surprises at checkout.<\/p>"}},"column_dyeMWQ":{"type":"column","settings":{"icon":"Assignment Returned","filled_icon":true,"title":"30-Day Money-Back Guarantee","text":"<p>Not satisfied? Get a full refund within 30 days.<br\/>No questions asked.<\/p>"}},"column_VzPRa7":{"type":"column","settings":{"icon":"Star","filled_icon":true,"title":"Satisfaction Guaranteed","text":"<p>Your satisfaction is our top priority.<br\/>We stand behind every order.<\/p>"}}},"block_order":["column_KgG7yp","column_dyeMWQ","column_VzPRa7"],"name":"Icon Bar","settings":{"display_id":false,"visibility":"always-display","title":"","title_highlight_1":"solid-color","title_highlight_1_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_bg-color":"#f9efff","title_highlight_1_color":"#6d388b","highlighted-1_border_radius":8,"highlighted-1_border_width":0,"highlighted-1_border":"solid","highlighted-1_border_color":"#6d388b","highlighted-1_padding-block":0.3,"highlighted-1_padding-inline":0.3,"title_highlight_1_underline-thickness":2,"title_highlight_1_underline-color":"#6d388b","title_highlight_1_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_underline-color-position":25,"title_highlight_1_handwritten-color":"#6d388b","title_highlight_1_handwritten-stroke-width":3,"title_highlight_1_handwritten-position":60,"title_highlight_2":"none","title_highlight_2_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_bg-color":"#f9efff","title_highlight_2_color":"#6d388b","highlighted-2_border_radius":8,"highlighted-2_border_width":0,"highlighted-2_border":"solid","highlighted-2_border_color":"#6d388b","highlighted-2_padding-block":0.3,"highlighted-2_padding-inline":0.3,"title_highlight_2_underline-thickness":2,"title_highlight_2_underline-color":"#6d388b","title_highlight_2_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_underline-color-position":25,"title_highlight_2_handwritten-color":"#6d388b","title_highlight_2_handwritten-stroke-width":3,"title_highlight_2_handwritten-position":60,"heading_size":"h1","custom_desktop_size":39,"custom_mobile_size":28,"text":"","color_scheme":"background-1","custom_colors_background":"#ffffff","custom_gradient_background":"","custom_colors_text":"#2e2a39","pattern_bg":"none","pattern_color":"#6d388b","pattern_size":20,"pattern_thickness":2,"pattern_angle":45,"pattern_opacity_mode":"low","pattern_opacity_low":7,"pattern_opacity_normal":80,"icon_layout":"vertical","icon_size":"medium","icon_color":"accent-1","cards_color_scheme":"background-1","custom_cards_colors_background":"#f3f3f3","custom_cards_gradient_background":"","custom_cards_colors_text":"#2e2a39","type":"slide","autoplay":false,"autoplay_speed":5,"arrows_color_scheme":"inverse","transparent_arrows":true,"dots_color_scheme":"inverse","desktop_full_page":false,"columns_desktop":3,"slider_desktop":false,"per_move_desktop":1,"desktop_spacing":40,"desktop_side_padding":0,"desktop_padding_calc":true,"desktop_adaptive_height":false,"desktop_dots_position":"under","desktop_arrows_position":"sides","columns_mobile":"1","slider_mobile":true,"enable_mobile_preview":false,"mobile_adaptive_height":false,"mobile_dots_position":"under","mobile_arrows_position":"under","padding_top":36,"padding_bottom":36}},"rich_text_bdPH4C":{"type":"rich-text","blocks":{"heading_QHEDVT":{"type":"heading","settings":{"visibility":"always-display","title":"UrbanFlex Crossbody Bag","heading_size":"h1","custom_desktop_size":39,"custom_mobile_size":28,"alignment":"left","mobile_alignment":"mobile-left","enable_custom_color":false,"custom_color":"#ff0000","title_highlight_1":"solid-color","title_highlight_1_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_bg-color":"#f9efff","title_highlight_1_color":"#6d388b","highlighted-1_border_radius":8,"highlighted-1_border_width":0,"highlighted-1_border":"solid","highlighted-1_border_color":"#6d388b","highlighted-1_padding-block":0.3,"highlighted-1_padding-inline":0.3,"title_highlight_1_underline-thickness":2,"title_highlight_1_underline-color":"#6d388b","title_highlight_1_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_1_underline-color-position":25,"title_highlight_1_handwritten-color":"#6d388b","title_highlight_1_handwritten-stroke-width":3,"title_highlight_1_handwritten-position":60,"title_highlight_2":"none","highlight_2_keep_italic":false,"title_highlight_2_gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_bg-color":"#f9efff","title_highlight_2_color":"#6d388b","highlighted-2_border_radius":8,"highlighted-2_border_width":0,"highlighted-2_border":"solid","highlighted-2_border_color":"#6d388b","highlighted-2_padding-block":0.3,"highlighted-2_padding-inline":0.3,"title_highlight_2_underline-thickness":2,"title_highlight_2_underline-color":"#6d388b","title_highlight_2_underline-color--gradient":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","title_highlight_2_underline-color-position":25,"title_highlight_2_handwritten-color":"#6d388b","title_highlight_2_handwritten-stroke-width":3,"title_highlight_2_handwritten-position":60,"text_animation":"none","split_type":"chars","split_delay":30,"split_duration":600,"split_y_offset":40,"split_animate_on_scroll":true,"shiny_speed":5,"shiny_on_scroll":false,"blur_type":"words","blur_direction":"top","blur_delay":200,"blur_duration":350,"blur_animate_on_scroll":true,"highlight_bold_only":false,"remove_bold_styling":false,"highlight_color":"#ffd1dc","highlight_height":40,"highlight_position":10,"highlighter_underline_color":"#000000","highlighter_underline_thickness":2,"highlighter_underline_offset":0,"highlighter_strike_color":"#ff0000","highlighter_strike_thickness":2,"highlighter_strike_offset":0,"highlighter_animation_duration":800,"highlighter_animation_delay":200,"highlighter_animate_on_scroll":false,"typing_speed":50,"typing_initial_delay":0,"typing_pause_duration":2000,"typing_deleting_speed":30,"typing_loop":true,"typing_show_cursor":true,"typing_cursor_character":"|","typing_cursor_blink_duration":500,"typing_hide_cursor_while_typing":false,"typing_start_on_visible":false,"typing_reverse_mode":false,"margin_top":15,"margin_bottom":15},"blocks":{}},"text_bA9MBF":{"type":"text","settings":{"visibility":"always-display","text":"<p><strong>keeps everything organized, secure, and accessible<\/strong> — without weighing you down.<\/p><p>Designed for modern city life, travel, and everyday movement.<\/p>","alignment":"left","mobile_alignment":"mobile-center","text_size":14,"enable_custom_color":false,"custom_text_color":"#ff0000","bold_text_style":"none","bold_solid_color":"#6d388b","bold_gradient_color":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","bold_bg_color":"#ffd700","bold_bg_text_color":"#000000","bold_bg_padding_inline":0.7,"bold_bg_padding_block":0.2,"bold_bg_border_radius":8,"bold_bg_border_width":0,"bold_bg_border_style":"solid","bold_bg_border_color":"#121212","bold_remove_weight":false,"italic_text_style":"none","italic_solid_color":"#6d388b","italic_gradient_color":"linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)","italic_bg_color":"#ffd700","italic_bg_text_color":"#121212","italic_bg_padding_inline":0.7,"italic_bg_padding_block":0.2,"italic_bg_border_radius":8,"italic_bg_border_width":0,"italic_bg_border_style":"solid","italic_bg_border_color":"#121212","italic_remove_style":false,"text_animation":"none","split_type":"chars","split_delay":30,"split_duration":600,"split_y_offset":40,"split_animate_on_scroll":true,"shiny_speed":5,"shiny_on_scroll":false,"blur_type":"words","blur_direction":"top","blur_delay":200,"blur_duration":350,"blur_animate_on_scroll":true,"highlight_bold_only":false,"remove_bold_weight":false,"highlight_color":"#ffd1dc","highlight_height":40,"highlight_position":10,"highlighter_underline_color":"#000000","highlighter_underline_thickness":2,"highlighter_underline_offset":0,"highlighter_strike_color":"#ff0000","highlighter_strike_thickness":2,"highlighter_strike_offset":0,"highlighter_animation_duration":800,"highlighter_animation_delay":200,"highlighter_animate_on_scroll":false,"typing_speed":50,"typing_initial_delay":0,"typing_pause_duration":2000,"typing_deleting_speed":30,"typing_loop":true,"typing_show_cursor":true,"typing_cursor_character":"|","typing_cursor_blink_duration":500,"typing_hide_cursor_while_typing":false,"typing_start_on_visible":false,"typing_reverse_mode":false,"margin_top":15,"margin_bottom":15},"blocks":{}}},"block_order":["heading_QHEDVT","text_bA9MBF"],"name":"Rich text","settings":{"display_id":false,"visibility":"always-display","desktop_content_position":"center","desktop_content_alignment":"center","mobile_content_alignment":"center","full_width":true,"mobile_narrow_width":false,"color_scheme":"background-1","custom_colors_background":"#ffffff","custom_gradient_background":"","custom_colors_text":"#2e2a39","custom_colors_solid_button_background":"#dd1d1d","custom_colors_solid_button_text":"#ffffff","custom_colors_outline_button":"#dd1d1d","pattern_bg":"none","pattern_color":"#6d388b","pattern_size":20,"pattern_thickness":2,"pattern_angle":45,"pattern_opacity_mode":"low","pattern_opacity_low":7,"pattern_opacity_normal":80,"padding_top":40,"padding_bottom":52}}},"order":["main","related-products","video_make_xkcDcG","logo_list_wPJ7px","image_with_text_tWejha","image_with_text_CHwqTD","horizontal_ticker_AMPAU8","55bd100e-3bbd-426c-a5cf-eed7b2a3706f","icon_bar_FD8YMn","rich_text_bdPH4C"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "product_title",
+          "settings": {
+            "uppercase_title": false,
+            "desktop_size": 39,
+            "alignment": "left",
+            "mobile_size": 28,
+            "mobile_alignment": "mobile-left",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
+          "type": "rating-stars",
+          "settings": {
+            "visibility": "always-display",
+            "rating": 4.9,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "(1255+ Verified Reviews)",
+            "size": 16,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 9
+          },
+          "blocks": {}
+        },
+        "price": {
+          "type": "product_price",
+          "settings": {
+            "price_layout": "price-first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "regular_price_size": 25,
+            "sale_price_size": 20,
+            "compare_price_size": 16,
+            "displayed_badge": "sale",
+            "sale_badge_color": "accent-2",
+            "custom_badge_text": "[icon_1] SPECIAL OFFER",
+            "icon_scale": 140,
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 9,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "5fcc0428-e768-4cb7-bea3-eb0274198dd1": {
+          "type": "product_product-variant-picker-block",
+          "settings": {
+            "picker_types": "pills, dropdown, dropdown",
+            "custom_labels": "[name] - [selected]",
+            "skip_unavailable": false,
+            "append": "option_1_label_container",
+            "swatches_size": "medium",
+            "swatches_custom_colors": "disabled",
+            "swatches_custom_colors_list": "#000000, #6D388B, #0000FF, #FFCC00",
+            "full_width_dropdowns": false,
+            "breaks_style": "normal",
+            "breaks_headline": "BUNDLE & SAVE",
+            "breaks_prices_layout": "price-first-vertical",
+            "breaks_display_selected_indicator": true,
+            "breaks_border_radius": 10,
+            "breaks_border_width": 2,
+            "breaks_color_scheme": "accent-1",
+            "breaks_vertical_items_align": "flex-start",
+            "breaks_badges": "[empty], Most popular, [empty]",
+            "breaks_badge_style": "1",
+            "breaks_badge_color": "accent-1",
+            "breaks_displayed_images": "variant_images",
+            "breaks_custom_images": "",
+            "breaks_image_width": 70,
+            "breaks_space_images": true,
+            "breaks_vertical_images_position": "top",
+            "breaks_labels": "[name], [name], [name]",
+            "breaks_benefits": "[empty], Free Shipping, Free Shipping",
+            "breaks_benefit_position": "top",
+            "breaks_benefit_style": "outlined",
+            "breaks_benefit_color": "accent-1",
+            "breaks_captions": "Variant 1 caption, Variant 2 caption, Variant 3 caption",
+            "breaks_price_texts": "[price], [price], [price]",
+            "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
+            "margin_top": 15,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "quantity_selector_4KXChJ": {
+          "type": "product_quantity-selector",
+          "settings": {
+            "full_width_classic": false,
+            "enable_quantity_discounts": true,
+            "headline": "BUNDLE & SAVE",
+            "style": "normal",
+            "preselected": "option_2",
+            "update_pdp_prices": true,
+            "prices_layout": "price-first-vertical",
+            "display_selected_indicator": true,
+            "border_radius": 10,
+            "border_width": 2,
+            "colors": "theme",
+            "color_scheme": "accent-1",
+            "accent_color": "accent-1",
+            "non_selected_border_style": "solid",
+            "non_selected_border_color": "#d9d9d9",
+            "non_selected_background_type": "color",
+            "non_selected_background_color": "#fbfbfb",
+            "non_selected_background_gradient": "linear-gradient(#ffffff, #f5f5f5)",
+            "non_selected_text_color": "#565656",
+            "non_selected_accent_color": "#a16ac0",
+            "non_selected_badge_text_color": "#ffffff",
+            "non_selected_badge_bg_color": "#a16ac0",
+            "non_selected_benefit_text_color": "#a16ac0",
+            "non_selected_benefit_bg_color": "#ffffff",
+            "non_selected_benefit_border_color": "#a16ac0",
+            "selected_border_style": "solid",
+            "selected_border_color": "#6d388b",
+            "selected_background_type": "color",
+            "selected_background_color": "#f2eaf6",
+            "selected_background_gradient": "linear-gradient(#FBF4FF, #E6D5F1)",
+            "selected_text_color": "#121212",
+            "selected_accent_color": "#6d388b",
+            "selected_badge_text_color": "#ffffff",
+            "selected_badge_bg_color": "#6d388b",
+            "selected_benefit_text_color": "#6d388b",
+            "selected_benefit_bg_color": "#ffffff",
+            "selected_benefit_border_color": "#6d388b",
+            "upsells_primary_style_bg_color": "#6d388b",
+            "upsells_primary_style_text_color": "#ffffff",
+            "upsells_primary_style_badge_bg": "#121212",
+            "upsells_primary_style_badge_text_color": "#ffffff",
+            "upsells_secondary_style_bg_color": "#e6dcf0",
+            "upsells_secondary_style_text_color": "#121212",
+            "upsells_secondary_style_badge_bg": "#6d388b",
+            "upsells_secondary_style_badge_text_color": "#ffffff",
+            "selected_upsells_primary_style_bg_color": "#6d388b",
+            "selected_upsells_primary_style_text_color": "#ffffff",
+            "selected_upsells_primary_style_badge_bg": "#121212",
+            "selected_upsells_primary_style_badge_text_color": "#ffffff",
+            "selected_upsells_secondary_style_bg_color": "#e6dcf0",
+            "selected_upsells_secondary_style_text_color": "#121212",
+            "selected_upsells_secondary_style_badge_bg": "#6d388b",
+            "selected_upsells_secondary_style_badge_text_color": "#ffffff",
+            "enable_variant_selectors": true,
+            "pickers_label": "",
+            "enable_variant_selectors_on_quantity_of_1": false,
+            "update_prices": true,
+            "pickers_number_text": "<strong>#[index]</strong>",
+            "show_selected_variant_images": false,
+            "variant_images_position": "middle",
+            "skip_unavailable": false,
+            "full_width_pickers": false,
+            "hide_pickers_overlay": true,
+            "indicator_top": true,
+            "scroll_media_gallery": true,
+            "image_width": 70,
+            "vertical_items_align": "flex-start",
+            "space_images": true,
+            "vertical_images_position": "top",
+            "hide_upsells_on_non_selected": true,
+            "upsells_primary_style_badge_color_scheme": "inverse",
+            "upsells_secondary_style_badge_color_scheme": "accent-1",
+            "upsells_image_size": 27,
+            "upsells_text_size": 11,
+            "upsells_badge_radius": 45,
+            "upsell_1_product": "",
+            "upsell_1_min_offer": "2",
+            "upsell_1_type": "checkbox_preselected",
+            "upsell_1_design": "primary",
+            "upsell_1_badge_position": "left",
+            "upsell_1_text_left": "Add [title]",
+            "upsell_1_text_right": "<strong>[price]</strong>",
+            "upsell_1_badge_text": "",
+            "upsell_2_product": "",
+            "upsell_2_min_offer": "2",
+            "upsell_2_type": "checkbox_preselected",
+            "upsell_2_design": "primary",
+            "upsell_2_badge_position": "left",
+            "upsell_2_text_left": "Add [title]",
+            "upsell_2_text_right": "<strong>[price]</strong>",
+            "upsell_2_badge_text": "",
+            "upsell_3_product": "",
+            "upsell_3_min_offer": "2",
+            "upsell_3_type": "checkbox_preselected",
+            "upsell_3_design": "primary",
+            "upsell_3_badge_position": "left",
+            "upsell_3_text_left": "Add [title]",
+            "upsell_3_text_right": "<strong>[price]</strong>",
+            "upsell_3_badge_text": "",
+            "option_1_quantity": 1,
+            "option_1_percentage_off_text": "0",
+            "option_1_fixed_amount_off": "0",
+            "option_1_compare_price": "compare_price",
+            "option_1_badge": "",
+            "option_1_label": "<strong>Buy [quantity] - Everyday Essential</strong>",
+            "option_1_benefit": "",
+            "option_1_caption": "You save [amount_saved]",
+            "option_1_price_text": "<em><strong>[price]</strong></em>",
+            "option_1_compare_price_text": "[compare_price]",
+            "option_1_badge_style": "1",
+            "option_1_badge_color": "accent-1",
+            "option_1_benefit_position": "top",
+            "option_1_benefit_style": "outlined",
+            "option_1_benefit_radius": 45,
+            "option_1_benefit_color": "accent-1",
+            "option_2_quantity": 2,
+            "option_2_percentage_off_text": "0",
+            "option_2_fixed_amount_off": "",
+            "option_2_compare_price": "compare_price",
+            "option_2_badge": "<strong>MOST POPULAR</strong>",
+            "option_2_label": "<strong>Buy [quantity] - Travel Ready</strong>",
+            "option_2_benefit": "FREE SHIPPING",
+            "option_2_caption": "You save [amount_saved]",
+            "option_2_price_text": "<em><strong>[price]</strong></em>",
+            "option_2_compare_price_text": "[compare_price]",
+            "option_2_badge_style": "1",
+            "option_2_badge_color": "accent-1",
+            "option_2_benefit_position": "top",
+            "option_2_benefit_style": "outlined",
+            "option_2_benefit_radius": 45,
+            "option_2_benefit_color": "accent-1",
+            "option_3_quantity": 3,
+            "option_3_percentage_off_text": "0",
+            "option_3_fixed_amount_off": "0",
+            "option_3_compare_price": "compare_price",
+            "option_3_badge": "",
+            "option_3_label": "<strong>Buy [quantity] - Family / Gift Set</strong>",
+            "option_3_benefit": "",
+            "option_3_caption": "You save [amount_saved]",
+            "option_3_price_text": "<em><strong>[price]</strong></em>",
+            "option_3_compare_price_text": "[compare_price]",
+            "option_3_badge_style": "1",
+            "option_3_badge_color": "accent-1",
+            "option_3_benefit_position": "top",
+            "option_3_benefit_style": "outlined",
+            "option_3_benefit_radius": 45,
+            "option_3_benefit_color": "accent-1",
+            "option_4_quantity": 0,
+            "option_4_percentage_off_text": "0",
+            "option_4_fixed_amount_off": "0",
+            "option_4_compare_price": "compare_price",
+            "option_4_badge": "",
+            "option_4_label": "<strong>Buy [quantity]</strong>",
+            "option_4_benefit": "",
+            "option_4_caption": "You save [amount_saved]",
+            "option_4_price_text": "<em><strong>[price]</strong></em>",
+            "option_4_compare_price_text": "[compare_price]",
+            "option_4_badge_style": "1",
+            "option_4_badge_color": "accent-1",
+            "option_4_benefit_position": "top",
+            "option_4_benefit_style": "outlined",
+            "option_4_benefit_radius": 45,
+            "option_4_benefit_color": "accent-1",
+            "margin_top": 15,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "buy_buttons": {
+          "type": "product_buy-buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "atc_append": "left",
+            "atc_append_heights": "stretch-quantity",
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "",
+            "display_price": false,
+            "price_position": "left",
+            "price_separator": "•",
+            "enable_custom_color": false,
+            "custom_color": "#53af01",
+            "custom_text_color": "#ffffff",
+            "enable_secondary_btn": true,
+            "secondary_btn_label": "Buy It Now",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#dd1d1d",
+            "margin_top": 24,
+            "margin_bottom": 24
+          },
+          "blocks": {}
+        },
+        "e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5": {
+          "type": "product_sticky-atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "Add to cart",
+            "enable_custom_btn_color": false,
+            "custom_btn_color": "#dd1d1d",
+            "color_scheme": "background-1",
+            "star_color": "#ffcc00",
+            "stars_label": "(xxxx Reviews)",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": true,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": false,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          },
+          "blocks": {}
+        },
+        "description": {
+          "type": "product_description",
+          "disabled": true,
+          "settings": {
+            "margin_top": 24,
+            "margin_bottom": 24
+          },
+          "blocks": {}
+        },
+        "de158e68-5d0d-4819-a625-e2dabdff87d1": {
+          "type": "collapsible-row",
+          "settings": {
+            "visibility": "always-display",
+            "open": false,
+            "heading": "🚚 Shipping & Delivery",
+            "heading_size": "medium",
+            "icon": "",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "collapse_icon_style": "standard",
+            "collapse_icon_radius": 15,
+            "animation_speed": 0.4,
+            "border_type": "bottom",
+            "border_thickness": 1,
+            "border_style": "solid",
+            "corner_radius": 8,
+            "enable_custom_style": false,
+            "heading_padding_vertical": 12,
+            "heading_padding_horizontal": 10,
+            "content_padding_vertical": 10,
+            "content_padding_horizontal": 10,
+            "closed_state_border": "#dddddd",
+            "closed_state_header_bg": "#f9f9f9",
+            "closed_state_header_text": "#121212",
+            "closed_state_row_icon": "#121212",
+            "closed_state_collapse_icon": "#121212",
+            "closed_state_collapse_icon_solid": "#ffffff",
+            "closed_state_collapse_bg": "#121212",
+            "closed_state_content_bg": "#f9f9f9",
+            "closed_state_content_text": "#121212",
+            "open_colors_on_hover": true,
+            "open_state_border": "#d5aeea",
+            "open_state_header_bg": "#fefaff",
+            "open_state_header_text": "#000000",
+            "open_state_row_icon": "#6d388b",
+            "open_state_collapse_icon": "#121212",
+            "open_state_collapse_icon_solid": "#ffffff",
+            "open_state_collapse_bg": "#6d388b",
+            "open_state_content_bg": "#fefaff",
+            "open_state_content_text": "#121212",
+            "content": "<p>We process orders within <strong>1–2 business days</strong>.</p><p>Estimated Delivery Time:<br/><br/><strong>5–10 Business Days (USA)</strong></p><p>Once your order ships, you will receive a <strong>tracking number via email</strong> so you can monitor your package every step of the way.</p><h3>📦 What To Expect</h3><ul><li><br/>Secure packaging<br/></li><li><br/>Tracking included<br/></li><li><br/>Responsive customer support<br/></li><li><br/>Delivery straight to your doorstep<br/></li></ul><p>Please note: During holidays or high-demand periods, delivery may take slightly longer.</p><p>Have questions? Our support team is here to help 24/7.</p>",
+            "page": "",
+            "margin_top": 24,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "collapsible_row_NUtAaV": {
+          "type": "collapsible-row",
+          "settings": {
+            "visibility": "always-display",
+            "open": false,
+            "heading": "🛡️ 30-Day Money Back Guarantee",
+            "heading_size": "medium",
+            "icon": "",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "collapse_icon_style": "standard",
+            "collapse_icon_radius": 15,
+            "animation_speed": 0.4,
+            "border_type": "bottom",
+            "border_thickness": 1,
+            "border_style": "solid",
+            "corner_radius": 8,
+            "enable_custom_style": false,
+            "heading_padding_vertical": 12,
+            "heading_padding_horizontal": 10,
+            "content_padding_vertical": 10,
+            "content_padding_horizontal": 10,
+            "closed_state_border": "#dddddd",
+            "closed_state_header_bg": "#f9f9f9",
+            "closed_state_header_text": "#121212",
+            "closed_state_row_icon": "#121212",
+            "closed_state_collapse_icon": "#121212",
+            "closed_state_collapse_icon_solid": "#ffffff",
+            "closed_state_collapse_bg": "#121212",
+            "closed_state_content_bg": "#f9f9f9",
+            "closed_state_content_text": "#121212",
+            "open_colors_on_hover": true,
+            "open_state_border": "#d5aeea",
+            "open_state_header_bg": "#fefaff",
+            "open_state_header_text": "#000000",
+            "open_state_row_icon": "#6d388b",
+            "open_state_collapse_icon": "#121212",
+            "open_state_collapse_icon_solid": "#ffffff",
+            "open_state_collapse_bg": "#6d388b",
+            "open_state_content_bg": "#fefaff",
+            "open_state_content_text": "#121212",
+            "content": "<p>f you’re not completely satisfied, you have <strong>30 days from the date of delivery</strong> to request a return or refund.</p><h3>✔️ Our Promise</h3><ul><li><br/>No complicated forms<br/></li><li><br/>No hidden fees<br/></li><li><br/>Fast response from our support team<br/></li><li><br/>Hassle-free process<br/></li></ul><p>To start a return, simply contact our support team with your order number.</p><p>Your satisfaction is our priority.</p>",
+            "page": "",
+            "margin_top": 24,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "a6eb81db-40e4-43e0-972f-32db010a4a56",
+        "price",
+        "5fcc0428-e768-4cb7-bea3-eb0274198dd1",
+        "quantity_selector_4KXChJ",
+        "buy_buttons",
+        "e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5",
+        "description",
+        "de158e68-5d0d-4819-a625-e2dabdff87d1",
+        "collapsible_row_NUtAaV"
+      ],
+      "custom_css": [],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": true,
+        "color_scheme": "background-1",
+        "pattern_bg": "none",
+        "pattern_color": "#6d388b",
+        "pattern_size": 20,
+        "pattern_thickness": 2,
+        "pattern_angle": 45,
+        "pattern_opacity_mode": "low",
+        "pattern_opacity_low": 7,
+        "pattern_opacity_normal": 80,
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": false,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
+        "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_count": 5,
+        "desktop_vertical_thumbnails_width": 16,
+        "desktop_vertical_thumbnails_hide_arrows": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 0,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails_position": "hidden",
+        "mobile_thumbnails_count": 5,
+        "mobile_vertical_thumbnails_width": 22,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 0,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "image_stiff_shoulders": {
+      "type": "image-with-text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image": "",
+        "video_autoplay": true,
+        "video_loop": true,
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "desktop_media_width": 55,
+        "content_layout": "media_right",
+        "desktop_content_position": "middle",
+        "desktop_full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "text_stiff": {
+          "type": "text",
+          "settings": {
+            "visibility": "always-display",
+            "text": "<h2>Stiff shoulders and tight back after work</h2><p>Prolonged sitting, screen time, and physical stress take a toll on your body. Our GlowRelief Cupping Massager targets the root of muscle tension — delivering deep-tissue relief right where you need it most.</p><p>✔ Relieves muscle soreness and stiffness<br/>✔ Improves circulation and flexibility<br/>✔ Reduces stress and promotes relaxation</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_stiff"
+      ]
+    },
+    "rich_feel_calmer": {
+      "type": "rich-text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 0
+      },
+      "blocks": {
+        "heading_feel_calmer": {
+          "type": "heading",
+          "settings": {
+            "visibility": "always-display",
+            "title": "Feel calmer, move easier, and glow with confidence",
+            "heading_size": "h2",
+            "alignment": "center",
+            "mobile_alignment": "mobile-center"
+          }
+        },
+        "text_feel_calmer": {
+          "type": "text",
+          "settings": {
+            "visibility": "always-display",
+            "text": "<p>Our targeted heat therapy and gentle suction work together to melt away pain, improve blood flow, reduce tension, and leave you feeling thoroughly relaxed and ready for the day.</p>",
+            "alignment": "center",
+            "mobile_alignment": "mobile-center"
+          }
+        }
+      },
+      "block_order": [
+        "heading_feel_calmer",
+        "text_feel_calmer"
+      ]
+    },
+    "icon_wellness_spa": {
+      "type": "icon-bar",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "✨ Wellness SPA as...",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "background-1",
+        "cards_color_scheme": "background-2",
+        "slider_mobile": false,
+        "slider_desktop": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "col_deep_heat": {
+          "type": "column",
+          "settings": {
+            "icon": "local_fire_department",
+            "filled_icon": true,
+            "title": "Deep Heat",
+            "text": "<p>Penetrating warmth relaxes muscles and soothes chronic aches deeply.</p>"
+          }
+        },
+        "col_red_light": {
+          "type": "column",
+          "settings": {
+            "icon": "wb_twilight",
+            "filled_icon": true,
+            "title": "Red Light",
+            "text": "<p>LED red light therapy boosts cellular recovery and skin radiance.</p>"
+          }
+        },
+        "col_custom_suction": {
+          "type": "column",
+          "settings": {
+            "icon": "tune",
+            "filled_icon": true,
+            "title": "Custom Suction",
+            "text": "<p>Adjustable suction levels for gentle or intensive cupping therapy.</p>"
+          }
+        },
+        "col_portable": {
+          "type": "column",
+          "settings": {
+            "icon": "bolt",
+            "filled_icon": true,
+            "title": "Portable",
+            "text": "<p>Rechargeable and cordless — use it anywhere, anytime you need relief.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "col_deep_heat",
+        "col_red_light",
+        "col_custom_suction",
+        "col_portable"
+      ]
+    },
+    "comparison_glowrelief": {
+      "type": "comparison-table",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Why GlowRelief Cupping Massager Stands Out",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_color": "#6d388b",
+        "us_label": "GlowRelief Cupping Massager",
+        "others_label": "Others",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "row_suction": {
+          "type": "row",
+          "settings": {
+            "benefit": "Adjustable Suction (12 Levels)",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_remote": {
+          "type": "row",
+          "settings": {
+            "benefit": "Remote Control Included",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_heat": {
+          "type": "row",
+          "settings": {
+            "benefit": "12 Heat Level Settings",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_led": {
+          "type": "row",
+          "settings": {
+            "benefit": "LED Red Light Therapy",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_cordless": {
+          "type": "row",
+          "settings": {
+            "benefit": "Cordless & Portable Design",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_warranty": {
+          "type": "row",
+          "settings": {
+            "benefit": "30-Day Money-Back Guarantee",
+            "us": true,
+            "others": false
+          }
+        }
+      },
+      "block_order": [
+        "row_suction",
+        "row_remote",
+        "row_heat",
+        "row_led",
+        "row_cordless",
+        "row_warranty"
+      ]
+    },
+    "image_led_light": {
+      "type": "image-with-text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image": "",
+        "video_autoplay": true,
+        "video_loop": true,
+        "height": "adapt",
+        "color_scheme": "background-2",
+        "desktop_media_width": 50,
+        "content_layout": "media_first",
+        "desktop_content_position": "middle",
+        "desktop_full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "text_led": {
+          "type": "text",
+          "settings": {
+            "visibility": "always-display",
+            "text": "<h2>LED Red Light Heat Therapy</h2><p>Our 97 LED Red Light Temperatures range from<br/><strong>35°C to 50°C</strong></p><p>🔴 Increases blood circulation<br/>🔴 Stimulates collagen production<br/>🔴 Reduces inflammation and pain<br/>🔴 Accelerates muscle recovery</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_led"
+      ]
+    },
+    "image_small_time": {
+      "type": "image-with-text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image": "",
+        "video_autoplay": true,
+        "video_loop": true,
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "desktop_media_width": 50,
+        "content_layout": "media_right",
+        "desktop_content_position": "middle",
+        "desktop_full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "text_small_time": {
+          "type": "text",
+          "settings": {
+            "visibility": "always-display",
+            "text": "<h2>Small time, big relief: notice real change fast</h2><p>⚡ Experienced shoulder tension relief after just a single use<br/>⚡ Experienced improved joint steadiness after consistent use<br/>⚡ Reported improved post-recovery well-being and less soreness</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_small_time"
+      ]
+    },
+    "image_cordless": {
+      "type": "image-with-text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image": "",
+        "video_autoplay": true,
+        "video_loop": true,
+        "height": "adapt",
+        "color_scheme": "background-2",
+        "desktop_media_width": 50,
+        "content_layout": "media_first",
+        "desktop_content_position": "middle",
+        "desktop_full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "text_cordless": {
+          "type": "text",
+          "settings": {
+            "visibility": "always-display",
+            "text": "<h2>Cordless Portable Design</h2><p>Enjoy the freedom of wireless therapy anywhere — at home, at the office, or on the go. The built-in rechargeable battery provides up to 2 hours of uninterrupted relief.</p><p>✔ USB-C rechargeable<br/>✔ Up to 2 hours battery life<br/>✔ Lightweight and travel-friendly</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_cordless"
+      ]
+    },
+    "image_cellulite": {
+      "type": "image-with-text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image": "",
+        "video_autoplay": true,
+        "video_loop": true,
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "desktop_media_width": 50,
+        "content_layout": "media_first",
+        "desktop_content_position": "middle",
+        "desktop_full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "text_cellulite": {
+          "type": "text",
+          "settings": {
+            "visibility": "always-display",
+            "text": "<h2>Embarrassing cellulite and poor circulation</h2><p>Poor circulation leads to fluid buildup, cellulite, and chronic fatigue. GlowRelief's vacuum suction and heat therapy work synergistically to break down fat deposits, improve lymphatic drainage, and restore healthy circulation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_cellulite"
+      ]
+    },
+    "faq_glowrelief": {
+      "type": "collapsible-content",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Common Questions About GlowRelief Therapy",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_color": "#6d388b",
+        "heading_alignment": "center",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": true,
+            "heading": "Is the cupping suitable for beginners?",
+            "row_content": "<p>Yes! GlowRelief features 12 adjustable suction levels, starting from very gentle. Beginners can start at level 1 and gradually increase as they get comfortable with the therapy.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "How long does a typical session last?",
+            "row_content": "<p>Most users find 15–20 minutes per session to be optimal. You can use GlowRelief daily or several times per week depending on your needs.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "Can I use it on sensitive skin?",
+            "row_content": "<p>Yes, the lower heat and suction settings are suitable for sensitive skin. We recommend starting on the lowest setting and testing on a small area first.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "How do the light and heat help?",
+            "row_content": "<p>Red light therapy penetrates deep into muscle tissue to stimulate healing at the cellular level, while heat relaxes muscle fibers and improves blood flow — together they deliver faster and more complete relief.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "How long does the battery last between charges?",
+            "row_content": "<p>The built-in battery provides approximately 2 hours of continuous use on a full charge. It recharges fully via USB-C in about 2 hours.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5"
+      ]
+    },
+    "rich_guarantee": {
+      "type": "rich-text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "background-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "heading_guarantee": {
+          "type": "heading",
+          "settings": {
+            "visibility": "always-display",
+            "title": "30-Day Money-Back Guarantee on GlowRelief Cupping Massager",
+            "heading_size": "h2",
+            "alignment": "center",
+            "mobile_alignment": "mobile-center"
+          }
+        },
+        "text_guarantee": {
+          "type": "text",
+          "settings": {
+            "visibility": "always-display",
+            "text": "<p>Try GlowRelief risk-free for 30 days. If you don't feel reduced tension, clearer skin texture, or improved comfort, return it for a full refund. We want you to feel the benefits of heat therapy at home.</p>",
+            "alignment": "center",
+            "mobile_alignment": "mobile-center"
+          }
+        }
+      },
+      "block_order": [
+        "heading_guarantee",
+        "text_guarantee"
+      ]
+    },
+    "testimonials_real_users": {
+      "type": "testimonials",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Real users love it",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_color": "#6d388b",
+        "columns_desktop": 5,
+        "columns_mobile": 1,
+        "color_scheme": "background-1",
+        "cards_color_scheme": "background-2",
+        "slider_mobile": true,
+        "slider_desktop": false,
+        "autoplay": false,
+        "image_ratio": "square",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "review_1": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Amazing for back pain!”",
+            "text": "<p>I've been using this for two weeks and my chronic back pain has significantly reduced. The heat and suction combination is incredible.</p>",
+            "author": "<strong>Lily S.</strong> • Verified Buyer"
+          }
+        },
+        "review_2": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Worth every penny”",
+            "text": "<p>The remote control makes it so easy to adjust. I use it every evening after the gym and my recovery time has improved dramatically.</p>",
+            "author": "<strong>Marcus T.</strong> • Verified Buyer"
+          }
+        },
+        "review_3": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Best investment for wellness”",
+            "text": "<p>I was skeptical at first, but after one week I noticed real improvements in my shoulder mobility and less tension headaches.</p>",
+            "author": "<strong>Sarah K.</strong> • Verified Buyer"
+          }
+        },
+        "review_4": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Perfect for office workers”",
+            "text": "<p>After sitting at a desk all day my neck and shoulders are always tight. This device gives me spa-level relief at home every night.</p>",
+            "author": "<strong>Jennifer L.</strong> • Verified Buyer"
+          }
+        },
+        "review_5": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Game changer for recovery”",
+            "text": "<p>As an athlete I need effective recovery tools. The red light therapy feature is a bonus I didn't expect — my legs feel so much better after use.</p>",
+            "author": "<strong>Daniel M.</strong> • Verified Buyer"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3",
+        "review_4",
+        "review_5"
+      ]
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": false,
+      "settings": {
+        "display_id": false,
+        "title": "Recommended Products",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_color": "#6d388b",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {}
+    },
+    "testimonials_customers": {
+      "type": "testimonials",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Let customers speak for us",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_color": "#6d388b",
+        "columns_desktop": 3,
+        "columns_mobile": 1,
+        "color_scheme": "background-2",
+        "cards_color_scheme": "background-1",
+        "slider_mobile": true,
+        "slider_desktop": true,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "image_ratio": "square",
+        "padding_top": 36,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "cust_review_1": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Feels like a professional massage”",
+            "text": "<p>I've tried many massage devices over the years, but GlowRelief is on another level. The combination of suction, heat, and red light is unlike anything else I've used.</p>",
+            "author": "<strong>Amanda P.</strong> • Verified Buyer"
+          }
+        },
+        "cust_review_2": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Great gift idea”",
+            "text": "<p>Bought this for my mom who has arthritis and she absolutely loves it. She uses it every morning and says her joints feel so much more flexible now.</p>",
+            "author": "<strong>Robert C.</strong> • Verified Buyer"
+          }
+        },
+        "cust_review_3": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "“Exceeds expectations”",
+            "text": "<p>The build quality is premium and the 12 levels of suction gives you complete control. Perfect for both light relaxation and deep tissue work.</p>",
+            "author": "<strong>Nicole W.</strong> • Verified Buyer"
+          }
+        }
+      },
+      "block_order": [
+        "cust_review_1",
+        "cust_review_2",
+        "cust_review_3"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "image_stiff_shoulders",
+    "rich_feel_calmer",
+    "icon_wellness_spa",
+    "comparison_glowrelief",
+    "image_led_light",
+    "image_small_time",
+    "image_cordless",
+    "image_cellulite",
+    "faq_glowrelief",
+    "rich_guarantee",
+    "testimonials_real_users",
+    "related-products",
+    "testimonials_customers"
+  ]
+}

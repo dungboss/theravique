@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ':*)",
+      "Bash(shopify auth:*)",
+      "Bash(shopify whoami:*)",
+      "Bash(xxd /Users/macbook/dev/shopify/theravique/templates/__TRACKED_VAR__)",
+      "Bash(python3)",
+      "Bash(agent-browser open:*)",
+      "Bash(agent-browser wait:*)",
+      "Bash(agent-browser screenshot:*)",
+      "Bash(npm list:*)",
+      "Bash(npx agent-browser:*)",
+      "Bash(npm install:*)",
+      "Bash(agent-browser install:*)",
+      "Bash(agent-browser scroll:*)",
+      "Bash(agent-browser eval:*)",
+      "Bash(agent-browser viewport:*)",
+      "Bash(echo \"exit: $?\")"
+    ]
+  }
+}

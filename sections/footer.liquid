@@ -105,7 +105,19 @@
                     <div class="footer-block__details-content rte">
                       {{ block.settings.subtext }}
                     </div>
+                    {%- if block.settings.custom_links != blank -%}
+                      <ul class="footer-block__details-content list-unstyled" style="margin-top:8px;">
+                        {%- assign link_lines = block.settings.custom_links | split: '|' -%}
+                        {%- for line in link_lines -%}
+                          {%- assign parts = line | split: '::' -%}
+                          {%- if parts.size == 2 -%}
+                            <li><a href="{{ parts[1] | strip }}" class="link link--text list-menu__item list-menu__item--link">{{ parts[0] | strip }}</a></li>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
                   {%- when 'link_list' -%}
+                    {%- comment -%} Append hardcoded quick links below the menu {%- endcomment -%}
                     {%- if block.settings.menu != blank -%}
                       <style>
                         .footer-block__details-content-{{ block.id }} .link {
@@ -130,6 +142,13 @@
                             </a>
                           </li>
                         {%- endfor -%}
+                        {%- if block.settings.heading == 'Quick links' -%}
+                          <li><a href="/pages/faqs" class="link link--text list-menu__item list-menu__item--link">FAQs</a></li>
+                          <li><a href="/policies/refund-policy" class="link link--text list-menu__item list-menu__item--link">Return Policy</a></li>
+                          <li><a href="/policies/shipping-policy" class="link link--text list-menu__item list-menu__item--link">Shipping Policy</a></li>
+                          <li><a href="/policies/terms-of-service" class="link link--text list-menu__item list-menu__item--link">Terms and Conditions</a></li>
+                          <li><a href="/policies/privacy-policy" class="link link--text list-menu__item list-menu__item--link">Your privacy choices</a></li>
+                        {%- endif -%}
                       </ul>
                     {%- endif -%}
                   {%- when 'brand_information' -%}
@@ -661,6 +680,12 @@
           "id": "subtext",
           "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
           "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_links",
+          "label": "Custom links (format: Label :: /url | Label :: /url)",
+          "info": "One link per line separated by |. Use :: to separate label from URL."
         },
         {
           "type": "header",
