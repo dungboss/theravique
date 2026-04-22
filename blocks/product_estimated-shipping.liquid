@@ -1,5 +1,5 @@
 <dynamic-dates
-  class="estimated-shipping{% if block.settings.icon_alignment == 'middle' %} estimated-shipping--align-center{% endif %} {{ block.settings.visibility }}"
+  class="estimated-shipping{% if block.settings.icon_alignment == 'middle' %} estimated-shipping--align-center{% endif %}"
   data-date-format="{{ block.settings.date_format }}"
   data-day-labels="{{ block.settings.days_labels }}"
   data-month-labels="{{ block.settings.months_labels }}"
@@ -43,26 +43,6 @@
   "name": "Estimated shipping",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "header",
       "content": "Icon & text"

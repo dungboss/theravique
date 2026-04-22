@@ -17,23 +17,7 @@
   else
     assign thumbnail = video.preview_image
   endif
-
-  assign button_position = 'center'
-  if block.settings.play_btn_position
-    assign button_position = block.settings.play_btn_position
-  endif
-
-  assign button_style = 'solid'
-  if block.settings.play_btn_style
-    assign button_style = block.settings.play_btn_style
-  endif
-
-  assign button_radius = 50
-  if block.settings.play_btn_corner_radius
-    assign button_radius = block.settings.play_btn_corner_radius | divided_by: 2.0
-  endif
 %}
-
 <div class="video-container">
   {% if video != blank %}
     <internal-video
@@ -65,11 +49,8 @@
           >
         {% endfor %}
       </video>
-      <button class="internal-video__play internal-video__play--{{ button_position }}"{% if no_play_button %} style='visibility: hidden;'{% endif %}>
-        <div
-          class="play-button play-button--{{ button_style }} color-{{ block.settings.btn_color_scheme }}{% if block.settings.btn_animation %} ripple-animation{% endif %}"
-          style="--size: {{ block.settings.play_btn_size_desktop | divided_by: 10.0 }}rem;--mobile-size: {{ block.settings.play_btn_size_mobile | divided_by: 10.0 }}rem;border-radius:{{ button_radius }}%;"
-        >
+      <button class="internal-video__play"{% if no_play_button %} style='visibility: hidden;'{% endif %}>
+        <div class="play-button color-{{ block.settings.btn_color_scheme }}{% if block.settings.btn_animation %} ripple-animation{% endif %}">
           {%- render 'icon-play' -%}
         </div>
       </button>

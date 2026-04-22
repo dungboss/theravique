@@ -115,7 +115,7 @@
 
 <div
   id="Inventory-{{ section.id }}"
-  class="product__inventory-outer {{ block.settings.visibility }}"
+  class="product__inventory-outer"
   style="
     {{ outer_style | strip }}
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
@@ -222,26 +222,6 @@
   "name": "Inventory status",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     { "type": "header", "content": "Inventory" },
     {
       "type": "select",

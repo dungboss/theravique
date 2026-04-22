@@ -69,6 +69,15 @@
                 if block.settings.mobile_bg_image != blank or block.settings.mobile_bg_video != blank
                   assign has_mobile_bg = true
                 endif
+                
+                comment
+                  如果没有上传任何图片或视频，则显示默认图片
+                  这样确保总是有背景显示
+                endcomment
+                if has_desktop_bg == false and has_mobile_bg == false
+                  assign has_desktop_bg = true
+                  assign has_mobile_bg = true
+                endif
 
                 if block.settings.content_max_width == 'pixels'
                   assign content_max_width = block.settings.content_pixels_max_width | append: 'px'
@@ -144,20 +153,35 @@
                       </internal-video>
                     {% else %}
                       {%- liquid
-                        assign image_height = block.settings.desktop_bg_image.width | divided_by: block.settings.desktop_bg_image.aspect_ratio
-                        assign sizes = '100vw'
+                        if block.settings.desktop_bg_image != blank
+                          assign image_height = block.settings.desktop_bg_image.width | divided_by: block.settings.desktop_bg_image.aspect_ratio
+                          assign sizes = '100vw'
+                        endif
                       -%}
-                      {{
-                        block.settings.desktop_bg_image
-                        | image_url: width: 3840
-                        | image_tag:
-                          loading: loading,
-                          width: block.settings.desktop_bg_image.width,
-                          height: image_height,
-                          sizes: sizes,
-                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                          class: 'hero-slide__background__desktop-media'
-                      }}
+                      {% if block.settings.desktop_bg_image != blank %}
+                        {{
+                          block.settings.desktop_bg_image
+                          | image_url: width: 3840
+                          | image_tag:
+                            loading: loading,
+                            width: block.settings.desktop_bg_image.width,
+                            height: image_height,
+                            sizes: sizes,
+                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                            class: 'hero-slide__background__desktop-media'
+                        }}
+                      {% else %}
+                        {% comment %} 使用默认桌面图片 {% endcomment %}
+                        {% assign default_desktop = "Slideshow_hero.webp" | asset_url %}
+                        <img 
+                          src="{{ default_desktop }}" 
+                          alt="Default Desktop Hero Image" 
+                          class="hero-slide__background__desktop-media"
+                          loading="{{ loading }}"
+                          sizes="100vw"
+                          style="width: 100%; height: auto;"
+                        >
+                      {% endif %}
                       <div class="hero-slide__overlay{% if has_mobile_bg %} mobile-hidden{% endif %}">&nbsp</div>
                     {% endif %}
                     {% if has_mobile_bg %}
@@ -197,20 +221,35 @@
                         </internal-video>
                       {% else %}
                         {%- liquid
-                          assign image_height = block.settings.mobile_bg_image.width | divided_by: block.settings.mobile_bg_image.aspect_ratio
-                          assign sizes = '100vw'
+                          if block.settings.mobile_bg_image != blank
+                            assign image_height = block.settings.mobile_bg_image.width | divided_by: block.settings.mobile_bg_image.aspect_ratio
+                            assign sizes = '100vw'
+                          endif
                         -%}
-                        {{
-                          block.settings.mobile_bg_image
-                          | image_url: width: 3840
-                          | image_tag:
-                            loading: loading,
-                            width: block.settings.mobile_bg_image.width,
-                            height: image_height,
-                            sizes: sizes,
-                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                            class: 'hero-slide__background__mobile-media desktop-hidden'
-                        }}
+                        {% if block.settings.mobile_bg_image != blank %}
+                          {{
+                            block.settings.mobile_bg_image
+                            | image_url: width: 3840
+                            | image_tag:
+                              loading: loading,
+                              width: block.settings.mobile_bg_image.width,
+                              height: image_height,
+                              sizes: sizes,
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                              class: 'hero-slide__background__mobile-media desktop-hidden'
+                          }}
+                        {% else %}
+                          {% comment %} 使用默认移动端图片 {% endcomment %}
+                          {% assign default_mobile = "Slideshow_Phone.webp" | asset_url %}
+                          <img 
+                            src="{{ default_mobile }}" 
+                            alt="Default Mobile Hero Image" 
+                            class="hero-slide__background__mobile-media desktop-hidden"
+                            loading="{{ loading }}"
+                            sizes="100vw"
+                            style="width: 100%; height: auto;"
+                          >
+                        {% endif %}
                         <div class="hero-slide__overlay desktop-hidden">&nbsp</div>
                       {% endif %}
                     {% endif %}

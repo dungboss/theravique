@@ -22,7 +22,7 @@
 %}
 {% unless is_image_with_text_section %}
   <div
-    class="{% if is_richtext_section %}rich-text__buttons{% else %}buttons-container{% endif %} {{ block.settings.visibility }}"
+    class="{% if is_richtext_section %}rich-text__buttons{% else %}buttons-container{% endif %}"
     style="
       margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
       margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
@@ -128,26 +128,6 @@
   "name": "Add to Cart button",
   "tag": null, 
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "text",
       "id": "button_label",

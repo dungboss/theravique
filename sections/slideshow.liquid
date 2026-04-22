@@ -172,7 +172,26 @@
               }}
             {% endif %}
           {%- else -%}
-            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% comment %} 使用默认图片 {% endcomment %}
+            {% assign default_desktop = "Slideshow_hero.webp" | asset_url %}
+            {% assign default_mobile = "Slideshow_Phone.webp" | asset_url %}
+            
+            <img 
+              src="{{ default_desktop }}" 
+              alt="Default Hero Image" 
+              class="mobile-hidden"
+              loading="lazy"
+              sizes="100vw"
+              style="width: 100%; height: auto;"
+            >
+            <img 
+              src="{{ default_mobile }}" 
+              alt="Default Mobile Hero Image" 
+              class="desktop-hidden"
+              loading="lazy"
+              sizes="100vw"
+              style="width: 100%; height: auto;"
+            >
           {%- endif -%}
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% unless block.settings.heading != blank or block.settings.subheading != blank or block.settings.button_label != blank or block.settings.atc_button_label != blank %} hidden{% endunless %}">
@@ -701,42 +720,42 @@
           "id": "custom_colors_background",
           "default": "#FFFFFF",
           "label": "Custom background color",
-          "visible_if": "{{ block.settings.color_scheme == 'custom' }}"
+          "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
         },
         {
           "type": "color_background",
           "id": "custom_gradient_background",
           "label": "Custom gradient background",
           "info": "If added, replaces Background color when applicable.",
-          "visible_if": "{{ block.settings.color_scheme == 'custom' }}"
+          "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
         },
         {
           "type": "color",
           "id": "custom_colors_text",
           "default": "#2E2A39",
           "label": "Custom text color",
-          "visible_if": "{{ block.settings.color_scheme == 'custom' }}"
+          "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
         },
         {
           "type": "color",
           "id": "custom_colors_solid_button_background",
           "default": "#dd1d1d",
           "label": "Custom solid button background",
-          "visible_if": "{{ block.settings.color_scheme == 'custom' }}"
+          "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
         },
         {
           "type": "color",
           "id": "custom_colors_solid_button_text",
           "default": "#ffffff",
           "label": "Custom solid button label color",
-          "visible_if": "{{ block.settings.color_scheme == 'custom' }}"
+          "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
         },
         {
           "type": "color",
           "id": "custom_colors_outline_button",
           "default": "#dd1d1d",
           "label": "Custom outline button color",
-          "visible_if": "{{ block.settings.color_scheme == 'custom' }}"
+          "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
         },
         {
           "type": "select",
@@ -785,9 +804,6 @@
     {
       "name": "t:sections.slideshow.presets.name",
       "blocks": [
-        {
-          "type": "slide"
-        },
         {
           "type": "slide"
         }

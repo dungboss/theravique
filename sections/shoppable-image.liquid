@@ -215,7 +215,7 @@
                 {{ block.shopify_attributes }}
               >
                 <button
-                  class="hotspot-btn hotspot-btn--{{ section.settings.hotspots_style }} color-{{ section.settings.hotspots_color_scheme }}{% if section.settings.display_hotspots_animation and section.settings.hotspots_style == 'plus' %} ripple-animation{% endif %}"
+                  class="hotspot-btn color-{{ section.settings.hotspots_color_scheme }}{% if section.settings.display_hotspots_animation %} ripple-animation{% endif %}"
                 >
                   {% render 'material-icon', icon: 'add' %}
                 </button>
@@ -783,6 +783,31 @@
       "visible_if": "{{ section.settings.heading_size == 'custom' }}"
     },
     {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 15
+    },
+
+    {
       "type": "richtext",
       "id": "text",
       "label": "Text",
@@ -1077,19 +1102,19 @@
     },
     {
       "type": "select",
-      "id": "hotspots_style",
+      "id": "hotspot_open_event",
       "options": [
         {
-          "value": "plus",
-          "label": "Plus"
+          "value": "click",
+          "label": "Click"
         },
         {
-          "value": "minimal",
-          "label": "Minimalistic"
+          "value": "hover",
+          "label": "Hover"
         }
       ],
-      "label": "Hotspot buttons style",
-      "default": "plus"
+      "label": "Open modal on:",
+      "default": "click"
     },
     {
       "type": "select",
@@ -1123,24 +1148,7 @@
       "type": "checkbox",
       "id": "display_hotspots_animation",
       "label": "Display button ripple animation",
-      "default": true,
-      "visible_if": "{{ section.settings.hotspots_style == 'plus' }}"
-    },
-    {
-      "type": "select",
-      "id": "hotspot_open_event",
-      "options": [
-        {
-          "value": "click",
-          "label": "Click"
-        },
-        {
-          "value": "hover",
-          "label": "Hover"
-        }
-      ],
-      "label": "Open modal on:",
-      "default": "click"
+      "default": true
     },
     {
       "type": "select",

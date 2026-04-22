@@ -1,6 +1,6 @@
 {% unless section.settings.url != blank %}
   <div
-    class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} {{ block.settings.visibility }}"
+    class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
     style="
       margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
       margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
@@ -39,26 +39,6 @@
   "name": "Buttons",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "text",
       "id": "button_label_1",

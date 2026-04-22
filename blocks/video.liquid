@@ -1,5 +1,5 @@
 <div
-  class="product-info__image-block{% if block.settings.Full_mobile_width %} product-info__image-block--mobile-full{% endif %} {{ block.settings.visibility }}"
+  class="product-info__image-block{% if block.settings.Full_mobile_width %} product-info__image-block--mobile-full{% endif %}"
   style="
     --image-width:{{ block.settings.width }}%;
     --image-alignment:{{ block.settings.alignment }};
@@ -26,30 +26,6 @@
   "name": "Video",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
-    {
-      "type": "header",
-      "content": "Video"
-    },
     {
       "type": "video",
       "id": "video",
@@ -85,37 +61,10 @@
       "visible_if": "{{ block.settings.video != blank and block.settings.muted_autoplay }}"
     },
     {
-      "type": "header",
-      "content": "Buttons",
-      "visible_if": "{{ block.settings.video != blank }}"
-    },
-    {
-      "type": "select",
-      "id": "play_btn_position",
-      "options": [
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "top-left",
-          "label": "Top left"
-        },
-        {
-          "value": "top-right",
-          "label": "Top right"
-        },
-        {
-          "value": "bottom-right",
-          "label": "Bottom right"
-        },
-        {
-          "value": "bottom-left",
-          "label": "Bottom left"
-        }
-      ],
-      "default": "center",
-      "label": "Play button position",
+      "type": "checkbox",
+      "id": "btn_animation",
+      "label": "Enable button ripple animation",
+      "default": false,
       "visible_if": "{{ block.settings.video != blank }}"
     },
     {
@@ -145,63 +94,6 @@
       ],
       "default": "accent-1",
       "label": "Play button color scheme",
-      "visible_if": "{{ block.settings.video != blank }}"
-    },
-    {
-      "type": "select",
-      "id": "play_btn_style",
-      "options": [
-        {
-          "value": "solid",
-          "label": "Filled"
-        },
-        {
-          "value": "outline",
-          "label": "Outlined"
-        }
-      ],
-      "default": "solid",
-      "label": "Play button style",
-      "visible_if": "{{ block.settings.video != blank }}"
-    },
-    {
-      "type": "range",
-      "id": "play_btn_size_desktop",
-      "min": 30,
-      "max": 80,
-      "step": 5,
-      "unit": "px",
-      "label": "Play button desktop size",
-      "default": 50,
-      "visible_if": "{{ block.settings.video != blank }}"
-    },
-    {
-      "type": "range",
-      "id": "play_btn_size_mobile",
-      "min": 25,
-      "max": 75,
-      "step": 5,
-      "unit": "px",
-      "label": "Play button mobile size",
-      "default": 50,
-      "visible_if": "{{ block.settings.video != blank }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "btn_animation",
-      "label": "Play button ripple animation",
-      "default": false,
-      "visible_if": "{{ block.settings.video != blank }}"
-    },
-    {
-      "type": "range",
-      "id": "play_btn_corner_radius",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Play button corner radius",
-      "default": 100,
       "visible_if": "{{ block.settings.video != blank }}"
     },
     {

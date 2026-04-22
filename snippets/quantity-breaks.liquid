@@ -1,5 +1,5 @@
 {% liquid
-  assign item_count = 0
+ assign item_count = 0
   if block.settings.option_1_quantity != 0
     assign item_count = item_count | plus: 1
     assign last_offer_index = 1
@@ -26,7 +26,7 @@
   if block.settings.option_1_badge != blank or block.settings.option_2_badge != blank or block.settings.option_3_badge != blank or block.settings.option_4_badge != blank
     assign has_badge = true
   endif
-
+  
   assign variants_available_arr = product.variants | map: 'available'
   assign variants_option1_arr = product.variants | map: 'option1'
   assign variants_option2_arr = product.variants | map: 'option2'
@@ -43,6 +43,41 @@
     --image-size: {{ block.settings.upsells_image_size | divided_by: 10.0 }}rem;
     --text-size: {{ block.settings.upsells_text_size | divided_by: 10.0 }}rem;
     --checkbox-size: {{ block.settings.upsells_text_size | times: 1.37 | divided_by: 10.0 }}rem;
+  }
+  
+  /* Custom Features List Styles */
+  #quantity-breaks-{{ section.id }} .quantity-break__features {
+    background: {{ block.settings.features_bg_color }};
+    color: {{ block.settings.features_text_color }};
+    padding: {{ block.settings.features_padding }}px;
+    border-radius: {{ block.settings.features_border_radius }}px;
+    margin-top: 10px;
+    font-size: {{ block.settings.features_text_size }}px;
+  }
+  
+  #quantity-breaks-{{ section.id }} .quantity-break__features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #quantity-breaks-{{ section.id }} .quantity-break__features-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: {{ block.settings.features_text_size }}px;
+    color: {{ block.settings.features_text_color }};
+  }
+  
+  #quantity-breaks-{{ section.id }} .quantity-break__features-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  #quantity-breaks-{{ section.id }} .quantity-break__features-icon {
+    font-size: {{ block.settings.features_icon_size }}px;
+    margin-right: 8px;
+    color: {{ block.settings.features_text_color }};
+    flex-shrink: 0;
   }
   {% if block.settings.colors == 'custom' %}
     #quantity-breaks-{{ section.id }} .quantity-break {
@@ -123,7 +158,7 @@
   data-update-pdp-prices="{{ block.settings.update_pdp_prices }}"
   data-money-format="{{ shop.money_format | escape }}"
   data-base-price="{{ product.selected_or_first_available_variant.price }}"
-  data-skip-non-existent="true"
+  data-skip-non-existent='true'
   data-skip-unavailable="{{ block.settings.skip_unavailable }}"
   {% if block.settings.scroll_media_gallery == false %}
     data-prevent-gallery-scroll="true"
@@ -172,6 +207,8 @@
             assign price_text = block.settings.option_1_price_text
             assign compare_mode = block.settings.option_1_compare_price
             assign compare_text = block.settings.option_1_compare_price_text
+            assign show_features = block.settings.option_1_show_features
+            assign features_text_key = 'option_1_features_text'
             if block.settings.preselected == 'option_1'
               assign preselected = true
             endif
@@ -193,6 +230,8 @@
             assign price_text = block.settings.option_2_price_text
             assign compare_mode = block.settings.option_2_compare_price
             assign compare_text = block.settings.option_2_compare_price_text
+            assign show_features = block.settings.option_2_show_features
+            assign features_text_key = 'option_2_features_text'
             if block.settings.preselected == 'option_2'
               assign preselected = true
             endif
@@ -214,6 +253,8 @@
             assign price_text = block.settings.option_3_price_text
             assign compare_mode = block.settings.option_3_compare_price
             assign compare_text = block.settings.option_3_compare_price_text
+            assign show_features = block.settings.option_3_show_features
+            assign features_text_key = 'option_3_features_text'
             if block.settings.preselected == 'option_3'
               assign preselected = true
             endif
@@ -235,6 +276,8 @@
             assign price_text = block.settings.option_4_price_text
             assign compare_mode = block.settings.option_4_compare_price
             assign compare_text = block.settings.option_4_compare_price_text
+            assign show_features = block.settings.option_4_show_features
+            assign features_text_key = 'option_4_features_text'
             if block.settings.preselected == 'option_4'
               assign preselected = true
             endif
@@ -244,9 +287,9 @@
           assign percentage = percentage_off | plus: 0
           assign percentage_left = 100 | minus: percentage | divided_by: 100.0
           assign fixed_discount = fixed_off | times: 100
-
+  
           assign price = base_price | times: qty | times: percentage_left | minus: fixed_discount
-
+  
           assign compare_price = base_price
           if compare_mode == 'compare_price' and product.selected_or_first_available_variant.compare_at_price > base_price
             assign compare_price = product.selected_or_first_available_variant.compare_at_price
@@ -283,10 +326,7 @@
         >
           <div class="quantity-break__wrapper">
             {% if badge != blank %}
-              <p
-                class="quantity-break__badge dynamic-price variant-price-update color-{{ badge_color }}"
-                data-text="{{ badge }}"
-              >
+              <p class="quantity-break__badge dynamic-price variant-price-update color-{{ badge_color }}" data-text="{{ badge }}">
                 {% render 'text-with-price',
                   text: badge,
                   quantity: qty,
@@ -299,28 +339,25 @@
                 %}
               </p>
             {% endif %}
-
-            <div class="quantity-break__image-and-content">
+          
+            <div class='quantity-break__image-and-content'>
               {% if image != blank %}
-                <div class="quantity-break__image">
-                  <img
-                    src="{{ image | image_url }}"
+                <div class='quantity-break__image'>
+                  <img 
+                    src='{{ image | image_url }}'
                     alt="{{ image.alt }}"
-                    width="auto"
-                    height="auto"
-                    loading="lazy"
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
                   >
                 </div>
               {% endif %}
-
+          
               <div class="quantity-break__content">
                 <div class="quantity-break__left">
                   <span class="quantity-break__label">
                     {% if label != blank %}
-                      <span
-                        class="quantity-break__label-text dynamic-price variant-price-update"
-                        data-text="{{ label }}"
-                      >
+                      <span class="quantity-break__label-text dynamic-price variant-price-update" data-text="{{ label }}">
                         {% render 'text-with-price',
                           text: label,
                           quantity: qty,
@@ -334,11 +371,7 @@
                       </span>
                     {% endif %}
                     {% if benefit != blank %}
-                      <span
-                        class="quantity-break__benefit quantity-break__benefit--{{ benefit_style }} accent-color-{{ benefit_color }} dynamic-price variant-price-update"
-                        data-text="{{ benefit }}"
-                        style="--benefit-border-radius:{{ benefit_radius }}em;"
-                      >
+                      <span class="quantity-break__benefit quantity-break__benefit--{{ benefit_style }} accent-color-{{ benefit_color }} dynamic-price variant-price-update" data-text="{{ benefit }}" style="--benefit-border-radius:{{ benefit_radius }}em;">
                         {% render 'text-with-price',
                           text: benefit,
                           quantity: qty,
@@ -352,7 +385,7 @@
                       </span>
                     {% endif %}
                   </span>
-
+          
                   {% if caption != blank %}
                     <span class="quantity-break__caption dynamic-price variant-price-update" data-text="{{ caption }}">
                       {% render 'text-with-price',
@@ -368,7 +401,7 @@
                     </span>
                   {% endif %}
                 </div>
-
+          
                 <div class="quantity-break__right quantity-break__right--{{ block.settings.prices_layout }} dynamic-price">
                   {% if price_text != blank %}
                     <span class="quantity-break__price variant-price-update" data-text="{{ price_text }}">
@@ -385,10 +418,7 @@
                     </span>
                   {% endif %}
                   {% if compare_text != blank %}
-                    <span
-                      class="quantity-break__compare-price variant-price-update{% if compare_total <= price %} hidden{% endif %}"
-                      data-text="{{ compare_text }}"
-                    >
+                    <span class="quantity-break__compare-price variant-price-update{% if compare_total <= price %} hidden{% endif %}" data-text="{{ compare_text }}">
                       {% render 'text-with-price',
                         text: compare_text,
                         quantity: qty,
@@ -409,7 +439,7 @@
                 <div class="quantity-break__variants">
                   {% assign has_variants = true %}
                   {% if block.settings.pickers_label != blank %}
-                    <span class="quantity-break__variants__label">
+                    <span class='quantity-break__variants__label'>
                       {{ block.settings.pickers_label }}
                     </span>
                   {% endif %}
@@ -419,9 +449,7 @@
                       data-select-index="{{ forloop.index0 }}"
                       data-selected-id="{{ product.selected_or_first_available_variant.id }}"
                     >
-                      <span class="quantity-break__selector-item__number">
-                        {{- block.settings.pickers_number_text | replace: '[index]', selectorItem -}}
-                      </span>
+                      <span class="quantity-break__selector-item__number">{{ block.settings.pickers_number_text | replace: '[index]', selectorItem }}</span>
                       {% for option in product.options_with_values %}
                         <div class="select select--small no-background color-{{ settings.pickers_color_scheme }} accent-color-{{ settings.pickers_overlay_color }} accent-2-color-{{ settings.pickers_text_color }}">
                           <select
@@ -434,7 +462,7 @@
                                 assign option_class = ''
                                 assign option_disabled = true
                                 assign option_exists = false
-
+          
                                 for option1_name in variants_option1_arr
                                   case option.position
                                     when 1
@@ -510,7 +538,7 @@
               {% endif %}
             {% endif %}
           </div>
-
+          
           {% if block.settings.style == 'normal' %}
             <quantity-break-upsells
               class="quantity-break__upsells-container"
@@ -566,7 +594,7 @@
                       endif
                       assign badge_position = block.settings.upsell_3_badge_position
                   endcase
-
+  
                   case upsell_min_offer
                     when 1
                       assign upsell_min_quantity = block.settings.option_1_quantity
@@ -622,7 +650,7 @@
                       | replace: '[amount_saved_rounded]', amount_saved_rounded
                     }}
                   {% endcapture %}
-
+              
                   <div
                     class="quantity-break__upsell quantity-break__upsell--{{ upsell_type }} quantity-break__upsell--style-{{ upsell_design }}{% if block.settings.hide_upsells_on_non_selected %} quantity-break__upsell--hide-inactive{% endif %} gift--product-{{ upsell_product.handle }}"
                     data-toggle="{{ is_checkbox }}"
@@ -633,7 +661,7 @@
                     data-handle="{{ upsell_product.handle }}"
                     data-type="{% if is_checkbox %}upsell{% else %}gift{% endif %}"
                     style="
-                                            --badge-radius: {{ block.settings.upsells_badge_radius | divided_by: 100.0 | times: 1.33 }}em;
+                      --badge-radius: {{ block.settings.upsells_badge_radius | divided_by: 100.0 | times: 1.33 }}em;
                     "
                   >
                     <style>
@@ -646,13 +674,7 @@
                     {% endif %}
                     {% if upsell_image %}
                       <div class="quantity-break__upsell-image media media--transparent flex-shrink-0">
-                        <img
-                          src="{{ upsell_image | image_url }}"
-                          loading="lazy"
-                          width="auto"
-                          height="auto"
-                          alt="{{ upsell_product.title | escape }}"
-                        >
+                        <img src="{{ upsell_image | image_url }}" loading="lazy" width="auto" height="auto" alt="{{ upsell_product.title | escape }}">
                       </div>
                     {% endif %}
                     <div class="quantity-break__upsell-content">
@@ -672,13 +694,8 @@
                         </div>
                       {% endif %}
                     </div>
-                    <product-form class="hidden" data-is-cart-upsell="true">
-                      {% assign upsell_product_form_id = 'GiftUpsellForm-'
-                        | append: section.id
-                        | append: block.id
-                        | append: offer_index
-                        | append: forloop.index
-                      %}
+                    <product-form class='hidden' data-is-cart-upsell='true'>
+                      {% assign upsell_product_form_id = 'GiftUpsellForm-' | append: section.id | append: block.id | append: offer_index | append: forloop.index %}
                       {%- form 'product',
                         upsell_product,
                         id: upsell_product_form_id,
@@ -687,13 +704,45 @@
                         data-type: 'add-to-cart-form'
                       -%}
                         <input type="hidden" name="id" value="{{ upsell_product.first_available_variant.id }}">
-                        <button type="submit">+</button>
+                        <button type='submit'>+</button>
                       {%- endform -%}
                     </product-form>
                   </div>
                 {% endif %}
               {% endfor %}
             </quantity-break-upsells>
+          {% endif %}
+          
+          {% comment %} Custom Features List {% endcomment %}
+          {% if show_features %}
+            {% assign features_text = block.settings[features_text_key] %}
+            {% if features_text != blank %}
+              {% assign features_lines = features_text | newline_to_br | split: '<br />' %}
+              {% assign has_features = false %}
+              {% for line in features_lines %}
+                {% assign trimmed_line = line | strip %}
+                {% if trimmed_line != blank %}
+                  {% assign has_features = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+              
+              {% if has_features %}
+                <div class="quantity-break__features">
+                  <ul class="quantity-break__features-list">
+                    {% for line in features_lines %}
+                      {% assign trimmed_line = line | strip %}
+                      {% if trimmed_line != blank %}
+                        <li class="quantity-break__features-item">
+                          <span class="quantity-break__features-icon">{{ block.settings.features_icon }}</span>
+                          <span>{{ trimmed_line }}</span>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            {% endif %}
           {% endif %}
         </label>
       {% endif %}

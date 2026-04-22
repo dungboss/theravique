@@ -30,7 +30,9 @@
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
     margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
   "
-  class="{% if block.settings.mobile_full_page %}mobile-side-margins-negative {% endif %}{{ block.settings.visibility }}"
+  {% if block.settings.mobile_full_page %}
+    class="mobile-side-margins-negative"
+  {% endif %}
   {{- block.shopify_attributes -}}
 >
   <div
@@ -87,26 +89,6 @@
     }
   ],
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "header",
       "content": "Slider"

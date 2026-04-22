@@ -43,9 +43,6 @@
       }
     }
   {% endif %}
-  {% if section.settings.pattern_bg != 'none' %}
-    {% render 'pattern-background' %}
-  {% endif %}
 {%- endstyle -%}
 
 <footer
@@ -73,7 +70,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width{% if section.settings.top_page_width != 'normal' %} {{ section.settings.top_page_width }}{% endif %}">
+      <div class="footer__content-top page-width">
         {%- if section.blocks.size > 0 -%}
           <div class="footer__blocks-wrapper grid">
             {%- for block in section.blocks -%}
@@ -105,19 +102,7 @@
                     <div class="footer-block__details-content rte">
                       {{ block.settings.subtext }}
                     </div>
-                    {%- if block.settings.custom_links != blank -%}
-                      <ul class="footer-block__details-content list-unstyled" style="margin-top:8px;">
-                        {%- assign link_lines = block.settings.custom_links | split: '|' -%}
-                        {%- for line in link_lines -%}
-                          {%- assign parts = line | split: '::' -%}
-                          {%- if parts.size == 2 -%}
-                            <li><a href="{{ parts[1] | strip }}" class="link link--text list-menu__item list-menu__item--link">{{ parts[0] | strip }}</a></li>
-                          {%- endif -%}
-                        {%- endfor -%}
-                      </ul>
-                    {%- endif -%}
                   {%- when 'link_list' -%}
-                    {%- comment -%} Append hardcoded quick links below the menu {%- endcomment -%}
                     {%- if block.settings.menu != blank -%}
                       <style>
                         .footer-block__details-content-{{ block.id }} .link {
@@ -142,13 +127,6 @@
                             </a>
                           </li>
                         {%- endfor -%}
-                        {%- if block.settings.heading == 'Quick links' -%}
-                          <li><a href="/pages/faqs" class="link link--text list-menu__item list-menu__item--link">FAQs</a></li>
-                          <li><a href="/policies/refund-policy" class="link link--text list-menu__item list-menu__item--link">Return Policy</a></li>
-                          <li><a href="/policies/shipping-policy" class="link link--text list-menu__item list-menu__item--link">Shipping Policy</a></li>
-                          <li><a href="/policies/terms-of-service" class="link link--text list-menu__item list-menu__item--link">Terms and Conditions</a></li>
-                          <li><a href="/policies/privacy-policy" class="link link--text list-menu__item list-menu__item--link">Your privacy choices</a></li>
-                        {%- endif -%}
                       </ul>
                     {%- endif -%}
                   {%- when 'brand_information' -%}
@@ -325,7 +303,7 @@
   {%- endif -%}
 
   <div class="footer__content-bottom animate-item animate-item--child" style="--index: {{ section.blocks.size }};">
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.bottom_page_width != 'normal' %} {{ section.settings.bottom_page_width }}{% endif %}">
+    <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
@@ -493,7 +471,7 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}{% if section.settings.bottom_page_width != 'normal' %} {{ section.settings.bottom_page_width }}{% endif %}">
+    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content">
           &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
@@ -680,12 +658,6 @@
           "id": "subtext",
           "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
           "label": "t:sections.footer.blocks.text.settings.subtext.label"
-        },
-        {
-          "type": "textarea",
-          "id": "custom_links",
-          "label": "Custom links (format: Label :: /url | Label :: /url)",
-          "info": "One link per line separated by |. Use :: to separate label from URL."
         },
         {
           "type": "header",
@@ -1179,149 +1151,6 @@
       "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
     },
     {
-      "type": "select",
-      "id": "pattern_bg",
-      "label": "Background pattern",
-      "default": "none",
-      "options": [
-        {
-          "value": "none",
-          "label": "None"
-        },
-        {
-          "value": "dotted",
-          "label": "Dots"
-        },
-        {
-          "value": "grid",
-          "label": "Grid"
-        },
-        {
-          "value": "curved-grid",
-          "label": "Curved grid"
-        },
-        {
-          "value": "diagonal-stripes",
-          "label": "Stripes"
-        },
-        {
-          "value": "zigzag",
-          "label": "ZigZag"
-        },
-        {
-          "value": "arrow-pattern",
-          "label": "3D Boxes"
-        },
-        {
-          "value": "radial-rings",
-          "label": "Rings"
-        },
-        {
-          "value": "diamond-grid-1",
-          "label": "Diamond grid 1"
-        },
-        {
-          "value": "diamond-grid-2",
-          "label": "Diamond grid 2"
-        },
-        {
-          "value": "quatrefoils",
-          "label": "Quatrefoils"
-        },
-        {
-          "value": "ovals",
-          "label": "Ovals"
-        },
-        {
-          "value": "hexagons",
-          "label": "Hexagons"
-        },
-        {
-          "value": "curvy",
-          "label": "Curvy"
-        }
-      ]
-    },
-    {
-      "type": "color",
-      "id": "pattern_color",
-      "label": "Pattern color",
-      "default": "#6D388B",
-      "visible_if": "{{ section.settings.pattern_bg != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_size",
-      "min": 4,
-      "max": 80,
-      "step": 2,
-      "unit": "px",
-      "label": "Pattern size / spacing",
-      "default": 20,
-      "visible_if": "{{ section.settings.pattern_bg != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_thickness",
-      "min": 1,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "label": "Line / dot thickness",
-      "default": 2,
-      "visible_if": "{{ section.settings.pattern_bg == 'dotted' or section.settings.pattern_bg == 'grid' or section.settings.pattern_bg == 'diagonal-stripes' or section.settings.pattern_bg == 'radial-rings' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_angle",
-      "min": 0,
-      "max": 180,
-      "step": 15,
-      "unit": "deg",
-      "label": "Stripe angle",
-      "default": 45,
-      "visible_if": "{{ section.settings.pattern_bg == 'diagonal-stripes' }}"
-    },
-    {
-      "type": "select",
-      "id": "pattern_opacity_mode",
-      "label": "Opacity type",
-      "default": "low",
-      "options": [
-        {
-          "value": "low",
-          "label": "Low"
-        },
-        {
-          "value": "normal",
-          "label": "Normal"
-        }
-      ],
-      "visible_if": "{{ section.settings.pattern_bg != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_opacity_low",
-      "min": 1,
-      "max": 20,
-      "step": 1,
-      "unit": "%",
-      "label": "Opacity",
-      "default": 7,
-      "visible_if": "{{ section.settings.pattern_bg != 'none' and section.settings.pattern_opacity_mode == 'low' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_opacity_normal",
-      "min": 20,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Opacity",
-      "default": 80,
-      "visible_if": "{{ section.settings.pattern_bg != 'none' and section.settings.pattern_opacity_mode == 'normal' }}"
-    },
-    {
       "type": "header",
       "content": "t:sections.footer.settings.header__9.content",
       "info": "t:sections.footer.settings.header__9.info"
@@ -1401,58 +1230,6 @@
       "id": "branding_text",
       "label": "Branding text",
       "default": "Powered by Shrine"
-    },
-    {
-      "type": "header",
-      "content": "Layout"
-    },
-    {
-      "type": "select",
-      "id": "top_page_width",
-      "options": [
-        {
-          "value": "page-width--narrow",
-          "label": "Narrow"
-        },
-        {
-          "value": "normal",
-          "label": "Normal"
-        },
-        {
-          "value": "desktop-full-page",
-          "label": "Full width"
-        },
-        {
-          "value": "desktop-full-page-no-padding",
-          "label": "Full width without side spacing"
-        }
-      ],
-      "default": "normal",
-      "label": "Top part page width"
-    },
-    {
-      "type": "select",
-      "id": "bottom_page_width",
-      "options": [
-        {
-          "value": "page-width--narrow",
-          "label": "Narrow"
-        },
-        {
-          "value": "normal",
-          "label": "Normal"
-        },
-        {
-          "value": "desktop-full-page",
-          "label": "Full width"
-        },
-        {
-          "value": "desktop-full-page-no-padding",
-          "label": "Full width without side spacing"
-        }
-      ],
-      "default": "normal",
-      "label": "Bottom part page width"
     },
     {
       "type": "header",

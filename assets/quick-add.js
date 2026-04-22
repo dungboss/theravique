@@ -28,14 +28,15 @@ if (!customElements.get('quick-add-modal')) {
           this.removeDOMElements();
           this.fixQuantityBreaks();
           const mediaGallery = this.productElement.querySelector('media-gallery');
-          // if (mediaGallery) {
-          //   mediaGallery.dataset.disablePrepend = 'false';
-          //   mediaGallery.removeAttribute('data-filtering-option');
-          //   mediaGallery.querySelectorAll('.product__media-item.hidden, .thumbnail-list__item.hidden').forEach(item => {
-          //     item.classList.remove('hidden');
-          //   })
-          // }
-          // if (this.productElement.querySelector('variant-selects')) this.productElement.querySelector('variant-selects').dataset.hasFiltering = 'false';
+          if (mediaGallery) {
+            mediaGallery.dataset.disablePrepend = 'false';
+            mediaGallery.removeAttribute('data-filtering-option');
+            mediaGallery.querySelectorAll('.product__media-item.hidden, .thumbnail-list__item.hidden').forEach(item => {
+              console.log(item)
+              item.classList.remove('hidden');
+            })
+          }
+          if (this.productElement.querySelector('variant-selects')) this.productElement.querySelector('variant-selects').dataset.hasFiltering = 'false';
           this.setInnerHTML(this.modalContent, this.productElement.innerHTML);
 
           if (window.Shopify && Shopify.PaymentButton) {

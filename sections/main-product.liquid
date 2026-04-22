@@ -15,9 +15,6 @@
         padding-bottom: {{ section.settings.desktop_padding_bottom }}px;
       }
     }
-    {% if section.settings.pattern_bg != 'none' %}
-      {% render 'pattern-background' %}
-    {% endif %}
 
     #MediaGallery-{{ section.id }},
     #MediaGallery-{{ section.id }}-duplicate {
@@ -275,9 +272,6 @@
       "type": "image"
     },
     {
-      "type": "json-animation"
-    },
-    {
       "type": "divider"
     },
     {
@@ -411,6 +405,108 @@
     },
     {
       "type": "product_custom-product-field"
+    },
+    {
+      "type": "blinkingdot"
+    },
+    {
+      "type": "best-seller-badge"
+    },
+    {
+      "type": "countdown-timer-block"
+    },
+    {
+      "type": "custom-description-block"
+    },
+    {
+      "type": "custombannertext"
+    },
+    {
+      "type": "dashed-text-box"
+    },
+    {
+      "type": "delivery-date"
+    },
+    {
+      "type": "desktop-review-gallery"
+    },
+    {
+      "type": "gallery-inner-text"
+    },
+    {
+      "type": "geo-location-flag"
+    },
+    {
+      "type": "get-more-pay-less"
+    },
+    {
+      "type": "gift-card-recipient-form"
+    },
+    {
+      "type": "gift-info"
+    },
+    {
+      "type": "key-benefits"
+    },
+    {
+      "type": "moneybackcheck"
+    },
+    {
+      "type": "moneybackcheckcart"
+    },
+    {
+      "type": "new-featured-review-with-image"
+    },
+    {
+      "type": "offertext"
+    },
+    {
+      "type": "price-and-rating-stars-block"
+    },
+    {
+      "type": "price-for-above"
+    },
+    {
+      "type": "rating-stars-block-2"
+    },
+    {
+      "type": "readytoship"
+    },
+    {
+      "type": "results-block"
+    },
+    {
+      "type": "review-new"
+    },
+    {
+      "type": "selling-plans"
+    },
+    {
+      "type": "single-featured-review"
+    },
+    {
+      "type": "social-proof-customers"
+    },
+    {
+      "type": "social-proof-for-banner"
+    },
+    {
+      "type": "social-proof-quote"
+    },
+    {
+      "type": "video-player-2"
+    },
+    {
+      "type": "video-player-3"
+    },
+    {
+      "type": "video-slider-block"
+    },
+    {
+      "type": "warningmessage"
+    },
+    {
+      "type": "product-benefits-grid"
     }
   ],
   "settings": [
@@ -454,149 +550,6 @@
       ],
       "default": "background-1",
       "label": "Color scheme"
-    },
-    {
-      "type": "select",
-      "id": "pattern_bg",
-      "label": "Background pattern",
-      "default": "none",
-      "options": [
-        {
-          "value": "none",
-          "label": "None"
-        },
-        {
-          "value": "dotted",
-          "label": "Dots"
-        },
-        {
-          "value": "grid",
-          "label": "Grid"
-        },
-        {
-          "value": "curved-grid",
-          "label": "Curved grid"
-        },
-        {
-          "value": "diagonal-stripes",
-          "label": "Stripes"
-        },
-        {
-          "value": "zigzag",
-          "label": "ZigZag"
-        },
-        {
-          "value": "arrow-pattern",
-          "label": "3D Boxes"
-        },
-        {
-          "value": "radial-rings",
-          "label": "Rings"
-        },
-        {
-          "value": "diamond-grid-1",
-          "label": "Diamond grid 1"
-        },
-        {
-          "value": "diamond-grid-2",
-          "label": "Diamond grid 2"
-        },
-        {
-          "value": "quatrefoils",
-          "label": "Quatrefoils"
-        },
-        {
-          "value": "ovals",
-          "label": "Ovals"
-        },
-        {
-          "value": "hexagons",
-          "label": "Hexagons"
-        },
-        {
-          "value": "curvy",
-          "label": "Curvy"
-        }
-      ]
-    },
-    {
-      "type": "color",
-      "id": "pattern_color",
-      "label": "Pattern color",
-      "default": "#6D388B",
-      "visible_if": "{{ section.settings.pattern_bg != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_size",
-      "min": 4,
-      "max": 80,
-      "step": 2,
-      "unit": "px",
-      "label": "Pattern size / spacing",
-      "default": 20,
-      "visible_if": "{{ section.settings.pattern_bg != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_thickness",
-      "min": 1,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "label": "Line / dot thickness",
-      "default": 2,
-      "visible_if": "{{ section.settings.pattern_bg == 'dotted' or section.settings.pattern_bg == 'grid' or section.settings.pattern_bg == 'diagonal-stripes' or section.settings.pattern_bg == 'radial-rings' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_angle",
-      "min": 0,
-      "max": 180,
-      "step": 15,
-      "unit": "deg",
-      "label": "Stripe angle",
-      "default": 45,
-      "visible_if": "{{ section.settings.pattern_bg == 'diagonal-stripes' }}"
-    },
-    {
-      "type": "select",
-      "id": "pattern_opacity_mode",
-      "label": "Opacity type",
-      "default": "low",
-      "options": [
-        {
-          "value": "low",
-          "label": "Low"
-        },
-        {
-          "value": "normal",
-          "label": "Normal"
-        }
-      ],
-      "visible_if": "{{ section.settings.pattern_bg != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_opacity_low",
-      "min": 1,
-      "max": 20,
-      "step": 1,
-      "unit": "%",
-      "label": "Opacity",
-      "default": 7,
-      "visible_if": "{{ section.settings.pattern_bg != 'none' and section.settings.pattern_opacity_mode == 'low' }}"
-    },
-    {
-      "type": "range",
-      "id": "pattern_opacity_normal",
-      "min": 20,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Opacity",
-      "default": 80,
-      "visible_if": "{{ section.settings.pattern_bg != 'none' and section.settings.pattern_opacity_mode == 'normal' }}"
     },
     {
       "type": "header",
@@ -1303,6 +1256,202 @@
       "unit": "px",
       "label": "Bottom padding",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Review under product images",
+      "info": "Only shows on desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "enabledesktopreview",
+      "default": true,
+      "label": "Enable review"
+    },
+    {
+      "type": "color",
+      "id": "review_background_color",
+      "label": "Review Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "review_border_color",
+      "label": "Review Border Color",
+      "default": "#e9ecef"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#ffc107"
+    },
+    {
+      "type": "color",
+      "id": "username_color",
+      "label": "Username Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "username",
+      "label": "Username",
+      "default": "Sarah M."
+    },
+    {
+      "type": "checkbox",
+      "id": "verified_customer",
+      "label": "Show Verified Customer Badge",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "verified_icon_color",
+      "label": "Verified Icon Color",
+      "default": "#28a745"
+    },
+    {
+      "type": "color",
+      "id": "verified_text_color",
+      "label": "Verified Text Color",
+      "default": "#28a745"
+    },
+    {
+      "type": "text",
+      "id": "verified_text",
+      "label": "Verified Text",
+      "default": "Verified Purchase"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "textarea",
+      "id": "review_text",
+      "label": "Review Text",
+      "default": "Amazing product! Highly recommend it to everyone."
+    },
+    {
+      "type": "header",
+      "content": "Text badge within the image gallery"
+    },
+    {
+      "type": "checkbox",
+      "id": "enablegallerybottomtext",
+      "default": false,
+      "label": "Enable text badge"
+    },
+    {
+      "type": "color",
+      "id": "galleryinnerbackground",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "galleryinneropacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.8,
+      "label": "Opacity level"
+    },
+    {
+      "type": "color",
+      "id": "galleryinnertextcolor",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "galleryinnerradius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 8,
+      "label": "Border radius"
+    },
+    {
+      "type": "range",
+      "id": "galleryinnerheight",
+      "min": 5,
+      "max": 95,
+      "step": 5,
+      "unit": "%",
+      "default": 80,
+      "label": "Badge height",
+      "info": "Low percentage moves to top and high moves to bottom"
+    },
+    {
+      "type": "textarea",
+      "id": "galleryinnertext",
+      "label": "Text",
+      "default": "5-Star Rated Product",
+      "info": "Wrap text in <b> and </b> if you want to bold text"
+    },
+    {
+      "type": "checkbox",
+      "id": "enablegalleryreviewstars",
+      "default": false,
+      "label": "Enable review stars in badge",
+      "info": "To use the reviews, delete all text above"
+    },
+    {
+      "type": "range",
+      "id": "rating",
+      "label": "Rating",
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "default": 4.8
+    },
+    {
+      "type": "color",
+      "id": "star_color2",
+      "default": "#ffcc00",
+      "label": "Stars color"
+    },
+    {
+      "type": "select",
+      "id": "bg_stars_style",
+      "options": [
+        {
+          "value": "outlined",
+          "label": "Outlined"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ],
+      "label": "Background stars style",
+      "default": "full"
+    },
+    {
+      "type": "color",
+      "id": "bg_star_color2",
+      "default": "#ececec",
+      "label": "Background stars color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "label",
+      "label": "Text",
+      "default": "(xxxx Reviews)"
+    },
+    {
+      "type": "range",
+      "id": "size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16,
+      "label": "Text size"
     }
   ]
 }

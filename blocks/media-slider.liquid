@@ -30,7 +30,9 @@
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
     margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
   "
-  class="{% if block.settings.mobile_full_page %}mobile-side-margins-negative {% endif %}{{ block.settings.visibility }}"
+  {% if block.settings.mobile_full_page %}
+    class="mobile-side-margins-negative"
+  {% endif %}
   {{- block.shopify_attributes -}}
 >
   <div
@@ -214,26 +216,6 @@
   "name": "Image/Video slider",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "header",
       "content": "Slider"
@@ -539,32 +521,10 @@
       "default": true
     },
     {
-      "type": "select",
-      "id": "play_btn_position",
-      "options": [
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "top-left",
-          "label": "Top left"
-        },
-        {
-          "value": "top-right",
-          "label": "Top right"
-        },
-        {
-          "value": "bottom-right",
-          "label": "Bottom right"
-        },
-        {
-          "value": "bottom-left",
-          "label": "Bottom left"
-        }
-      ],
-      "default": "center",
-      "label": "Play button position"
+      "type": "checkbox",
+      "id": "btn_animation",
+      "label": "Enable button ripple animation",
+      "default": false
     },
     {
       "type": "select",
@@ -578,58 +538,6 @@
         { "value": "inverse", "label": "Inverse" }
       ],
       "default": "accent-1"
-    },
-    {
-      "type": "select",
-      "id": "play_btn_style",
-      "options": [
-        {
-          "value": "solid",
-          "label": "Filled"
-        },
-        {
-          "value": "outline",
-          "label": "Outlined"
-        }
-      ],
-      "default": "solid",
-      "label": "Play button style"
-    },
-    {
-      "type": "range",
-      "id": "play_btn_size_desktop",
-      "min": 30,
-      "max": 80,
-      "step": 5,
-      "unit": "px",
-      "label": "Play button desktop size",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "play_btn_size_mobile",
-      "min": 25,
-      "max": 75,
-      "step": 5,
-      "unit": "px",
-      "label": "Play button mobile size",
-      "default": 50
-    },
-    {
-      "type": "checkbox",
-      "id": "btn_animation",
-      "label": "Enable button ripple animation",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "play_btn_corner_radius",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Play button corner radius",
-      "default": 100
     },
     {
       "type": "checkbox",

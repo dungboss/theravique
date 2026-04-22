@@ -142,13 +142,7 @@
             {%- endunless -%}
             {%- unless current_product.has_only_default_variant -%}
               {% if block.settings.show_variant_picker %}
-                <div
-                  class='upsell__variant-picker bundle-deals__variant-selects-js'
-                  data-index="{{ item_index }}"
-                  data-id-index="id_{{ item_index }}"
-                  data-percentage-left="{{ percentage_left_multiplier }}"
-                  data-fixed-discount="{{ fixed_discount }}"
-                >
+                <div class='upsell__variant-picker bundle-deals__variant-selects-js' data-index="{{ item_index }}" data-id-index="id_{{ item_index }}">
                   {%- for option in current_product.options_with_values -%}
                     <div class="upsell__select select select--small no-background color-{{ settings.pickers_color_scheme }} accent-color-{{ settings.pickers_overlay_color }} accent-2-color-{{ settings.pickers_text_color }}">
                       <select class="select__select variant-dropdown">
@@ -340,13 +334,7 @@
             {%- endunless -%}
             {%- unless current_product.has_only_default_variant -%}
               {% if block.settings.show_variant_picker %}
-                <div
-                  class='upsell__variant-picker bundle-deals__variant-selects-js'
-                  data-index="{{ item_index }}"
-                  data-id-index="id_{{ item_index }}"
-                  data-percentage-left="{{ percentage_left_multiplier }}"
-                  data-fixed-discount="{{ fixed_discount }}"
-                >
+                <div class='upsell__variant-picker bundle-deals__variant-selects-js' data-index="{{ item_index }}" data-id-index="id_{{ item_index }}">
                   {%- for option in current_product.options_with_values -%}
                     <div class="upsell__select select select--small no-background color-{{ settings.pickers_color_scheme }} accent-color-{{ settings.pickers_overlay_color }} accent-2-color-{{ settings.pickers_text_color }}">
                       <select class="select__select variant-dropdown">
@@ -538,13 +526,7 @@
             {%- endunless -%}
             {%- unless current_product.has_only_default_variant -%}
               {% if block.settings.show_variant_picker %}
-                <div
-                  class='upsell__variant-picker bundle-deals__variant-selects-js'
-                  data-index="{{ item_index }}"
-                  data-id-index="id_{{ item_index }}"
-                  data-percentage-left="{{ percentage_left_multiplier }}"
-                  data-fixed-discount="{{ fixed_discount }}"
-                >
+                <div class='upsell__variant-picker bundle-deals__variant-selects-js' data-index="{{ item_index }}" data-id-index="id_{{ item_index }}">
                   {%- for option in current_product.options_with_values -%}
                     <div class="upsell__select select select--small no-background color-{{ settings.pickers_color_scheme }} accent-color-{{ settings.pickers_overlay_color }} accent-2-color-{{ settings.pickers_text_color }}">
                       <select class="select__select variant-dropdown">

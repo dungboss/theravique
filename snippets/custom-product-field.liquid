@@ -97,7 +97,33 @@
               assign option_trim = option | strip
               assign hex_value = ''
               if block.settings.swatches_custom_colors == 'custom'
-                assign hex_value = custom_colors_arr[forloop.index0]
+                assign option_trim_normalized = option_trim | downcase | replace: 'grey', 'gray'
+
+                for custom_color_option in custom_colors_arr
+                  assign custom_color_line = custom_color_option | strip
+
+                  if custom_color_line contains '='
+                    assign custom_color_parts = custom_color_line | split: '='
+                    assign configured_name = custom_color_parts[0] | strip | downcase | replace: 'grey', 'gray'
+                    assign configured_hex = custom_color_parts[1] | strip
+
+                    if option_trim_normalized == configured_name
+                      assign hex_value = configured_hex
+                      break
+                    endif
+                  endif
+                endfor
+
+                if hex_value == blank
+                  assign fallback_custom_color = custom_colors_arr[forloop.index0] | strip
+
+                  if fallback_custom_color contains '='
+                    assign fallback_custom_color_parts = fallback_custom_color | split: '='
+                    assign hex_value = fallback_custom_color_parts[1] | strip
+                  else
+                    assign hex_value = fallback_custom_color
+                  endif
+                endif
               else
                 for color in predefined_colors
                   assign color_line = color | remove: '<p>' | remove: '</p>'

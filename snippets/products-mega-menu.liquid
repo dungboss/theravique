@@ -34,7 +34,7 @@
                   {% endif %}
                 >
                   {% if childlink.url contains 'collections' and section.settings.products_mega_menu_display_collection_images %}
-                    {% assign link_collection_handle = childlink.url | split: 'collections/' | last %}
+                    {% assign link_collection_handle = childlink.url | remove: '/collections/' %}
                     {% assign link_current_collection = collections[link_collection_handle] %}
                     {% if link_current_collection.featured_image != blank %}
                       <div class="header__menu-item__preview-image">

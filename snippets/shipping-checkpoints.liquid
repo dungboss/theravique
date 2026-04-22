@@ -26,7 +26,7 @@
     margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
     --item-count: {{ item_count }};
   "
-  class='shipping-checkpoints{% if item_count == 4 %} shipping-checkpoints--has-4{% endif %} {{ block.settings.visibility }}'
+  class='shipping-checkpoints{% if item_count == 4 %} shipping-checkpoints--has-4{% endif %}'
 >
   <div
     class='shipping-checkpoints__bar color-{{ block.settings.color_scheme }}'

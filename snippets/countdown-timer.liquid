@@ -175,17 +175,16 @@
               00
             {% endif %}
           </div>
-          {% if part == 'day' -%}
-            {% assign label = block.settings.label_days %}
-          {% elsif part == 'hour' -%}
-            {% assign label = block.settings.label_hours %}
-          {% elsif part == 'minute' -%}
-            {% assign label = block.settings.label_minutes %}
-          {% elsif part == 'second' -%}
-            {% assign label = block.settings.label_seconds %}
-          {% endif %}
-          <span class="countdown-timer__label{% if label == blank %} hidden{% endif %}" aria-hidden="true">
-            {{ label }}
+          <span class="countdown-timer__label" aria-hidden="true">
+            {% if part == 'day' -%}
+              {{- block.settings.label_days }}
+            {% elsif part == 'hour' -%}
+              {{- block.settings.label_hours }}
+            {% elsif part == 'minute' -%}
+              {{- block.settings.label_minutes }}
+            {% elsif part == 'second' -%}
+              {{- block.settings.label_seconds }}
+            {% endif %}
           </span>
         </div>
         {% if block.settings.enable_colons and forloop.last == false %}

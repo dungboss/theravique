@@ -44,7 +44,7 @@
 {% endcapture %}
 
 <div
-  class='review-avatars review-avatars--{{ block.settings.avatars_size }} review-avatars--{{ block.settings.avatars_position }} isolate flex-justify-{{ block.settings.alignment }} {{ block.settings.visibility }}'
+  class='review-avatars review-avatars--{{ block.settings.avatars_size }} review-avatars--{{ block.settings.avatars_position }} isolate flex-justify-{{ block.settings.alignment }}'
   style="
     --avatar-size:{{ block.settings.avatar_size | divided_by: 10.0 }}rem;
     --avatar-offset:{{ block.settings.avatar_offset | divided_by: 10.0 }}rem;
@@ -158,26 +158,6 @@
   "name": "Review avatars",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "header",
       "content": "Layout"

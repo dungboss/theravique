@@ -48,6 +48,7 @@
     assign option_class = ''
     assign option_disabled = true
     assign option_index = forloop.index0
+    assign option_value_normalized = value | strip | downcase | replace: 'grey', 'gray'
     assign option_exists = false
 
     for option1_name in variants_option1_arr
@@ -112,6 +113,29 @@
 
   {% case type %}
     {%- when 'swatches' -%}
+      {% liquid
+        assign hex_value = ''
+
+        for color in predefined_colors
+          assign color_line = color | remove: '<p>' | remove: '</p>'
+          assign color_parts = color_line | split: '='
+          assign option_name = color_parts[0] | strip
+          assign option_hex = color_parts[1] | strip
+
+          if value == option_name
+            assign hex_value = option_hex
+            assign current_option_name = option_name
+            assign option_value_index = option_value_index | plus: 1
+          endif
+        endfor
+
+        if value.swatch.image
+          assign image_url = value.swatch.image | image_url: width: 400
+          assign swatch_value = 'no-repeat center / cover url(' | append: image_url | append: ')'
+        else
+          assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+        endif
+      %}
       <div class="color-swatch {{ option_class }}">
         <input
           type="radio"
@@ -149,14 +173,35 @@
                   if block.settings.swatches_custom_colors == 'image_alt'
                     assign custom_color = variant.image.alt
                   elsif block.settings.swatches_custom_colors == 'custom'
-                    assign custom_color = custom_colors_arr[option_index]
-                  elsif block.settings.swatches_custom_colors == 'metafield'
-                    if value.swatch.image
-                      assign image_url = value.swatch.image | image_url: width: 400
-                      assign custom_color = 'no-repeat center / cover url(' | append: image_url | append: ')'
-                    else
-                      assign custom_color = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+                    assign custom_color = ''
+
+                    for custom_color_option in custom_colors_arr
+                      assign custom_color_line = custom_color_option | strip
+
+                      if custom_color_line contains '='
+                        assign custom_color_parts = custom_color_line | split: '='
+                        assign configured_name = custom_color_parts[0] | strip | downcase | replace: 'grey', 'gray'
+                        assign configured_hex = custom_color_parts[1] | strip
+
+                        if configured_name == option_value_normalized
+                          assign custom_color = configured_hex
+                          break
+                        endif
+                      endif
+                    endfor
+
+                    if custom_color == blank
+                      assign fallback_custom_color = custom_colors_arr[option_index] | strip
+
+                      if fallback_custom_color contains '='
+                        assign fallback_custom_color_parts = fallback_custom_color | split: '='
+                        assign custom_color = fallback_custom_color_parts[1] | strip
+                      else
+                        assign custom_color = fallback_custom_color
+                      endif
                     endif
+                  elsif block.settings.swatches_custom_colors == 'metafield'
+                    assign custom_color = swatch_value
                   else
                     assign custom_color = ''
 

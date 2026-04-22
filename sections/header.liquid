@@ -17,44 +17,11 @@
   .header__heading-link.media .header__heading-logo--secondary {
     display: none !important;
   }
-
-  {% liquid
-    assign logo_height = 46
-    assign mobile_logo_height = 41
-    assign desktop_addition = 0
-    if settings.logo != blank
-      assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio
-      assign mobile_logo_height = settings.mobile_logo_width | divided_by: settings.logo.aspect_ratio
-      if settings.logo_mobile != blank
-        assign mobile_logo_height = settings.mobile_logo_width | divided_by: settings.logo_mobile.aspect_ratio
-      endif
-    endif
-    if logo_height < 44
-      assign logo_height = 44
-    endif
-    if mobile_logo_height < 44
-      assign mobile_logo_height = 44
-    endif
-    if section.settings.logo_position == 'top-left' or section.settings.logo_position == 'top-center'
-      assign desktop_addition = 52
-    endif
-    assign mobile_top_padding = section.settings.padding_top | times: 0.5 | round: 0
-    assign mobile_bottom_padding = section.settings.padding_bottom | times: 0.5 | round: 0
-
-    assign header_height = section.settings.padding_top | plus: logo_height | plus: section.settings.padding_bottom | plus: desktop_addition
-    assign mobile_header_height = mobile_top_padding | plus: mobile_logo_height | plus: mobile_bottom_padding
-  %}
-  html {
-    --header-height: {{ header_height }}px
-  }
   
   @media screen and (max-width: 749px) {
     .header__heading-link.media {
       width: {{ settings.mobile_logo_width }}px;
       max-width: {{ settings.mobile_logo_width }}px;
-    }
-    html {
-      --header-height: {{ mobile_header_height }}px
     }
   }
 
@@ -80,12 +47,6 @@
     .header__text-icon.icon {
       font-size: {{ section.settings.text_icons_size | divided_by: 10.0 }}rem;
     }
-    {% if section.settings.logo_position == 'middle-left' and section.settings.menu_position == 'center' and section.settings.menu_type_desktop != 'drawer' %}
-      .header__icons {
-        justify-content: flex-end;
-        min-width: {{ settings.logo_width }}px;
-      }
-    {% endif %}
   }
   .header__icon--text {
     width: fit-content;
@@ -182,7 +143,7 @@
   }
 
   .section-header {
-    position: sticky;
+    position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
 
@@ -221,7 +182,7 @@
   </symbol>
 </svg>
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}static-header{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}{% if section.settings.sticky_header_type == 'none' %} header-wrapper--not-sticky{% endif %}">
-  <header class="header header--{{ section.settings.logo_position }} position-{{ section.settings.menu_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}" style="--icons-thickness:{{ section.settings.icons_thickness }}px;">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}" style="--icons-thickness:{{ section.settings.icons_thickness }}px;">
     {% liquid
       assign text_menu_icon = false
       assign text_search_icon = false
@@ -240,13 +201,9 @@
         assign text_cart_icon = true
       endif
     %}
-    {% comment %} {% if section.blocks.size == 0 %}
-      {%- if section.settings.menu != blank -%}
-        {% render 'header-drawer', section: section, text_menu_icon: text_menu_icon %}
-      {%- endif -%}
-    {% else %}
-    {% endif %} {% endcomment %}
-    {% content_for 'block', type: 'header-drawer', id: 'HeaderDrawer' %}
+    {%- if section.settings.menu != blank -%}
+      {% render 'header-drawer', section: section, text_menu_icon: text_menu_icon %}
+    {%- endif -%}
 
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
       <details-modal class="header__search">
@@ -335,19 +292,13 @@
     {%- endif -%}
 
     {%- if section.settings.menu != blank and section.settings.menu_type_desktop != 'drawer' -%}
-      {% liquid
-        assign products_mega_menu_links = section.settings.products_mega_menu_links | downcase
-      %}
       {% if section.settings.menu_type_desktop == 'dropdown' %}
         <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.menu.links -%}
-              {% liquid
-                assign link_title_downcase = link.title | downcase
-              %}
               <li>
                 {%- if link.links != blank -%}
-                  {% if products_mega_menu_links contains link_title_downcase %}
+                  {% if section.settings.products_mega_menu_links contains link.title %}
                     {% render 'products-mega-menu', link: link %}
                   {% else %}
                     <header-menu>
@@ -399,12 +350,9 @@
         <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.menu.links -%}
-              {% liquid
-                assign link_title_downcase = link.title | downcase
-              %}
               <li>
                 {%- if link.links != blank -%}
-                  {% if products_mega_menu_links contains link_title_downcase %}
+                  {% if section.settings.products_mega_menu_links contains link.title %}
                     {% render 'products-mega-menu', link: link %}
                   {% else %}
                     <header-menu>
@@ -805,9 +753,6 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 1,
-  "blocks": [
-  ],
   "settings": [
     {
       "type": "header",
@@ -873,7 +818,7 @@
     },
     {
       "type": "header",
-      "content": "Icons styling"
+      "content": "Icons"
     },
     {
       "type": "range",
@@ -930,10 +875,6 @@
       "label": "Text icons font"
     },
     {
-      "type": "header",
-      "content": "Icons selection"
-    },
-    {
       "type": "select",
       "id": "menu_icon",
       "options": [
@@ -973,8 +914,7 @@
       "type": "inline_richtext",
       "id": "menu_icon_text",
       "label": "Drawer menu icon text",
-      "default": "MENU",
-      "visible_if": "{{ section.settings.menu_icon == 'text' }}"
+      "default": "MENU"
     },
     {
       "type": "select",
@@ -1004,8 +944,7 @@
       "type": "inline_richtext",
       "id": "search_icon_text",
       "label": "Search icon text",
-      "default": "SEARCH",
-      "visible_if": "{{ section.settings.search_icon == 'text' }}"
+      "default": "SEARCH"
     },
     {
       "type": "select",
@@ -1031,8 +970,7 @@
       "type": "inline_richtext",
       "id": "account_icon_text",
       "label": "Account icon text",
-      "default": "ACCOUNT",
-      "visible_if": "{{ section.settings.search_icon == 'text' }}"
+      "default": "ACCOUNT"
     },
     {
       "type": "select",
@@ -1074,8 +1012,7 @@
       "type": "inline_richtext",
       "id": "cart_icon_text",
       "label": "Cart icon text",
-      "default": "CART",
-      "visible_if": "{{ section.settings.cart_icon == 'text' }}"
+      "default": "CART"
     },
     {
       "type": "header",
@@ -1116,22 +1053,6 @@
       "label": "t:sections.header.settings.logo_position.label"
     },
     {
-      "type": "select",
-      "id": "mobile_logo_position",
-      "options": [
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "left",
-          "label": "Left"
-        }
-      ],
-      "default": "center",
-      "label": "Mobile logo position"
-    },
-    {
       "type": "header",
       "content": "Menu"
     },
@@ -1140,28 +1061,6 @@
       "id": "menu",
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
-    },
-    
-    {
-      "type": "select",
-      "id": "menu_position",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "Right"
-        },
-      ],
-      "default": "left",
-      "label": "Menu position",
-      "visible_if": "{{ section.settings.logo_position == 'middle-left' }}"
     },
     {
       "type": "select",
@@ -1241,16 +1140,7 @@
     },
     {
       "type": "header",
-      "content": "Mobile menu"
-    },
-    {
-      "type": "paragraph",
-      "content": "To customize the mobile menu, customize the 'Drawer (mobile) menu' block located in the Header section."
-    },
-    {
-      "type": "header",
-      "content": "Products & Collections Mega Menu",
-      "info": "For drawer (mobile) menu, this menu is configured in its own block settings."
+      "content": "Products & Collections Mega Menu"
     },
     {
       "type": "text",
@@ -1263,15 +1153,82 @@
       "id": "products_mega_menu_display_collection_products",
       "label": "Display products that the collection contains",
       "default": false,
-      "info": "If checked, every product from the sub-link collection will be displayed. Otherwise, add each individual product/collection as a nested link.",
-      "visible_if": "{{ section.settings.products_mega_menu_links != blank }}"
+      "info": "If checked, every product from the sub-link collection will be displayed. Otherwise, add each individual product/collection as a nested link."
     },
     {
       "type": "checkbox",
       "id": "products_mega_menu_display_collection_images",
-      "label": "Display collection images",
-      "default": true,
-      "visible_if": "{{ section.settings.products_mega_menu_links != blank }}"
+      "label": "Display collection images on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "products_mega_menu_display_collection_images_on_mobile",
+      "label": "Display collection images on mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Mobile menu"
+    },
+    {
+      "type": "text",
+      "id": "mobile_menu_title",
+      "label": "Title",
+      "default": "Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary menu"
+    },
+    {
+      "type": "select",
+      "id": "menu_color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.mobile_layout.content"
+    },
+    {
+      "type": "select",
+      "id": "mobile_logo_position",
+      "options": [
+        {
+          "value": "center",
+          "label": "t:sections.header.settings.mobile_logo_position.options__1.label"
+        },
+        {
+          "value": "left",
+          "label": "t:sections.header.settings.mobile_logo_position.options__2.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.header.settings.mobile_logo_position.label"
     },
     {
       "type": "header",
@@ -1284,46 +1241,24 @@
       "default": false
     },
     {
-      "type": "select",
-      "id": "country_selector_visibility",
-      "options": [
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display selector on",
-      "default": "always-display",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "type": "paragraph",
+      "content": "HOW TO USE: In each text setting, you can use the following keywords (words in square brackets) to display their corresponding values:"
     },
     {
       "type": "paragraph",
-      "content": "HOW TO USE: In each text setting, you can use the following keywords (words in square brackets) to display their corresponding values:",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "content": "[country_name] - displays the country name"
     },
     {
       "type": "paragraph",
-      "content": "[country_name] - displays the country name",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "content": "[country_code] - displays the ISO country code"
     },
     {
       "type": "paragraph",
-      "content": "[country_code] - displays the ISO country code",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "content": "[currency_symbol] - displays the currency symbol"
     },
     {
       "type": "paragraph",
-      "content": "[currency_symbol] - displays the currency symbol",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
-    },
-    {
-      "type": "paragraph",
-      "content": "[currency_code] - displays the currency ISO code",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "content": "[currency_code] - displays the currency ISO code"
     },
     {
       "type": "select",
@@ -1343,50 +1278,43 @@
         },
       ],
       "default": "circle",
-      "label": "Country flags aspect ratio",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "label": "Country flags aspect ratio"
     },
     {
       "type": "checkbox",
       "id": "country_selector_selected_flags_desktop",
       "label": "Desktop selected button - display country flag",
-      "default": true,
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "default": true
     },
     {
       "type": "text",
       "id": "country_selector_selected_text_desktop",
       "label": "Desktop selected button - text",
-      "default": "[country_name] | [currency_code] [currency_symbol]",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "default": "[country_name] | [currency_code] [currency_symbol]"
     },
     {
       "type": "checkbox",
       "id": "country_selector_selected_flags_mobile",
       "label": "Mobile selected button - display country flag",
-      "default": true,
-      "visible_if": "{{ section.settings.enable_country_selector and section.settings.country_selector_visibility == 'always-display' }}"
+      "default": true
     },
     {
       "type": "text",
       "id": "country_selector_selected_text_mobile",
       "label": "Mobile selected button - text",
-      "default": "[country_code] | [currency_symbol]",
-      "visible_if": "{{ section.settings.enable_country_selector and section.settings.country_selector_visibility == 'always-display' }}"
+      "default": "[country_code] | [currency_symbol]"
     },
     {
       "type": "checkbox",
       "id": "country_selector_options_flags",
       "label": "Dropdown options - display country flags",
-      "default": true,
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "default": true
     },
     {
       "type": "text",
       "id": "country_selector_options_text",
       "label": "Dropdown options - text",
-      "default": "[country_name] | [currency_code] [currency_symbol]",
-      "visible_if": "{{ section.settings.enable_country_selector }}"
+      "default": "[country_name] | [currency_code] [currency_symbol]"
     },
     {
       "type": "header",
@@ -1399,62 +1327,38 @@
       "default": false
     },
     {
-      "type": "select",
-      "id": "language_selector_visibility",
-      "options": [
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display selector on",
-      "default": "always-display",
-      "visible_if": "{{ section.settings.enable_language_selector }}"
+      "type": "paragraph",
+      "content": "HOW TO USE: In each text setting, you can use the following keywords (words in square brackets) to display their corresponding values:"
     },
     {
       "type": "paragraph",
-      "content": "HOW TO USE: In each text setting, you can use the following keywords (words in square brackets) to display their corresponding values:",
-      "visible_if": "{{ section.settings.enable_language_selector }}"
+      "content": "[name] - displays the language name"
     },
     {
       "type": "paragraph",
-      "content": "[name] - displays the language name",
-      "visible_if": "{{ section.settings.enable_language_selector }}"
+      "content": "[local_name] - displays the local name of the language"
     },
     {
       "type": "paragraph",
-      "content": "[local_name] - displays the local name of the language",
-      "visible_if": "{{ section.settings.enable_language_selector }}"
-    },
-    {
-      "type": "paragraph",
-      "content": "[code] - displays the language ISO code",
-      "visible_if": "{{ section.settings.enable_language_selector }}"
+      "content": "[code] - displays the language ISO code"
     },
     {
       "type": "text",
       "id": "language_selector_selected_text_desktop",
       "label": "Desktop selected button - text",
-      "default": "[local_name]",
-      "visible_if": "{{ section.settings.enable_language_selector }}"
+      "default": "[local_name]"
     },
     {
       "type": "text",
       "id": "language_selector_selected_text_mobile",
       "label": "Mobile selected button - text",
-      "default": "[code]",
-      "visible_if": "{{ section.settings.enable_language_selector and section.settings.language_selector_visibility == 'always-display' }}"
+      "default": "[code]"
     },
     {
       "type": "text",
       "id": "language_selector_options_text",
       "label": "Dropdown options - text",
-      "default": "[name] ([local_name])",
-      "visible_if": "{{ section.settings.enable_language_selector and section.settings.language_selector_visibility == 'always-display' }}"
+      "default": "[name] ([local_name])"
     },
     {
       "type": "header",

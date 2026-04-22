@@ -1,10 +1,8 @@
 <div
-  class="payment-badges-block {{ block.settings.visibility }}"
+  class="payment-badges-block"
   style="
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
     margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
-    --icon-width-desktop: {{ block.settings.width_desktop }}px;
-    --icon-width-mobile: {{ block.settings.width_mobile }}px;
   "
   role="region"
 >
@@ -30,54 +28,10 @@
   "tag": null,
   "settings": [
     {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
-    {
       "type": "text",
       "id": "enabled_payment_types",
       "label": "Custom payment icons to show",
       "info": "List of payments you want to show, split with a comma. View all available icons [here](https://shopify.dev/docs/api/checkout-ui-extensions/latest/components/media/paymenticon#paymentmethod). Example usage: \"american_express, apple_pay, google_pay\"."
-    },
-    {
-      "type": "header",
-      "content": "Badges size"
-    },
-    {
-      "type": "range",
-      "id": "width_desktop",
-      "label": "Desktop size",
-      "min": 26,
-      "max": 50,
-      "step": 2,
-      "unit": "px",
-      "default": 38
-    },
-    {
-      "type": "range",
-      "id": "width_mobile",
-      "label": "Mobile size",
-      "min": 20,
-      "max": 44,
-      "step": 2,
-      "unit": "px",
-      "default": 38
     },
     {
       "type": "header",

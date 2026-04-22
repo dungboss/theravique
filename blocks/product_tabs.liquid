@@ -59,7 +59,7 @@
 
 <content-tabs
   id="ProductTabs-{{ block.id }}"
-  class="product-tabs display-block {{ block.settings.visibility }}"
+  class="product-tabs display-block"
   data-product-tabs="true"
   style="
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
@@ -135,26 +135,6 @@
   "name": "Content tabs",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "header",
       "content": "Layout"

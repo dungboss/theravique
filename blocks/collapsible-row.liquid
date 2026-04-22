@@ -65,7 +65,7 @@
 %}
 <div
   id="Accordion-{{ block.id }}"
-  class="product__accordion accordion accordion-v2 accordion-v2--colors-{{ colors }} accordion--{{ block.settings.heading_size }} quick-add-hidden {{ block.settings.visibility }}"
+  class="product__accordion accordion accordion-v2 accordion-v2--colors-{{ colors }} accordion--{{ block.settings.heading_size }} quick-add-hidden"
   data-border-type="{{ block.settings.border_type }}"
   style="
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
@@ -216,26 +216,6 @@
     }
   ],
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "checkbox",
       "id": "open",

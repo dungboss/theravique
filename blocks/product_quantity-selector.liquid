@@ -45,7 +45,7 @@
       </span>
     </label>
     <quantity-input
-      class="quantity main-quantity{% if block.settings.full_width_classic %} quantity--full{% endif %} no-background color-{{ settings.quantity_color_scheme }} accent-color-{{ settings.quantity_overlay_color }} accent-2-color-{{ settings.quantity_text_color }}"
+      class="quantity main-quantity{% if block.settings.full_width_classic and quantity_atc_append == 'none' %} quantity--full{% endif %} no-background color-{{ settings.quantity_color_scheme }} accent-color-{{ settings.quantity_overlay_color }} accent-2-color-{{ settings.quantity_text_color }}"
       data-section="{{ section.id }}"
     >
       <button class="quantity__button no-js-hidden" name="minus" type="button">
@@ -1194,15 +1194,11 @@
       "content": "Quantity option #1 Amount & pricing"
     },
     {
-      "type": "range",
+      "type": "number",
       "id": "option_1_quantity",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "qty",
       "label": "Option #1 Quantity",
       "default": 1,
-      "info": "Set to 0 to disable this option"
+      "info": "Set to 0 to disable this option. You can enter any number (e.g., 1000)"
     },
     {
       "type": "text",
@@ -1290,6 +1286,26 @@
       "label": "Option #1 Compare price text",
       "default": "[compare_price]",
       "visible_if": "{{ block.settings.option_1_quantity > 0 }}"
+    },
+    {
+      "type": "header",
+      "content": "Quantity option #1 Custom features list",
+      "visible_if": "{{ block.settings.option_1_quantity > 0 }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "option_1_show_features",
+      "label": "Show custom features list for Option #1",
+      "default": false,
+      "visible_if": "{{ block.settings.option_1_quantity > 0 }}"
+    },
+    {
+      "type": "textarea",
+      "id": "option_1_features_text",
+      "label": "Features list (one per line)",
+      "info": "Enter each feature on a new line. Maximum 10 features.",
+      "placeholder": "✓ Free shipping\n✓ 30-day returns\n✓ 2-year warranty",
+      "visible_if": "{{ block.settings.option_1_quantity > 0 and block.settings.option_1_show_features }}"
     },
     {
       "type": "header",
@@ -1421,15 +1437,11 @@
       "content": "Quantity option #2 Amount & pricing"
     },
     {
-      "type": "range",
+      "type": "number",
       "id": "option_2_quantity",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "qty",
       "label": "Option #2 Quantity",
       "default": 2,
-      "info": "Set to 0 to disable this option"
+      "info": "Set to 0 to disable this option. You can enter any number (e.g., 1000)"
     },
     {
       "type": "text",
@@ -1517,6 +1529,26 @@
       "label": "Option #2 Compare price text",
       "default": "[compare_price]",
       "visible_if": "{{ block.settings.option_2_quantity > 0 }}"
+    },
+    {
+      "type": "header",
+      "content": "Quantity option #2 Custom features list",
+      "visible_if": "{{ block.settings.option_2_quantity > 0 }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "option_2_show_features",
+      "label": "Show custom features list for Option #2",
+      "default": false,
+      "visible_if": "{{ block.settings.option_2_quantity > 0 }}"
+    },
+    {
+      "type": "textarea",
+      "id": "option_2_features_text",
+      "label": "Features list (one per line)",
+      "info": "Enter each feature on a new line. Maximum 10 features.",
+      "placeholder": "✓ Free shipping\n✓ 30-day returns\n✓ 2-year warranty",
+      "visible_if": "{{ block.settings.option_2_quantity > 0 and block.settings.option_2_show_features }}"
     },
     {
       "type": "header",
@@ -1648,15 +1680,11 @@
       "content": "Quantity option #3 Amount & pricing"
     },
     {
-      "type": "range",
+      "type": "number",
       "id": "option_3_quantity",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "qty",
       "label": "Option #3 Quantity",
       "default": 3,
-      "info": "Set to 0 to disable this option"
+      "info": "Set to 0 to disable this option. You can enter any number (e.g., 1000)"
     },
     {
       "type": "text",
@@ -1744,6 +1772,26 @@
       "label": "Option #3 Compare price text",
       "default": "[compare_price]",
       "visible_if": "{{ block.settings.option_3_quantity > 0 }}"
+    },
+    {
+      "type": "header",
+      "content": "Quantity option #3 Custom features list",
+      "visible_if": "{{ block.settings.option_3_quantity > 0 }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "option_3_show_features",
+      "label": "Show custom features list for Option #3",
+      "default": false,
+      "visible_if": "{{ block.settings.option_3_quantity > 0 }}"
+    },
+    {
+      "type": "textarea",
+      "id": "option_3_features_text",
+      "label": "Features list (one per line)",
+      "info": "Enter each feature on a new line. Maximum 10 features.",
+      "placeholder": "✓ Free shipping\n✓ 30-day returns\n✓ 2-year warranty",
+      "visible_if": "{{ block.settings.option_3_quantity > 0 and block.settings.option_3_show_features }}"
     },
     {
       "type": "header",
@@ -1875,15 +1923,11 @@
       "content": "Quantity Option #4 Amount & pricing"
     },
     {
-      "type": "range",
+      "type": "number",
       "id": "option_4_quantity",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "qty",
       "label": "Option #4 Quantity",
       "default": 4,
-      "info": "Set to 0 to disable this option"
+      "info": "Set to 0 to disable this option. You can enter any number (e.g., 1000)"
     },
     {
       "type": "text",
@@ -1971,6 +2015,26 @@
       "label": "Option #4 Compare price text",
       "default": "[compare_price]",
       "visible_if": "{{ block.settings.option_4_quantity > 0 }}"
+    },
+    {
+      "type": "header",
+      "content": "Quantity Option #4 Custom features list",
+      "visible_if": "{{ block.settings.option_4_quantity > 0 }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "option_4_show_features",
+      "label": "Show custom features list for Option #4",
+      "default": false,
+      "visible_if": "{{ block.settings.option_4_quantity > 0 }}"
+    },
+    {
+      "type": "textarea",
+      "id": "option_4_features_text",
+      "label": "Features list (one per line)",
+      "info": "Enter each feature on a new line. Maximum 10 features.",
+      "placeholder": "✓ Free shipping\n✓ 30-day returns\n✓ 2-year warranty",
+      "visible_if": "{{ block.settings.option_4_quantity > 0 and block.settings.option_4_show_features }}"
     },
     {
       "type": "header",
@@ -2096,6 +2160,69 @@
       ],
       "default": "accent-1",
       "visible_if": "{{ block.settings.option_4_quantity > 0 and block.settings.colors == 'theme' }}"
+    },
+    {
+      "type": "header",
+      "content": "Custom features list styling"
+    },
+    {
+      "type": "color",
+      "id": "features_bg_color",
+      "label": "Features background color",
+      "default": "#6D388B"
+    },
+    {
+      "type": "color",
+      "id": "features_text_color",
+      "label": "Features text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "features_icon",
+      "label": "Features icon/symbol",
+      "default": "+",
+      "info": "Enter the symbol to display before each feature (e.g., +, ✓, •, →)"
+    },
+    {
+      "type": "range",
+      "id": "features_icon_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "features_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "features_padding",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Features padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "features_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
     },
     {
       "type": "header",

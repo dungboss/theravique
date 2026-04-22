@@ -1,5 +1,5 @@
 <div 
-  class="product-info__image-block{% if block.settings.Full_mobile_width %} product-info__image-block--mobile-full{% endif %} {{ block.settings.visibility }}" 
+  class="product-info__image-block{% if block.settings.Full_mobile_width %} product-info__image-block--mobile-full{% endif %}" 
   style="
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
     margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
@@ -16,26 +16,6 @@
   "name": "Divider",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "color",
       "id": "color",

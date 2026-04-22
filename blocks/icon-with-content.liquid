@@ -36,7 +36,7 @@
   {% endif %}
 </style>
 <div
-  class="icons-with-text__icon-item icons-with-text__icon-item-{{ block.id }} icons-with-text__icon-item--{{ block.settings.icon_position }} icons-with-text__icon-item--{{ block.settings.icon_text_alignment }} text-color-{{ block.settings.text_color }} {{ block.settings.visibility }}"
+  class="icons-with-text__icon-item icons-with-text__icon-item-{{ block.id }} icons-with-text__icon-item--{{ block.settings.icon_position }} icons-with-text__icon-item--{{ block.settings.icon_text_alignment }} text-color-{{ block.settings.text_color }}"
   style="
     margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
     margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
@@ -99,26 +99,6 @@
   "name": "Icon with content",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "header",
       "content": "Icon"

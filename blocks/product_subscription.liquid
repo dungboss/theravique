@@ -292,32 +292,18 @@
           </div>
         </div>
         {% liquid
-          assign current_variant = product.selected_or_first_available_variant
-
-          # All plans available for THIS variant (no premature group filter)
-          assign allocations = current_variant.selling_plan_allocations
-          assign allocations_count = allocations.size
-
-          # If you still need the group object/name, resolve it from the first allocation:
-          assign first_allocation = allocations | first
-          assign group = blank
-          if first_allocation
-            assign group_id = first_allocation.selling_plan.selling_plan_group_id
-            assign group = product.selling_plan_groups | where: 'id', group_id | first
-          endif
-
-          assign frequency_selector_type = block.settings.frequency_selector_type
-
           assign has_separator = false
           if block.settings.subscription_separator_opacity > 0
             assign has_separator = true
           endif
-
           assign has_bottom = false
           if block.settings.subscription_description_text != blank
             assign has_bottom = true
           endif
-          if allocations_count > 1
+          if block.settings.show_single_frequency_label and product.selling_plan_groups[0].selling_plans.size == 1
+            assign has_bottom = true
+          endif
+          if product.selling_plan_groups[0].selling_plans.size > 1
             assign has_bottom = true
           endif
         %}
@@ -325,7 +311,7 @@
         <div class="subscription__bottom{% unless has_bottom %} hidden{% endunless %}">
           {% if block.settings.subscription_description_text != blank %}
             {% capture benefit_icon %}
-              {%- if block.settings.benefits_custom_icon == blank -%}
+              {%- if block.settings.image == blank -%}
                 {% render 'material-icon', icon: block.settings.benefits_icon, filled: block.settings.benefits_filled_icon %}
               {%- else -%}
                 <img
@@ -345,15 +331,26 @@
               {{ block.settings.subscription_description_text | replace: '[icon]', benefit_icon }}
             </div>
           {% endif %}
-          {% if allocations_count > 1 %}
+          {% if product.selling_plan_groups[0].selling_plans.size > 1 %}
+            {%- liquid
+              assign current_variant = product.selected_or_first_available_variant
+              assign group = product.selling_plan_groups[0]
+              # All allocations for this variant within the first group
+              assign allocations = current_variant.selling_plan_allocations | where: 'selling_plan_group_id', group.id
+              assign frequency_selector_type = block.settings.frequency_selector_type
+            -%}
+            
+
             <div class="subscription__frequency subscription__frequency--{{ frequency_selector_type }}">
               <span class="subscription__frequency-label">
                 {{ block.settings.frequency_label }}
               </span>
-
               {%- if frequency_selector_type == 'dropdown' -%}
                 <div class="select select--small subscription__select{% if block.settings.frequency_dropdown_width != 'full' %} fit-content{% endif %} no-background color-{{ settings.pickers_color_scheme }} accent-color-{{ settings.pickers_overlay_color }} accent-2-color-{{ settings.pickers_text_color }}">
-                  <select id="SubscriptionFrequency-{{ section.id }}" class="select__select">
+                  <select
+                    id="SubscriptionFrequency-{{ section.id }}"
+                    class="select__select"
+                  >
                     {%- for allocation in allocations -%}
                       {%- liquid
                         assign plan_id = allocation.selling_plan.id
@@ -365,7 +362,6 @@
                         elsif block.settings.frequency_names == 'brackets'
                           assign plan_name = plan_name | replace: ', ', ' (' | append: ")"
                         endif
-
                         assign plan_price_cents = allocation.price
                         assign plan_compare_cents = allocation.compare_at_price
 
@@ -407,7 +403,6 @@
                         elsif block.settings.frequency_names == 'brackets'
                           assign plan_name = plan_name | replace: ', ', ' (' | append: ")"
                         endif
-
                         assign plan_price_cents = allocation.price
                         assign plan_compare_cents = allocation.compare_at_price
                         assign input_id = 'SubFreq-' | append: section.id | append: '-' | append: plan_id
@@ -432,7 +427,9 @@
                           data-compare-price="{{ plan_compare_cents }}"
                           data-discount-type="{{ adj_type }}"
                           data-discount-value="{{ adj_val }}"
-                          {% if forloop.first %}checked{% endif %}
+                          {% if forloop.first %}
+                            checked
+                          {% endif %}
                         />
                         <span class="subscription__frequency-text">{{ plan_name }}</span>
                       </label>

@@ -71,20 +71,20 @@
 
   assign desktop_thumbnails_position = section.settings.desktop_thumbnails_position | default: 'bottom'
   assign desktop_vertical_thumbnails = false
-  if product.media.size > 1 and desktop_thumbnails_position == 'left' or desktop_thumbnails_position == 'right'
+  if desktop_thumbnails_position == 'left' or desktop_thumbnails_position == 'right'
     assign desktop_vertical_thumbnails = true
   endif
 
   assign mobile_thumbnails_position = section.settings.mobile_thumbnails_position | default: 'bottom'
   assign mobile_vertical_thumbnails = false
-  if product.media.size > 1 and mobile_thumbnails_position == 'left' or mobile_thumbnails_position == 'right'
+  if mobile_thumbnails_position == 'left' or mobile_thumbnails_position == 'right'
     assign mobile_vertical_thumbnails = true
   endif
 -%}
 
 <media-gallery
   id="MediaGallery-{{ section.id }}{{ id_append }}"
-  class="media-gallery--desktop-thumbnails-{{ desktop_thumbnails_position }}{% if desktop_vertical_thumbnails %} media-gallery--desktop-thumbnails-vertical{% endif %} media-gallery--mobile-thumbnails-{{ mobile_thumbnails_position }}{% if mobile_vertical_thumbnails %} media-gallery--mobile-thumbnails-vertical{% endif %}{% if product.media.size < 2 %} media-gallery--single-media{% endif %}"
+  class="media-gallery--desktop-thumbnails-{{ desktop_thumbnails_position }}{% if desktop_vertical_thumbnails %} media-gallery--desktop-thumbnails-vertical{% endif %} media-gallery--mobile-thumbnails-{{ mobile_thumbnails_position }}{% if mobile_vertical_thumbnails %} media-gallery--mobile-thumbnails-vertical{% endif %}"
   data-section="{{ section.id }}"
   {% if has_filtering %}
     data-filtering-option="{{ section.settings.variant_image_filtering }}"
@@ -182,7 +182,7 @@
       {%- endfor -%}
     </ul>
     {%- unless is_duplicate -%}
-      <div class="slider-buttons{% if section.settings.mobile_pagination == 'dots_overlay' and section.settings.mobile_arrows_position == 'pagination' %} slider-mobile-buttons-overlay{% elsif section.settings.mobile_pagination == 'dots_overlay' %} slider-mobile-buttons-overlay-container{% endif %}{% if section.settings.mobile_pagination != 'numeric' %} slider-buttons--dots{% endif %} slider--mobile-arrows-{{ section.settings.mobile_arrows_position }}{% if section.settings.transparent_arrows %} splide--transparent-arrows{% endif %}{% if section.settings.mobile_pagination == 'hidden' %} slider-buttons--no-pagination{% endif %} no-js-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
+      <div class="slider-buttons{% if section.settings.mobile_pagination == 'dots_overlay' and section.settings.mobile_arrows_position == 'pagination' %} slider-mobile-buttons-overlay{% elsif section.settings.mobile_pagination == 'dots_overlay' %} slider-mobile-buttons-overlay-container{% endif %}{% if section.settings.mobile_pagination != 'numeric' %} slider-buttons--dots{% endif %} slider--mobile-arrows-{{ section.settings.mobile_arrows_position }}{% if section.settings.transparent_arrows %} splide--transparent-arrows{% endif %}{% if section.settings.mobile_pagination == 'hidden' %} slider-buttons--no-pagination{% endif %} no-js-hidden quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
         <button
           type="button"
           class="slider-button--prev splide__arrow splide__arrow--prev color-{{ section.settings.arrows_color_scheme }}{% if section.settings.desktop_arrows_position == 'hidden' %} desktop-hidden{% endif %}{% if section.settings.mobile_arrows_position == 'hidden' %} mobile-hidden{% endif %}"
@@ -259,7 +259,7 @@
   -%}
     <slider-component
       id="GalleryThumbnails-{{ section.id }}{{ id_append }}"
-      class="thumbnail-slider slider-mobile-gutter{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails_position == 'hidden' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
+      class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails_position == 'hidden' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
       data-desktop-vertical="{{ desktop_vertical_thumbnails }}"
       data-mobile-vertical="{{ mobile_vertical_thumbnails }}"
     >
@@ -421,3 +421,7 @@
     </slider-component>
   {%- endif -%}
 </media-gallery>
+
+{% if section.settings.enabledesktopreview %}
+{% render 'desktop-review-gallery' %}
+     {%- endif -%}

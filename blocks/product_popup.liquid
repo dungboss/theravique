@@ -1,5 +1,5 @@
 <modal-opener
-  class="product-popup-modal__opener no-js-hidden quick-add-hidden {{ block.settings.visibility }}"
+  class="product-popup-modal__opener no-js-hidden quick-add-hidden"
   data-modal="#PopupModal-{{ block.id }}"
   {{ block.shopify_attributes }}
   style="
@@ -47,26 +47,6 @@
   "name": "Pop-up",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "text",
       "id": "text",

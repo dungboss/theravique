@@ -22,7 +22,7 @@
 %}
 {% unless is_image_with_text_section %}
   <div
-    class="{% if is_richtext_section %}rich-text__buttons{% else %}buttons-container{% endif %} {{ block.settings.visibility }}"
+    class="{% if is_richtext_section %}rich-text__buttons{% else %}buttons-container{% endif %}"
     style="
       margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
       margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
@@ -69,7 +69,7 @@
     {% else %}
       href="{{ block.settings.button_link }}"
     {% endif %}
-    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.full_width %} button--full-width{% endif %}{% if block.settings.large_font_size %} button--large-text{% endif %}{% if block.settings.prefix_icon != blank %} button--prefix-icon{% endif %}{% if block.settings.suffix_icon != blank %} button--suffix-icon{% endif %} {{ block.settings.visibility }}"
+    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.full_width %} button--full-width{% endif %}{% if block.settings.large_font_size %} button--large-text{% endif %}{% if block.settings.prefix_icon != blank %} button--prefix-icon{% endif %}{% if block.settings.suffix_icon != blank %} button--suffix-icon{% endif %}"
   >
     <span class='button__label'>
       {{- block.settings.button_label -}}
@@ -84,26 +84,6 @@
   "name": "Link button",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
     {
       "type": "text",
       "id": "button_label",

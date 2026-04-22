@@ -51,6 +51,9 @@
     #main-price-{{ block.id }} .price__compare-price .price-item--regular {
       font-size: {{ block.settings.compare_price_size | divided_by: 10.0 }}rem;
     }
+    {%- if block.settings.price_color contains '#' -%}
+    #main-price-{{ block.id }} .main-price { color: {{ block.settings.price_color }} !important; }
+    {%- endif -%}
   </style>
 {% endif %}
 
@@ -96,7 +99,7 @@
         </span>
       {%- endunless -%}
     </div>
-    <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
+    <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil or template == 'product.travel-bottle' %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
         <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>

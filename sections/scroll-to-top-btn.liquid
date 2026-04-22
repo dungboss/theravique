@@ -9,11 +9,23 @@
       --offset-y: {{ section.settings.offset_y | times: 0.75 | divided_by: 10.0 }}rem;
     }
   }
+  {%- if section.settings.color_scheme == 'custom' -%}
+  .scroll-to-top-btn-{{ section.id }} {
+    background-color: {{ section.settings.custom_bg_color }} !important;
+    color: {{ section.settings.custom_icon_color }} !important;
+  }
+  {%- endif -%}
+  {%- if template == 'product.travel-bottle' -%}
+  .scroll-to-top-btn-{{ section.id }} {
+    background-color: {{ section.settings.travel_bottle_bg_color }} !important;
+    color: {{ section.settings.travel_bottle_icon_color }} !important;
+  }
+  {%- endif -%}
 {% endstyle %}
 
 {% if section.settings.enable_scroll_btn %}
   <button
-    class="floating-btn scroll-to-top-btn scroll-to-top-btn-{{ section.settings.position }} scroll-to-top-btn-{{ section.id }} color-{{ section.settings.color_scheme }}"
+    class="floating-btn scroll-to-top-btn scroll-to-top-btn-{{ section.settings.position }} scroll-to-top-btn-{{ section.id }} color-{% if section.settings.color_scheme == 'custom' %}accent-1{% else %}{{ section.settings.color_scheme }}{% endif %}"
     onclick="handleScrollToTop()"
     {% unless section.settings.display_after == 0 %}
       style="display:none;"
@@ -107,10 +119,44 @@
         {
           "value": "inverse",
           "label": "Inverse"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
         }
       ],
       "default": "accent-1",
       "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "color",
+      "id": "custom_bg_color",
+      "label": "Custom background color",
+      "default": "#CDD9AE",
+      "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "custom_icon_color",
+      "label": "Custom icon color",
+      "default": "#333333",
+      "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "Travel Bottle page color"
+    },
+    {
+      "type": "color",
+      "id": "travel_bottle_bg_color",
+      "label": "Background color (Travel Bottle)",
+      "default": "#CDD9AE"
+    },
+    {
+      "type": "color",
+      "id": "travel_bottle_icon_color",
+      "label": "Icon color (Travel Bottle)",
+      "default": "#333333"
     },
     {
       "type": "select",

@@ -24,39 +24,6 @@
       --swatch-size: {{ section.settings.swatches_desktop_size | divided_by: 10.0 }}rem;
     }
   }
-
-  {% liquid
-    assign bg_opacity = 1
-    if section.settings.active_buttons_bg_type == 'overlay'
-      assign bg_opacity = section.settings.active_buttons_bg_opacity | divided_by: 100.0
-    endif
-  %}
-  #main-collection-filters span.active-facets__button-inner {
-    color: rgb(var(--color-base-{{ section.settings.active_buttons_text_color }}));
-    {% if section.settings.active_buttons_bg_type != 'none' %}
-      background: rgba(var(--color-base-{{ section.settings.active_buttons_bg_color }}), {{ bg_opacity }});
-      {% endif %}
-    border: solid {{ section.settings.active_buttons_border_width }}px rgba(var(--color-base-{{ section.settings.active_buttons_border_color }}), {{ section.settings.active_buttons_border_opacity | divided_by: 100.0 }});
-  }
-  #main-collection-filters .mobile-facets__item-divider {
-    opacity: {{ section.settings.facets_drawer_separator_opacity }}%;
-  }
-  #main-collection-filters .drawer__sticky-open {
-    border-radius: {{ 0.92 | times: section.settings.facets_drawer_sticky_button_radius | divided_by: 100.0 }}em;
-    {% if section.settings.facets_drawer_sticky_button_color == 'custom' %}
-      color: {{ section.settings.facets_drawer_sticky_button_text_color }};
-      background: {{ section.settings.facets_drawer_sticky_button_bg_color }};
-    {% endif %}
-  }
-  #main-collection-filters .color-swatch {
-    --swatches-radius: {{ section.settings.facets_swatches_radius | divided_by: 2.0 }}%;
-  }
-  #main-collection-filters .facet-pill {
-    border-width: {{ section.settings.facets_pills_inactive_border_width }}px;
-    --inactive-bg-opacity: {{ section.settings.facets_pills_inactive_bg_opacity | divided_by: 100.0 }};
-    --inactive-border-opacity: {{ section.settings.facets_pills_inactive_border_opacity | divided_by: 100.0 }};
-    --radius-ratio: {{ section.settings.facets_pills_radius | divided_by: 100.0 }};
-  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding animate-section animate--hidden">
@@ -223,10 +190,6 @@
   "class": "section",
   "settings": [
     {
-      "type": "header",
-      "content": "Layout"
-    },
-    {
       "type": "range",
       "id": "products_per_page",
       "min": 8,
@@ -249,26 +212,6 @@
       "id": "stretch_cards",
       "default": false,
       "label": "Make all cards same height"
-    },
-    {
-      "type": "header",
-      "content": "Mobile layout"
-    },
-    {
-      "type": "select",
-      "id": "columns_mobile",
-      "default": "2",
-      "label": "Number of columns on mobile",
-      "options": [
-        {
-          "value": "1",
-          "label": "1 column"
-        },
-        {
-          "value": "2",
-          "label": "2 columns"
-        }
-      ]
     },
     {
       "type": "header",
@@ -416,13 +359,13 @@
     },
     {
       "type": "header",
-      "content": "Filtering"
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
     },
     {
       "type": "checkbox",
       "id": "enable_filtering",
       "default": true,
-      "label": "Enable filtering",
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
       "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
     },
     {
@@ -431,367 +374,46 @@
       "options": [
         {
           "value": "horizontal",
-          "label": "Horizontal"
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
         },
         {
           "value": "vertical",
-          "label": "Vertical"
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
         },
         {
           "value": "drawer",
-          "label": "Drawer"
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
         }
       ],
       "default": "horizontal",
-      "label": "Desktop filter layout",
-      "info": "Drawer is the default mobile layout."
-    },
-    {
-      "type": "select",
-      "id": "facets_vertical_open_rows",
-      "label": "Open rows by default",
-      "options": [
-        { "value": "none", "label": "None" },
-        { "value": "first", "label": "Only first row" },
-        { "value": "all", "label": "All rows" },
-      ],
-      "default": "first",
-      "visible_if": "{{ section.settings.filter_type == 'vertical' }}"
-    },
-    {
-      "type": "header",
-      "content": "Filtering - Swatches"
-    },
-    {
-      "type": "paragraph",
-      "content": "Color swatches filters are automatically displayed on the 'Category metafield' filters."
-    },
-    {
-      "type": "paragraph",
-      "content": "If you want to display swatches on additional (normal) filters, type their name in the option below. For these filters, their colors are defined in Theme settings > Color swatches > Predefined custom colors."
-    },
-    {
-      "type": "text",
-      "id": "facets_swatches_options",
-      "label": "Additional filters to display swatches on",
-      "info": "Names of filters explained in the text above. If there are mutliple filters, split them with commmas."
-    },
-    {
-      "type": "range",
-      "id": "facets_swatches_radius",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Corner radius",
-      "default": 100
-    },
-    {
-      "type": "header",
-      "content": "Filtering - Pills"
-    },
-    {
-      "type": "text",
-      "id": "facets_pills_options",
-      "label": "Filters to display pills on",
-      "info": "Write the names of filters to display variant pills on (instead of classic checkboxes). If there are multiple filters, separate them with commas. Example use: Size, Material"
-    },
-    {
-      "type": "select",
-      "id": "facets_pills_color",
-      "label": "Color",
-      "options": [
-        { "value": "accent-1", "label": "Accent 1" },
-        { "value": "accent-2", "label": "Accent 2" },
-        { "value": "inverse", "label": "Text" }
-      ],
-      "default": "accent-1",
-      "visible_if": "{{ section.settings.facets_pills_options != blank }}"
-    },
-    {
-      "type": "range",
-      "id": "facets_pills_inactive_bg_opacity",
-      "min": 2,
-      "max": 25,
-      "step": 1,
-      "unit": "%",
-      "label": "Inactive pills background opacity",
-      "default": 4,
-      "visible_if": "{{ section.settings.facets_pills_options != blank }}"
-    },
-    {
-      "type": "range",
-      "id": "facets_pills_inactive_border_width",
-      "min": 0,
-      "max": 4,
-      "step": 1,
-      "unit": "px",
-      "label": "Inactive pills border thickness",
-      "default": 1,
-      "visible_if": "{{ section.settings.facets_pills_options != blank }}"
-    },
-    {
-      "type": "range",
-      "id": "facets_pills_inactive_border_opacity",
-      "min": 5,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Inactive pills border opacity",
-      "default": 30,
-      "visible_if": "{{ section.settings.facets_pills_options != blank and section.settings.facets_pills_inactive_border_width > 0 }}"
-    },
-    {
-      "type": "range",
-      "id": "facets_pills_radius",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Corner radius",
-      "default": 100,
-      "visible_if": "{{ section.settings.facets_pills_options != blank }}"
-    },
-    {
-      "type": "header",
-      "content": "Filtering - Price range"
-    },
-    {
-      "type": "select",
-      "id": "facets_price_color",
-      "label": "Color",
-      "options": [
-        { "value": "accent-1", "label": "Accent 1" },
-        { "value": "accent-2", "label": "Accent 2" },
-        { "value": "text", "label": "Text" }
-      ],
-      "default": "accent-1"
-    },
-    {
-      "type": "select",
-      "id": "facets_price_price_position",
-      "label": "Selected prices position",
-      "options": [
-        { "value": "top", "label": "Top" },
-        { "value": "bottom", "label": "Bottom" }
-      ],
-      "default": "top"
-    },
-    {
-      "type": "select",
-      "id": "facets_price_btn_style",
-      "label": "Button style",
-      "options": [
-        { "value": "solid", "label": "Solid" },
-        { "value": "outline", "label": "Outline" }
-      ],
-      "default": "outline"
-    },
-    {
-      "type": "range",
-      "id": "facets_price_btn_border_width",
-      "min": 1,
-      "max": 8,
-      "step": 1,
-      "unit": "px",
-      "label": "Button outline thickness",
-      "default": 3,
-      "visible_if": "{{ section.settings.facets_price_btn_style == 'outline' }}"
-    },
-
-    {
-      "type": "header",
-      "content": "Filtering - Active filters pills (buttons)",
-      "info": "These are the pills that appear after you select a filter."
-    },
-    {
-      "type": "inline_richtext",
-      "id": "active_buttons_text",
-      "label": "Text",
-      "default": "[value]",
-      "info": "To display the name of the filter, use [filter]. To display the selected value of the filter, use [value]. Example: [filter]: [value], would display: Color: Black"
-    },
-    {
-      "type": "select",
-      "id": "active_buttons_text_color",
-      "label": "Text color",
-      "options": [
-        { "value": "accent-1", "label": "Accent 1" },
-        { "value": "accent-2", "label": "Accent 2" },
-        { "value": "background-1", "label": "Background 1" },
-        { "value": "background-2", "label": "Background 2" },
-        { "value": "text", "label": "Text" }
-      ],
-      "default": "accent-1"
-    },
-    {
-      "type": "select",
-      "id": "active_buttons_bg_type",
-      "label": "Background type",
-      "options": [
-        { "value": "none", "label": "None" },
-        { "value": "solid", "label": "Solid color" },
-        { "value": "overlay", "label": "Low opacity color" }
-      ],
-      "default": "overlay"
-    },
-    {
-      "type": "select",
-      "id": "active_buttons_bg_color",
-      "label": "Background color",
-      "options": [
-        { "value": "accent-1", "label": "Accent 1" },
-        { "value": "accent-2", "label": "Accent 2" },
-        { "value": "background-1", "label": "Background 1" },
-        { "value": "background-2", "label": "Background 2" },
-        { "value": "text", "label": "Text" }
-      ],
-      "default": "accent-1",
-      "visible_if": "{{ section.settings.active_buttons_bg_type != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "active_buttons_bg_opacity",
-      "min": 2,
-      "max": 25,
-      "step": 1,
-      "unit": "%",
-      "label": "Background opacity",
-      "default": 4,
-      "visible_if": "{{ section.settings.active_buttons_bg_type == 'overlay' }}"
-    },
-    {
-      "type": "range",
-      "id": "active_buttons_border_width",
-      "min": 0,
-      "max": 3,
-      "step": 1,
-      "unit": "px",
-      "label": "Border thickness",
-      "default": 1
-    },
-    {
-      "type": "select",
-      "id": "active_buttons_border_color",
-      "label": "Border color",
-      "options": [
-        { "value": "accent-1", "label": "Accent 1" },
-        { "value": "accent-2", "label": "Accent 2" },
-        { "value": "background-1", "label": "Background 1" },
-        { "value": "background-2", "label": "Background 2" },
-        { "value": "text", "label": "Text" }
-      ],
-      "default": "accent-1",
-      "visible_if": "{{ section.settings.active_buttons_border_width > 0 }}"
-    },
-    {
-      "type": "range",
-      "id": "active_buttons_border_opacity",
-      "min": 10,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Border opacity",
-      "default": 40,
-      "visible_if": "{{ section.settings.active_buttons_border_width > 0 }}"
-    },
-    {
-      "type": "header",
-      "content": "Filtering - Drawer"
-    },
-    {
-      "type": "select",
-      "id": "facets_drawer_open_mode",
-      "label": "Open filter style",
-      "options": [
-        { "value": "accordion", "label": "Collapse" },
-        { "value": "slide", "label": "Slide" }
-      ],
-      "default": "accordion"
-    },
-    {
-      "type": "select",
-      "id": "facets_drawer_open_rows",
-      "label": "Open rows by default",
-      "options": [
-        { "value": "none", "label": "None" },
-        { "value": "first", "label": "Only first row" },
-        { "value": "all", "label": "All rows" },
-      ],
-      "default": "none",
-      "visible_if": "{{ section.settings.facets_drawer_open_mode == 'accordion' }}"
-    },
-    {
-      "type": "range",
-      "id": "facets_drawer_separator_opacity",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "%",
-      "label": "Items separator opacity",
-      "default": 5
-    },
-    {
-      "type": "select",
-      "id": "facets_drawer_sticky_button",
-      "label": "Display sticky open button",
-      "options": [
-        { "value": "dont", "label": "Don't display" },
-        { "value": "after_scrolling", "label": "After scrolling past the main button" },
-        { "value": "always", "label": "Always" },
-      ],
-      "default": "after_scrolling"
-    },
-    {
-      "type": "select",
-      "id": "facets_drawer_sticky_button_color",
-      "label": "Sticky open button color scheme",
-      "options": [
-        { "value": "accent-1", "label": "Accent 1" },
-        { "value": "accent-2", "label": "Accent 2" },
-        { "value": "background-1", "label": "Background 1" },
-        { "value": "background-2", "label": "Background 2" },
-        { "value": "inverse", "label": "Inverse" },
-        { "value": "custom", "label": "Custom" }
-      ],
-      "default": "accent-1",
-      "visible_if": "{{ section.settings.facets_drawer_sticky_button != 'none' }}"
-    },
-    {
-      "type": "color",
-      "id": "facets_drawer_sticky_button_text_color",
-      "default": "#fff",
-      "label": "Sticky open button text color",
-      "visible_if": "{{ section.settings.facets_drawer_sticky_button != 'none' and section.settings.facets_drawer_sticky_button_color == 'custom' }}"
-    },
-    {
-      "type": "color",
-      "id": "facets_drawer_sticky_button_bg_color",
-      "default": "#dd1d1d",
-      "label": "Sticky open button background color",
-      "visible_if": "{{ section.settings.facets_drawer_sticky_button != 'none' and section.settings.facets_drawer_sticky_button_color == 'custom' }}"
-    },
-    {
-      "type": "range",
-      "id": "facets_drawer_sticky_button_radius",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Sticky open button corner radius",
-      "default": 100,
-      "visible_if": "{{ section.settings.facets_drawer_sticky_button != 'none' }}"
-    },
-
-    {
-      "type": "header",
-      "content": "Sorting"
+      "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
+      "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
     },
     {
       "type": "checkbox",
       "id": "enable_sorting",
       "default": true,
-      "label": "Enabke sorting"
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "t:sections.main-collection-product-grid.settings.columns_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
+        }
+      ]
     },
     {
       "type": "header",
