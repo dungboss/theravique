@@ -21,6 +21,18 @@
     color: {{ section.settings.travel_bottle_icon_color }} !important;
   }
   {%- endif -%}
+  {%- if template == 'product.red-light' -%}
+  .scroll-to-top-btn-{{ section.id }} {
+    background-color: #dd1d1d !important;
+    color: #ffffff !important;
+  }
+  {%- endif -%}
+  {%- if template == 'product.travel-pillow' -%}
+  .scroll-to-top-btn-{{ section.id }} {
+    background-color: #dd1d1d !important;
+    color: #ffffff !important;
+  }
+  {%- endif -%}
 {% endstyle %}
 
 {% if section.settings.enable_scroll_btn %}
