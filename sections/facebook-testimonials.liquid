@@ -156,8 +156,8 @@
                         {% if block.settings.post_author_avatar != blank %}
                           {{
                             block.settings.post_author_avatar
-                            | image_url: width: 200
-                            | image_tag: loading: 'lazy', width: 100
+                            | image_url: width: 100
+                            | image_tag: loading: 'lazy', decoding: 'async', width: 100
                           }}
                         {% else %}
                           <svg
@@ -215,6 +215,14 @@
                       </div>
                     {% endif %}
                     {% if displayed_post_image != blank %}
+                      {%- liquid
+                        assign post_image_src_width = 1100
+                        assign post_image_widths = '275, 550, 710, 1100'
+                        if section.blocks.size <= 2
+                          assign post_image_src_width = 1420
+                          assign post_image_widths = '275, 550, 710, 1420'
+                        endif
+                      -%}
                       {%- capture sizes -%}
                         (min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width:
                         750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px)
@@ -225,11 +233,12 @@
                       >
                         {{
                           displayed_post_image
-                          | image_url: width: 1420
+                          | image_url: width: post_image_src_width
                           | image_tag:
                             loading: 'lazy',
+                            decoding: 'async',
                             sizes: sizes,
-                            widths: '275, 550, 710, 1420',
+                            widths: post_image_widths,
                             class: 'fb-post__content__image'
                         }}
                       </div>
