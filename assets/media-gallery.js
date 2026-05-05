@@ -39,6 +39,7 @@ if (!customElements.get('media-gallery')) {
       }
 
       const activeMedia = this.elements.viewer.querySelector(`[data-media-id="${ mediaId }"]`);
+      if (!activeMedia) return;
       this.elements.viewer.querySelectorAll('[data-media-id]').forEach((element) => {
         element.classList.remove('is-active');
       });
@@ -48,13 +49,13 @@ if (!customElements.get('media-gallery')) {
         activeMedia.parentElement.prepend(activeMedia);
         if (this.elements.thumbnails) {
           const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
-          activeThumbnail.parentElement.prepend(activeThumbnail);
+          if (activeThumbnail) activeThumbnail.parentElement.prepend(activeThumbnail);
         }
         if (this.elements.viewer.slider) this.elements.viewer.resetPages();
       }
 
       this.preventStickyHeader();
-      window.setTimeout(() => {
+      window.requestAnimationFrame(() => {
         if (this.elements.thumbnails) {
           activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
         }
@@ -71,23 +72,22 @@ if (!customElements.get('media-gallery')) {
 
       if (!this.elements.thumbnails) return;
       const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
+      if (!activeThumbnail) return;
       this.setActiveThumbnail(activeThumbnail);
       this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
     }
 
     setActiveThumbnail(thumbnail) {
       if (!this.elements.thumbnails || !thumbnail) return;
+      const shouldScroll = !this.elements.thumbnails.isSlideVisible(thumbnail, false, 10, true);
 
       this.elements.thumbnails.querySelectorAll('button').forEach((element) => element.removeAttribute('aria-current'));
       thumbnail.querySelector('button').setAttribute('aria-current', true);
-      if (this.elements.thumbnails.isSlideVisible(thumbnail, false, 10, true)) return;
+      if (!shouldScroll) return;
 
-      if (this.elements.thumbnails.vertical) {
-        console.log('setActiveThumbnail')
-        this.elements.thumbnails.slider.scrollTo({ top: thumbnail.offsetTop });
-      } else {
-        this.elements.thumbnails.slider.scrollTo({ left: thumbnail.offsetLeft });
-      }
+      window.requestAnimationFrame(() => {
+        thumbnail.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+      });
     }
 
     announceLiveRegion(activeItem, position) {
