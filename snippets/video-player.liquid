@@ -4,6 +4,8 @@
     assign no_play_button = true
   endif
 
+  assign poster_width = custom_thumbnail_width | default: 550
+
   if custom_video and custom_video != blank
     assign video = custom_video
   else
@@ -32,7 +34,7 @@
         width="100%"
         height="auto"
         preload="metadata"
-        poster="{{ thumbnail | image_url }}"
+        poster="{{ thumbnail | image_url: width: poster_width }}"
         {% if block.settings.loop %}
           loop
         {% endif %}

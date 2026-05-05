@@ -156,8 +156,8 @@
                         {% if block.settings.post_author_avatar != blank %}
                           {{
                             block.settings.post_author_avatar
-                            | image_url: width: 100
-                            | image_tag: loading: 'lazy', decoding: 'async', width: 100
+                            | image_url: width: 80
+                            | image_tag: loading: 'lazy', decoding: 'async', width: 80
                           }}
                         {% else %}
                           <svg
@@ -216,11 +216,11 @@
                     {% endif %}
                     {% if displayed_post_image != blank %}
                       {%- liquid
-                        assign post_image_src_width = 1100
-                        assign post_image_widths = '275, 550, 710, 1100'
+                        assign post_image_src_width = 710
+                        assign post_image_widths = '275, 375, 550, 710'
                         if section.blocks.size <= 2
-                          assign post_image_src_width = 1420
-                          assign post_image_widths = '275, 550, 710, 1420'
+                          assign post_image_src_width = 1100
+                          assign post_image_widths = '275, 375, 550, 710, 1100'
                         endif
                       -%}
                       {%- capture sizes -%}
