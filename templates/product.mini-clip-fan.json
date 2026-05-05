@@ -1272,7 +1272,7 @@
               "type": "image",
               "name": "Image",
               "settings": {
-                "image": "shopify://shop_images/Untitled_design.png",
+                "image": "shopify://shop_images/Untitled_design_1.png",
                 "use_product_image_fallback": false,
                 "width": 100,
                 "alignment": "center",
