@@ -1548,18 +1548,6 @@
           },
           "blocks": {}
         },
-        "collapsible_row_content_ETX7yr": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "Where does it work best?",
-            "icon": "Can it be worn safely around the neck for jogging?",
-            "filled_icon": false,
-            "row_content": "<p><br/>Yes! The device is lightweight and comes with a dedicated lanyard port. You can wear it around your neck to direct airflow toward your face and neck area. The intake vents are designed to be \"hair-safe\" to prevent accidental snagging during movement.<br/><br/></p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
         "collapsible_row_content_HTVjPX": {
           "type": "collapsible-row-content",
           "settings": {
@@ -1576,10 +1564,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "What makes bladeless better?",
+            "heading": "Is the USB-C charging cable included with the purchase?",
             "icon": "",
             "filled_icon": false,
-            "row_content": "<p>No exposed blades, a cleaner look, and easier day-to-day maintenance in tighter spaces.</p>",
+            "row_content": "<p><br/>Yes, every fan comes with a universal USB-C charging cable in the box. You can easily charge it using a power bank, laptop, or any standard wall adapter.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1601,7 +1589,6 @@
         "collapsible_row_content_6w9ntk",
         "collapsible_row_content_njkpDd",
         "collapsible_row_content_CVU4Bm",
-        "collapsible_row_content_ETX7yr",
         "collapsible_row_content_HTVjPX",
         "collapsible_row_content_Ahw39W",
         "collapsible_row_content_z4rFdy"
