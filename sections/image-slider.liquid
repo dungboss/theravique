@@ -182,7 +182,11 @@
                             assign action_on_inactive = 'mute'
                           endif
                         %}
-                        {% render 'video-player', block: block, action_on_inactive: action_on_inactive %}
+                        {% render 'video-player',
+                          block: block,
+                          action_on_inactive: action_on_inactive,
+                          custom_thumbnail_width: 400
+                        %}
                       {% else %}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {% endif %}

@@ -17,6 +17,11 @@
   else
     assign thumbnail = video.preview_image
   endif
+
+  assign poster_width = thumbnail.width
+  if custom_thumbnail_width != blank
+    assign poster_width = custom_thumbnail_width
+  endif
 %}
 <div class="video-container">
   {% if video != blank %}
@@ -32,7 +37,7 @@
         width="100%"
         height="auto"
         preload="metadata"
-        poster="{{ thumbnail | image_url }}"
+        poster="{{ thumbnail | image_url: width: poster_width }}"
         {% if block.settings.loop %}
           loop
         {% endif %}
