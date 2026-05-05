@@ -37,12 +37,11 @@
       {%- endcapture -%}
       {{
         image_to_render
-        | image_url: width: 750
+        | image_url: width: 1500
         | image_tag:
           loading: 'lazy',
-          decoding: 'async',
           sizes: sizes,
-          widths: '165, 360, 535, 750'
+          widths: '165, 360, 535, 750, 1070, 1250, 1500'
       }}
     </div>
   {% else %}
