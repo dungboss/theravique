@@ -1165,7 +1165,7 @@
             "text_jQj3hy": {
               "type": "text",
               "settings": {
-                "text": "<p>One bladeless fan, five everyday comfort benefits</p>",
+                "text": "<p>One bladeless fan, four everyday comfort benefits</p>",
                 "alignment": "center",
                 "mobile_alignment": "mobile-center",
                 "text_size": 14,
@@ -1213,9 +1213,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Bladeless Safety",
+                "title": "Worry-Free Safety",
                 "icon_heading_size": "h3",
-                "text": "<p>No exposed blades for a cleaner, safer feel at home</p>",
+                "text": "<p>Total peace of mind with a specialized bladeless design that ensures inquisitive little fingers stay safe.<br/><br/></p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
