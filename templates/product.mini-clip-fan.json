@@ -1516,10 +1516,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it safe around kids and pets?",
+            "heading": "How does the clip-on design work for hands-free cooling?",
             "icon": "",
             "filled_icon": false,
-            "row_content": "<p>Yes. The bladeless design removes exposed spinning blades, which makes it a better fit for busy homes and smaller spaces.</p>",
+            "row_content": "<p><br/>The fan features a sturdy, built-in back clip that securely attaches to your waistband, belt, or pocket. This allows you to enjoy a refreshing breeze directed under your shirt or around your torso while keeping your hands completely free for outdoor activities or work.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1528,10 +1528,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it quiet enough for a bedroom?",
+            "heading": "Is the airflow powerful enough for outdoor activities?",
             "icon": "",
             "filled_icon": false,
-            "row_content": "<p>It is designed for everyday comfort and quieter use. Start on a lower setting at night and increase airflow if needed.</p>",
+            "row_content": "<p><br/>Despite its compact size, the high-speed motor and optimized air vents deliver a concentrated and powerful stream of air. It is specifically designed to provide effective relief during hiking, gardening, or commuting in humid weather.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1543,7 +1543,7 @@
             "heading": "Can I adjust the airflow?",
             "icon": "",
             "filled_icon": false,
-            "row_content": "<p>Yes. Use the controls to choose a gentler or stronger breeze depending on the room.</p>",
+            "row_content": "<p>Yes. Use the controls to choose a gentler or stronger breeze depending on the weather.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1553,9 +1553,9 @@
           "settings": {
             "open": false,
             "heading": "Where does it work best?",
-            "icon": "",
+            "icon": "Can it be worn safely around the neck for jogging?",
             "filled_icon": false,
-            "row_content": "<p>Bedrooms, offices, desks, living rooms, and other spaces where you want cool air without a bulky fan.</p>",
+            "row_content": "<p><br/>Yes! The device is lightweight and comes with a dedicated lanyard port. You can wear it around your neck to direct airflow toward your face and neck area. The intake vents are designed to be \"hair-safe\" to prevent accidental snagging during movement.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
