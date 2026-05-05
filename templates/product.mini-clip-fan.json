@@ -64,7 +64,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Bladeless Safety</strong>",
+            "text_1": "<strong>Bladeless & Tangle-Free</strong>",
             "icon_1": "shield",
             "filled_icon_1": false,
             "text_2": "",
@@ -104,7 +104,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "No exposed blades for a cleaner, safer feel at home",
+            "text_1": "No exposed blades mean zero risk of catching your hair, clothes, or bag straps while hiking or running.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -144,7 +144,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Quiet Comfort</strong>",
+            "text_1": "<strong>Whisper-Quiet Cooling</strong>",
             "icon_1": "volume_off",
             "filled_icon_1": false,
             "text_2": "",
@@ -184,7 +184,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "A low-distraction fan for bedrooms, offices, and late nights",
+            "text_1": "Enjoy a powerful breeze without the annoying motor buzz. It won't interrupt your conversations or outdoor relaxation.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -264,7 +264,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Choose the breeze level that fits your space",
+            "text_1": "Easily switch speeds to match the outdoor heat—from a light morning breeze to maximum power for the midday sun.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -304,7 +304,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Space-Saving Design</strong>",
+            "text_1": "<strong>100% Hands-Free</strong>",
             "icon_1": "grid_view",
             "filled_icon_1": false,
             "text_2": "",
@@ -344,7 +344,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Compact enough to sit neatly on a desk or bedside table",
+            "text_1": "Securely clip it to your collar, belt, or backpack. Stay cool on the move while keeping your hands completely free.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -936,6 +936,7 @@
         "video_slide_hxCnyh": {
           "type": "image_slide",
           "settings": {
+            "link": "",
             "description": "<p>Bladeless design keeps the look clean and modern.</p>",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
@@ -944,6 +945,7 @@
         "video_slide_JgrBd7": {
           "type": "image_slide",
           "settings": {
+            "link": "",
             "description": "<p>Quiet airflow for bedrooms, desks, and workspaces.</p>",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
@@ -952,6 +954,7 @@
         "video_slide_9M8frX": {
           "type": "image_slide",
           "settings": {
+            "link": "",
             "description": "<p>Compact shape fits neatly into smaller rooms.</p>",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
@@ -960,6 +963,7 @@
         "video_slide_fkDcwE": {
           "type": "image_slide",
           "settings": {
+            "link": "",
             "description": "<p>Easy-to-clean exterior for everyday use.</p>",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
@@ -1232,6 +1236,7 @@
             "image_dTEXhz": {
               "type": "image",
               "settings": {
+                "use_product_image_fallback": false,
                 "width": 100,
                 "alignment": "center",
                 "mobile_alignment": "center",
