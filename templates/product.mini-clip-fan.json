@@ -933,48 +933,83 @@
     "eba88da5-80ac-47fc-aa75-997cfe7b2e59": {
       "type": "image-slider",
       "blocks": {
-        "video_slide_hxCnyh": {
-          "type": "image_slide",
+        "video_slide_RzL7ec": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Bladeless design keeps the look clean and modern.</p>",
+            "video": "shopify://files/videos/7614531464784334110.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "video_slide_JgrBd7": {
-          "type": "image_slide",
+        "video_slide_apQKUU": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Quiet airflow for bedrooms, desks, and workspaces.</p>",
+            "video": "shopify://files/videos/7628242788131409166.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "video_slide_9M8frX": {
-          "type": "image_slide",
+        "video_slide_G79aat": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Compact shape fits neatly into smaller rooms.</p>",
+            "video": "shopify://files/videos/7633085623879863582.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "video_slide_fkDcwE": {
-          "type": "image_slide",
+        "video_slide_yTBimF": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Easy-to-clean exterior for everyday use.</p>",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         }
       },
       "block_order": [
-        "video_slide_hxCnyh",
-        "video_slide_JgrBd7",
-        "video_slide_9M8frX",
-        "video_slide_fkDcwE"
+        "video_slide_RzL7ec",
+        "video_slide_apQKUU",
+        "video_slide_G79aat",
+        "video_slide_yTBimF"
       ],
       "settings": {
         "display_id": false,
@@ -1233,9 +1268,11 @@
             "horizontal_mobile_padding": 14
           },
           "blocks": {
-            "image_dTEXhz": {
+            "image_kVY7Am": {
               "type": "image",
+              "name": "Image",
               "settings": {
+                "image": "shopify://shop_images/31ec7af0-7799-4eab-acdb-98b5f8c4279c.png",
                 "use_product_image_fallback": false,
                 "width": 100,
                 "alignment": "center",
@@ -1248,7 +1285,7 @@
             }
           },
           "block_order": [
-            "image_dTEXhz"
+            "image_kVY7Am"
           ]
         },
         "column_rgMUzg": {
