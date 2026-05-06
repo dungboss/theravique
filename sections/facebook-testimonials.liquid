@@ -216,8 +216,8 @@
                     {% endif %}
                     {% if displayed_post_image != blank %}
                       {%- liquid
-                        assign post_image_src_width = 675
-                        assign post_image_widths = '275, 550, 675'
+                        assign post_image_src_width = 550
+                        assign post_image_widths = '275, 325, 550'
                       -%}
                       {%- capture sizes -%}
                         (min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width:
