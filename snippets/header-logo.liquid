@@ -25,7 +25,9 @@
                 widths: '50, 100, 150, 200, 250, 300, 400, 500',
                 height: logo_height,
                 width: settings.logo_width,
-                alt: logo_alt
+                alt: logo_alt,
+                fetchpriority: 'high',
+                loading: 'eager'
             }}
             {% if settings.logo_mobile != blank %}
                 <style style="display:none;">
@@ -43,7 +45,9 @@
                     widths: '50, 100, 150, 200, 250, 300, 400, 500',
                     height: logo_height,
                     width: settings.logo_width,
-                    alt: logo_alt
+                    alt: logo_alt,
+                    fetchpriority: 'high',
+                    loading: 'eager'
                 }}
             {% endif %}
 

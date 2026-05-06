@@ -34,12 +34,14 @@
     }
   }
 
-  /* Bypass shrinetheme animate--hidden delay for hero — LCP image must paint immediately */
-  .hero-{{ section.id }}.animate--hidden,
-  .hero-{{ section.id }} .animate--hidden {
+  /* Bypass shrinetheme animate--hidden for hero section.
+     ID selector (#shopify-section-…) gives specificity 1-0-0 which beats
+     shrinetheme's class-only selectors regardless of !important order. */
+  #shopify-section-{{ section.id }} .animate-item {
     opacity: 1 !important;
-    visibility: visible !important;
+    filter: none !important;
     transform: none !important;
+    visibility: visible !important;
   }
 {%- endstyle -%}
 

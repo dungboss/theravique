@@ -201,31 +201,35 @@
   display: none;
 }
 .ques-desc {
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+.ques-desc.open {
+  max-height: 2000px;
 }
 
 
 </style>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
 <script>
-  $(function () {
-    $(".ques-heading").click(function (e) {
-      var $targetDesc = $(this).closest(".questions__item_row").find(".ques-desc");
-      $(".ques-desc").not($targetDesc).slideUp();
-      
-      if ($(this).hasClass("active")) {
-        $(this).removeClass("active");
-      } else {
-        $(".ques-heading.active").removeClass("active");
-        $(this).addClass("active");
-      }
-      
-      $targetDesc.stop(false, true).slideToggle();
-      e.preventDefault();
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.ques-heading').forEach(function(heading) {
+      heading.addEventListener('click', function(e) {
+        e.preventDefault();
+        var row = heading.closest('.questions__item_row');
+        var targetDesc = row.querySelector('.ques-desc');
+        var isActive = heading.classList.contains('active');
+        document.querySelectorAll('.ques-heading.active').forEach(function(h) {
+          h.classList.remove('active');
+          h.closest('.questions__item_row').querySelector('.ques-desc').classList.remove('open');
+        });
+        if (!isActive) {
+          heading.classList.add('active');
+          targetDesc.classList.add('open');
+        }
+      });
     });
   });
 </script>

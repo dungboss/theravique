@@ -1,9 +1,7 @@
 <link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
-
 <noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
-
-{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
   .section-{{ section.id }}-padding {

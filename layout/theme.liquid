@@ -100,6 +100,15 @@
         }
       {% endif %}
       {% if settings.animations_type == blank or settings.animations_type.size < 196 %}main{visibility:hidden !important;}{% endif %}
+      /* Override shrinetheme animate-item hidden state before its CDN JS loads.
+         Uses body prefix (specificity 0-3-1) to beat shrinetheme selector (0-3-0).
+         Once shrinetheme removes animate--hidden class this selector no longer matches. */
+      body .animate-section.animate--hidden .animate-item {
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+        visibility: visible !important;
+      }
       {% if settings.custom_header_font_link == blank %}
         {{ settings.type_header_font | font_face: font_display: 'swap' }}
         :root {
