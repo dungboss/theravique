@@ -173,6 +173,7 @@
                       {% elsif has_video %}
                         {% liquid
                           assign action_on_inactive = 'none'
+                          assign lazy_video_poster = false
 
                           if block.settings.muted_autoplay == false
                             assign action_on_inactive = 'pause'
@@ -181,11 +182,17 @@
                           elsif block.settings.muted_autoplay and block.settings.display_sound_btn and block.settings.display_play_btn == false
                             assign action_on_inactive = 'mute'
                           endif
+
+                          if forloop.index > section.settings.slides_mobile
+                            assign lazy_video_poster = true
+                          endif
                         %}
                         {% render 'video-player',
                           block: block,
                           action_on_inactive: action_on_inactive,
-                          custom_thumbnail_width: 324
+                          custom_thumbnail_width: 324,
+                          custom_preload: 'none',
+                          lazy_poster: lazy_video_poster
                         %}
                       {% else %}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
@@ -211,6 +218,39 @@
     </splide-component>
   </div>
 </div>
+
+<script>
+  (() => {
+    const section = document.getElementById('shopify-section-{{ section.id }}');
+    if (!section || section.dataset.lazyVideoPostersInit === 'true') return;
+
+    const videos = section.querySelectorAll('video[data-poster]');
+    if (!videos.length) return;
+
+    section.dataset.lazyVideoPostersInit = 'true';
+
+    const loadPoster = (video) => {
+      if (!video.dataset.poster) return;
+      video.poster = video.dataset.poster;
+      video.removeAttribute('data-poster');
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      videos.forEach(loadPoster);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadPoster(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '250px 0px' });
+
+    videos.forEach((video) => observer.observe(video));
+  })();
+</script>
 
 {% schema %}
 {

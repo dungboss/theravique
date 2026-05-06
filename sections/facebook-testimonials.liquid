@@ -216,12 +216,11 @@
                     {% endif %}
                     {% if displayed_post_image != blank %}
                       {%- liquid
-                        assign post_image_src_width = 550
-                        assign post_image_widths = '275, 325, 550'
+                        assign post_image_src_width = 500
+                        assign post_image_widths = '275, 325, 500'
                       -%}
                       {%- capture sizes -%}
-                        (min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width:
-                        750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px)
+                        (min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)
                       {%- endcapture -%}
                       <div
                         class="media media--transparent ratio"
