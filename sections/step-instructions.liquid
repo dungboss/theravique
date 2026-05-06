@@ -1,7 +1,5 @@
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
 
 {%- liquid 
   assign padding_horizontal = section.settings.padding_horizontal
@@ -568,25 +566,26 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
-  function initSteps4() {
-    const slider = new Swiper(".steps-slider-{{ section.id }}", {
-      speed: 300,
-      spaceBetween: 20,
-      centeredSlides: true,
-      spaceBetween: {{ slider_gap_mobile }},
-      slidesPerView: {{ slider_view_mobile }}
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', initSteps4);
-  
-  if (Shopify.designMode) {
-     document.addEventListener('shopify:section:unload', initSteps4);
-     document.addEventListener('shopify:section:load', initSteps4);
-  }
+  (function() {
+    function initSteps4() {
+      if (typeof Swiper === 'undefined') return;
+      new Swiper(".steps-slider-{{ section.id }}", {
+        speed: 300,
+        centeredSlides: true,
+        spaceBetween: {{ slider_gap_mobile }},
+        slidesPerView: {{ slider_view_mobile }}
+      });
+    }
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    s.onload = initSteps4;
+    document.body.appendChild(s);
+    if (Shopify.designMode) {
+      document.addEventListener('shopify:section:unload', initSteps4);
+      document.addEventListener('shopify:section:load', initSteps4);
+    }
+  })();
 </script>
 
 {% schema %}

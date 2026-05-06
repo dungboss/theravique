@@ -33,6 +33,14 @@
       {% endif %}
     }
   }
+
+  /* Bypass shrinetheme animate--hidden delay for hero — LCP image must paint immediately */
+  .hero-{{ section.id }}.animate--hidden,
+  .hero-{{ section.id }} .animate--hidden {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
 {%- endstyle -%}
 
 <div

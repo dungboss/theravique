@@ -642,15 +642,18 @@
     {% render 'security-settings' %}
 
     <script>
-      // Fallback: reveal main if shrinetheme JS is slow (common on mobile)
-      document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-          var main = document.getElementById('MainContent');
-          if (main && window.getComputedStyle(main).visibility === 'hidden') {
-            main.style.setProperty('visibility', 'visible', 'important');
+      // Fallback: reveal main if shrinetheme JS CDN is slow on mobile.
+      // Must use setTimeout (not DOMContentLoaded) because DOMContentLoaded fires
+      // AFTER all deferred scripts — by then shrinetheme has already run or failed.
+      (function() {
+        function revealMain() {
+          var m = document.getElementById('MainContent');
+          if (m && window.getComputedStyle(m).visibility === 'hidden') {
+            m.style.setProperty('visibility', 'visible', 'important');
           }
-        }, 0);
-      });
+        }
+        setTimeout(revealMain, 800);
+      })();
     </script>
   </body>
 </html>

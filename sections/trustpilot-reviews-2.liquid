@@ -1,6 +1,7 @@
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"></noscript>
 
 {%- liquid 
   assign padding_horizontal = section.settings.padding_horizontal
@@ -1178,74 +1179,71 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
-              
 <script>
-  function initTestimonials8{{ section.id | replace: '-', '' }}() {
-    document.querySelector('.testimonials-slider-{{ section.id }}').classList.remove('preview');
-    const slider = new Swiper('.testimonials-slider-{{ section.id }}', {
-      speed: 300,
-      loop: true,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: '.testimonials-btn-next-{{ section.id }}',
-        prevEl: '.testimonials-btn-prev-{{ section.id }}'
-      },
-      pagination: {
-        el: '.testimonials-pagination-{{ section.id }}',
-        type: 'bullets',
-        clickable: true
-      },
-      breakpoints: {
-        320: {
-          centeredSlides: true,
-          spaceBetween: {{ slider_gap_mobile }},
-          slidesPerView: {{ slider_view_mobile }}
+  (function() {
+    function initTestimonials8{{ section.id | replace: '-', '' }}() {
+      if (typeof Swiper === 'undefined') return;
+      document.querySelector('.testimonials-slider-{{ section.id }}').classList.remove('preview');
+      const slider = new Swiper('.testimonials-slider-{{ section.id }}', {
+        speed: 300,
+        loop: true,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: '.testimonials-btn-next-{{ section.id }}',
+          prevEl: '.testimonials-btn-prev-{{ section.id }}'
         },
-        768: {
-          centeredSlides: {% if size_tablet == 0 %}false{% else %}true{% endif %},
-          spaceBetween: {{ slider_gap_mobile }},
-          slidesPerView: {{ slider_view | times: 0.5 | round: 0 }}
+        pagination: {
+          el: '.testimonials-pagination-{{ section.id }}',
+          type: 'bullets',
+          clickable: true
         },
-        1024: {
-          centeredSlides: {% if size == 0 %}false{% else %}true{% endif %},
-          spaceBetween: {{ slider_gap }},
-          slidesPerView: {{ slider_view }}
+        breakpoints: {
+          320: {
+            centeredSlides: true,
+            spaceBetween: {{ slider_gap_mobile }},
+            slidesPerView: {{ slider_view_mobile }}
+          },
+          768: {
+            centeredSlides: {% if size_tablet == 0 %}false{% else %}true{% endif %},
+            spaceBetween: {{ slider_gap_mobile }},
+            slidesPerView: {{ slider_view | times: 0.5 | round: 0 }}
+          },
+          1024: {
+            centeredSlides: {% if size == 0 %}false{% else %}true{% endif %},
+            spaceBetween: {{ slider_gap }},
+            slidesPerView: {{ slider_view }}
+          }
         }
-      }
-    })
-    // slider.slidePrev();
-    let texts = document.querySelectorAll('.testimonials-slide-text-{{ section.id }}');
-    texts.forEach(el => {
-      let btn = el.querySelector('.testimonials-slide-text-btn');
-      let small = el.querySelector('.testimonials-slide-text-small');
-      let big = el.querySelector('.testimonials-slide-text-big');
-      btn.addEventListener('click', () => {
-        console.log(btn);
-        if(btn.classList.contains("active")) {
-          small.classList.remove('active');
-          big.classList.remove('active');
-          btn.classList.remove('active');
-          btn.textContent = "{{ card_text_more }}";
-        } else {
-          small.classList.add('active');
-          big.classList.add('active');
-          btn.textContent = "{{ card_text_less }}";
-          btn.classList.add('active');
-        }
-      })
-    })
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(initTestimonials8{{ section.id | replace: '-', '' }}, 500);
-  });
-  
-  if (Shopify.designMode) {
-     document.addEventListener('shopify:section:unload', initTestimonials8{{ section.id | replace: '-', '' }});
-     document.addEventListener('shopify:section:load', initTestimonials8{{ section.id | replace: '-', '' }});
-  }
-  
+      });
+      let texts = document.querySelectorAll('.testimonials-slide-text-{{ section.id }}');
+      texts.forEach(el => {
+        let btn = el.querySelector('.testimonials-slide-text-btn');
+        let small = el.querySelector('.testimonials-slide-text-small');
+        let big = el.querySelector('.testimonials-slide-text-big');
+        btn.addEventListener('click', () => {
+          if(btn.classList.contains("active")) {
+            small.classList.remove('active');
+            big.classList.remove('active');
+            btn.classList.remove('active');
+            btn.textContent = "{{ card_text_more }}";
+          } else {
+            small.classList.add('active');
+            big.classList.add('active');
+            btn.textContent = "{{ card_text_less }}";
+            btn.classList.add('active');
+          }
+        });
+      });
+    }
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js';
+    s.onload = function() { setTimeout(initTestimonials8{{ section.id | replace: '-', '' }}, 300); };
+    document.body.appendChild(s);
+    if (Shopify.designMode) {
+      document.addEventListener('shopify:section:unload', initTestimonials8{{ section.id | replace: '-', '' }});
+      document.addEventListener('shopify:section:load', initTestimonials8{{ section.id | replace: '-', '' }});
+    }
+  })();
 </script>
 
 {% schema %}
