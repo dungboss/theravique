@@ -461,11 +461,6 @@
       >
     {%- endif -%}
 
-    {%- comment -%} Preload default hero fallback images for pages using slideshow-hero {%- endcomment -%}
-    {%- if template == 'index' -%}
-      <link rel="preload" as="image" href="{{ 'Slideshow_hero.webp' | asset_url }}" media="(min-width: 750px)">
-      <link rel="preload" as="image" href="{{ 'Slideshow_Phone.webp' | asset_url }}" media="(max-width: 749px)">
-    {%- endif -%}
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -643,5 +638,17 @@
     
     {% comment %} Security Settings {% endcomment %}
     {% render 'security-settings' %}
+
+    <script>
+      // Fallback: reveal main if shrinetheme JS is slow (common on mobile)
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          var main = document.getElementById('MainContent');
+          if (main && window.getComputedStyle(main).visibility === 'hidden') {
+            main.style.setProperty('visibility', 'visible', 'important');
+          }
+        }, 0);
+      });
+    </script>
   </body>
 </html>

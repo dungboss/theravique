@@ -119,6 +119,18 @@
                         assign fetchpriority = 'auto'
                       endif
                     -%}
+                    {%- if forloop.index == 1 -%}
+                      {%- if block.settings.desktop_bg_image != blank -%}
+                        <script>
+                          (function(){var l=document.createElement('link');l.rel='preload';l.as='image';l.media='(min-width:750px)';l.href='{{ block.settings.desktop_bg_image | image_url: width: 1500 }}';l.setAttribute('imagesrcset','{{ block.settings.desktop_bg_image | image_url: width: 750 }} 750w,{{ block.settings.desktop_bg_image | image_url: width: 1100 }} 1100w,{{ block.settings.desktop_bg_image | image_url: width: 1500 }} 1500w,{{ block.settings.desktop_bg_image | image_url: width: 2000 }} 2000w');l.setAttribute('imagesizes','100vw');l.setAttribute('fetchpriority','high');document.head.appendChild(l);})();
+                        </script>
+                      {%- endif -%}
+                      {%- if block.settings.mobile_bg_image != blank -%}
+                        <script>
+                          (function(){var l=document.createElement('link');l.rel='preload';l.as='image';l.media='(max-width:749px)';l.href='{{ block.settings.mobile_bg_image | image_url: width: 750 }}';l.setAttribute('imagesrcset','{{ block.settings.mobile_bg_image | image_url: width: 375 }} 375w,{{ block.settings.mobile_bg_image | image_url: width: 550 }} 550w,{{ block.settings.mobile_bg_image | image_url: width: 750 }} 750w');l.setAttribute('imagesizes','100vw');l.setAttribute('fetchpriority','high');document.head.appendChild(l);})();
+                        </script>
+                      {%- endif -%}
+                    {%- endif -%}
                     {% if block.settings.desktop_bg_video != blank %}
                       <internal-video
                         class="internal-video internal-video--playing internal-video--muted"
