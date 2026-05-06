@@ -427,7 +427,14 @@
       </style>
     </noscript>
 
-    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'base-critical.css' | asset_url | stylesheet_tag: preload: true }}
+    <link
+      rel="stylesheet"
+      href="{{ 'base-deferred.css' | asset_url }}"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>{{ 'base-deferred.css' | asset_url | stylesheet_tag }}</noscript>
     {% if is_rtl %}
       {{ 'rtl.css' | asset_url | stylesheet_tag: preload: true }}
     {% endif %}
