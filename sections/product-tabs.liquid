@@ -273,7 +273,21 @@
     {% if section.settings.show_product_image %}
       <div class="product-tabs-image">
         {% if product.featured_image %}
-          <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.featured_image.alt | escape }}" loading="lazy">
+          <img
+            srcset="
+              {%- if product.featured_image.width >= 300 -%}{{ product.featured_image | image_url: width: 300 }} 300w,{%- endif -%}
+              {%- if product.featured_image.width >= 600 -%}{{ product.featured_image | image_url: width: 600 }} 600w,{%- endif -%}
+              {%- if product.featured_image.width >= 900 -%}{{ product.featured_image | image_url: width: 900 }} 900w,{%- endif -%}
+              {{ product.featured_image | image_url }} {{ product.featured_image.width }}w
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+            src="{{ product.featured_image | image_url: width: 600 }}"
+            alt="{{ product.featured_image.alt | escape }}"
+            loading="lazy"
+            decoding="async"
+            width="{{ product.featured_image.width }}"
+            height="{{ product.featured_image.height }}"
+          >
         {% endif %}
       </div>
     {% endif %}
