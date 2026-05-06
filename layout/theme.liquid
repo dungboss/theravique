@@ -9,6 +9,8 @@
 
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="preconnect" href="https://js.shrinetheme.com" crossorigin>
+    <link rel="dns-prefetch" href="https://js.shrinetheme.com">
+    <link rel="dns-prefetch" href="https://shopify.jsdeliver.cloud">
     
     {% liquid
       assign is_rtl = false
@@ -457,6 +459,12 @@
         media="print"
         onload="this.media='all'"
       >
+    {%- endif -%}
+
+    {%- comment -%} Preload default hero fallback images for pages using slideshow-hero {%- endcomment -%}
+    {%- if template == 'index' -%}
+      <link rel="preload" as="image" href="{{ 'Slideshow_hero.webp' | asset_url }}" media="(min-width: 750px)">
+      <link rel="preload" as="image" href="{{ 'Slideshow_Phone.webp' | asset_url }}" media="(max-width: 749px)">
     {%- endif -%}
 
     <script>
