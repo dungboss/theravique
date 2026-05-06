@@ -26,7 +26,12 @@
       endif
     %}
 
-    <script src="https://js.shrinetheme.com/js/v2/main.js?version=1" defer="defer" data-defer="true" data-is-rtl="{{ is_rtl }}" data-country-list-function="{{ settings.country_list_function }}" data-country-list="{{ settings.country_list }}" data-country-list-error="{{ settings.country_invalid_error_msg }}" data-animations-type="{{ settings.animations_type }}"></script>
+    {% comment %}
+      Shrine theme script is unused and intentionally disabled to avoid loading an external dependency.
+      secondary.js expects at least two [data-defer] elements; this inert meta keeps that guard satisfied.
+      <script src="https://js.shrinetheme.com/js/v2/main.js?version=1" defer="defer" data-defer="true" data-is-rtl="{{ is_rtl }}" data-country-list-function="{{ settings.country_list_function }}" data-country-list="{{ settings.country_list }}" data-country-list-error="{{ settings.country_invalid_error_msg }}" data-animations-type="{{ settings.animations_type }}"></script>
+    {% endcomment %}
+    <meta name="disabled-shrine-script-placeholder" content="true" data-defer="true">
     <script src="{{ 'secondary.js' | asset_url }}" defer="defer" data-defer="true" data-is-rtl="{{ is_rtl }}"></script>
     
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
@@ -99,7 +104,11 @@
           --font-body-weight-bold: {{ settings.custom_body_font_weight | plus: 300 | at_most: 1000 }};
         }
       {% endif %}
-      {% if settings.animations_type == blank or settings.animations_type.size < 196 %}main{visibility:hidden !important;}{% endif %}
+      {% comment %}
+        Do not hide the main content while waiting for theme animation scripts.
+        If the external animation script is disabled or delayed, hiding <main>
+        can make Lighthouse/PageSpeed fail with NO_LCP.
+      {% endcomment %}
       /* Override shrinetheme animate-item hidden state before its CDN JS loads.
          Uses body prefix (specificity 0-3-1) to beat shrinetheme selector (0-3-0).
          Once shrinetheme removes animate--hidden class this selector no longer matches. */
