@@ -1146,7 +1146,7 @@
                 "enable_custom_color": false,
                 "custom_text_color": "#ff0000",
                 "margin_top": 15,
-                "margin_bottom": 15
+                "margin_bottom": 30
               },
               "blocks": {}
             }
@@ -1210,10 +1210,10 @@
                 "custom_text_color": "#ff0000",
                 "title": "Quiet Comfort",
                 "icon_heading_size": "h3",
-                "text": "",
+                "text": "<p>Enjoy a restful environment with ultra-quiet technology that delivers a cooling breeze without any distracting noise.<br/><br/></p>",
                 "text_size": 14,
-                "margin_top": 15,
-                "margin_bottom": 0
+                "margin_top": 0,
+                "margin_bottom": 30
               },
               "blocks": {}
             }
@@ -1295,7 +1295,7 @@
                 "custom_text_color": "#ff0000",
                 "title": "Adjustable Airflow",
                 "icon_heading_size": "h3",
-                "text": "<p>Dial in a gentler or stronger breeze depending on the room</p>",
+                "text": "<p>Reliable outdoor cooling with flexible speed modes that adapt to changing winds and open-air settings.</p><h3></h3>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -1316,7 +1316,7 @@
                 "custom_text_color": "#ff0000",
                 "title": "Easy To Clean",
                 "icon_heading_size": "h3",
-                "text": "<p>Wipe the exterior quickly and keep it looking fresh</p>",
+                "text": "<p>No messy grilles or blades to scrub—just a simple wipe to keep it fresh and hygienic.<br/><br/></p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
