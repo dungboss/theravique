@@ -1,12 +1,10 @@
 # Session State
-<!-- Generated: 2026-05-06T09:14:11.352Z -->
+<!-- Generated: 2026-05-09T08:18:35.740Z -->
 <!-- Branch: unknown -->
 <!-- Plan: none -->
 
 ## What Worked (Verified)
-- Remove wrong static preloads (Slideshow_Phone.webp) from theme.liquid
-- Add dynamic preload in slideshow-hero for actual first-slide mobile+desktop images
-- Add DOMContentLoaded fallback to reveal main if shrinetheme JS is slow on mobile
+- (No completed tasks recorded)
 
 ## What's Left
 - (All tasks completed)
@@ -31,10 +29,7 @@
 - Completed at 08:43:59
 
 ## Key Files Modified
+- .claude/session-state/archive/20260506-1516.md
+- .claude/session-state/latest.md
 - layout/theme.liquid
-- sections/collage.liquid
-- sections/faqs.liquid
-- sections/featured-blog.liquid
-- sections/price-compare-section.liquid
-- sections/slideshow-hero.liquid
-- snippets/header-logo.liquid
+- snippets/buy-buttons.liquid
