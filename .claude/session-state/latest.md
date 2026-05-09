@@ -1,5 +1,5 @@
 # Session State
-<!-- Generated: 2026-05-09T08:56:44.433Z -->
+<!-- Generated: 2026-05-09T09:38:04.693Z -->
 <!-- Branch: unknown -->
 <!-- Plan: none -->
 
@@ -29,5 +29,4 @@
 - Completed at 08:43:59
 
 ## Key Files Modified
-- sections/image-slider.liquid
-- snippets/video-player.liquid
+- layout/theme.liquid
