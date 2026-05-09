@@ -28,7 +28,7 @@
     assign video_preload = custom_preload
   endif
 
-  assign poster_src = thumbnail | image_url: width: poster_width
+  assign poster_src = thumbnail | image_url: width: poster_width, format: 'webp'
 %}
 <div class="video-container">
   {% if video != blank %}
