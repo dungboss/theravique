@@ -19,6 +19,11 @@
     #sticky-atc-{{ section.id }} .sticky-atc__price .price-item {
       color: #c4b9b1 !important;
     }
+    #sticky-atc-{{ section.id }} .price__badge-sale,
+    #sticky-atc-{{ section.id }} .price__badge-custom {
+      --color-background: 196, 185, 177 !important;
+      --color-foreground: 255, 255, 255 !important;
+    }
   {% endstyle %}
 {%- endif -%}
 
