@@ -91,7 +91,11 @@
                     }
                   </style>
                   <h2 class="footer-block__heading footer-block__heading-{{ block.id }}">
-                    {{- block.settings.heading | escape -}}
+                    {%- if block.type == 'email_signup' and template == 'product.mini-clip-fan' -%}
+                      Stay Cool All Summer Long
+                    {%- else -%}
+                      {{- block.settings.heading | escape -}}
+                    {%- endif -%}
                   </h2>
                 {%- endif -%}
 
@@ -205,7 +209,13 @@
                   {% when 'email_signup' %}
                     <div>
                       <div class="footer-block__details-content footer-block__details-content-mb rte">
-                        {{ block.settings.subtext }}
+                        {%- if template == 'product.mini-clip-fan' -%}
+                          <p>Join thousands of happy customers. Get exclusive deals, cooling tips, and hands-free living inspiration straight to your inbox.</p>
+                          <p><strong>Contact us at:</strong></p>
+                          <p>support@theravique.com</p>
+                        {%- else -%}
+                          {{ block.settings.subtext }}
+                        {%- endif -%}
                       </div>
                       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                         <input type="hidden" name="contact[tags]" value="newsletter">
