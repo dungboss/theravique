@@ -82,3 +82,17 @@
 .collection__view-all a:not(.link) {
   margin-top: 2rem;
 }
+
+/* Equal height product cards: stretch all items in a row to the same height */
+.product-grid {
+  align-items: stretch;
+}
+
+.product-grid .grid__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-grid .card-wrapper {
+  flex: 1;
+}

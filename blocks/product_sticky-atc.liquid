@@ -14,6 +14,13 @@
     }
   {% endstyle %}
 {% endif %}
+{%- if template == 'product.mini-clip-fan' -%}
+  {% style %}
+    #sticky-atc-{{ section.id }} .sticky-atc__price .price-item {
+      color: #c4b9b1 !important;
+    }
+  {% endstyle %}
+{%- endif -%}
 
 <sticky-atc 
   id="sticky-atc-{{ section.id }}"

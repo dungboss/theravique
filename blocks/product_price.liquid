@@ -3,6 +3,15 @@
     assign product = section.settings.product
   endif
 %}
+{%- if template == 'product.mini-clip-fan' -%}
+  {% style %}
+    #price-{{ section.id }} .price__badge-sale,
+    #price-{{ section.id }} .price__badge-custom {
+      --color-background: 196, 185, 177 !important;
+      --color-foreground: 255, 255, 255 !important;
+    }
+  {% endstyle %}
+{%- endif -%}
 <div
   class="no-js-hidden product-page-price"
   id="price-{{ section.id }}"

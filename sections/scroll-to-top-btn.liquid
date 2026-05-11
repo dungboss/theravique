@@ -33,6 +33,12 @@
     color: #ffffff !important;
   }
   {%- endif -%}
+  {%- if template == 'product.mini-clip-fan' -%}
+  .scroll-to-top-btn-{{ section.id }} {
+    background-color: #c4b9b1 !important;
+    color: #ffffff !important;
+  }
+  {%- endif -%}
 {% endstyle %}
 
 {% if section.settings.enable_scroll_btn %}

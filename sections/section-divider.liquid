@@ -33,6 +33,7 @@
 
   .shape-color-{{ section.id }}.color-custom {
     --color-background: {{ section.settings.custom_shape_color.red }}, {{ section.settings.custom_shape_color.green }}, {{ section.settings.custom_shape_color.blue }};
+    color: rgb({{ section.settings.custom_shape_color.red }}, {{ section.settings.custom_shape_color.green }}, {{ section.settings.custom_shape_color.blue }}) !important;
   }
   .bg-color-{{ section.id }}.color-custom {
     --color-background: {{ section.settings.custom_background_color.red }}, {{ section.settings.custom_background_color.green }}, {{ section.settings.custom_background_color.blue }};
