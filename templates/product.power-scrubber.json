@@ -1839,6 +1839,21 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "section_divider_footer_wave": {
+      "type": "section-divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "waves_3",
+        "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "custom",
+        "custom_shape_color": "#53af01",
+        "background_color": "background-1",
+        "custom_background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -1848,6 +1863,7 @@
     "image_slider_product_gallery",
     "custom_columns_new_giXnD8",
     "facebook_testimonials_product_gallery",
-    "collapsible_content_nJrYmE"
+    "collapsible_content_nJrYmE",
+    "section_divider_footer_wave"
   ]
 }
